@@ -1,0 +1,11 @@
+pywebview
+pillow
+python-docx
+selenium
+webdriver-manager
+pywin32
+pycryptodome
+tkcalendar
+lxml
+requests
+pyinstaller
