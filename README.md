@@ -2,22 +2,31 @@
 **Litmas Berbasis Elektronik, Ringkas dan Optimal**
 
 Dibuat oleh Rinaldi Yudistira Nachrawy,
-Pembimbing Kemasyarakatan Pertama — Balai Pemasyarakatan Kelas I Jambi
+Pembimbing Kemasyarakatan Pertama, Balai Pemasyarakatan Kelas I Jambi
 
-[![Hak Cipta](https://img.shields.io/badge/HKI-EC00202514424-gold)](https://dgip.go.id)
+[![Hak Cipta](https://img.shields.io/badge/HKI-EC00202514424-gold?style=flat-square)](https://dgip.go.id)
+[![Platform](https://img.shields.io/badge/Platform-Windows%2010%2F11-blue?style=flat-square&logo=windows)](https://github.com/inaldy31/LIBERO/releases/latest)
+[![Versi](https://img.shields.io/badge/Versi-2.0.1-brightgreen?style=flat-square)](https://github.com/inaldy31/LIBERO/releases/latest)
+[![Trial](https://img.shields.io/badge/Trial-s.d.%2023%20Mei%202026-orange?style=flat-square)](https://github.com/inaldy31/LIBERO/releases/latest)
+![GitHub release (latest)](https://img.shields.io/github/v/release/inaldy31/LIBERO?style=flat-square&label=Rilis+Terbaru)
+![Downloads](https://img.shields.io/github/downloads/inaldy31/LIBERO/total?style=flat-square&label=Total+Unduhan)
 
 ---
 
 ## Daftar Isi
 - [Tentang Aplikasi](#tentang-aplikasi)
 - [Fitur](#fitur)
+- [Screenshot](#screenshot)
 - [Persyaratan Sistem](#persyaratan-sistem)
 - [Instalasi & Penggunaan](#instalasi--penggunaan)
 - [Registrasi Perangkat](#registrasi-perangkat)
 - [Sistem Trial](#sistem-trial)
-- [Struktur Proyek](#struktur-proyek)
+- [Keamanan Data](#keamanan-data)
 - [Build dari Source](#build-dari-source)
+- [Changelog](#changelog)
+- [FAQ](#faq)
 - [Troubleshooting](#troubleshooting)
+- [Lisensi Penggunaan](#lisensi-penggunaan)
 - [Hak Cipta](#hak-cipta)
 
 ---
@@ -34,20 +43,89 @@ Keamanan data rahasia klien dijamin melalui enkripsi fail kerja dan validasi per
 
 ## Fitur
 
-- **Litmas Integrasi** — Penyusunan Litmas untuk Program Pembebasan Bersyarat dan Cuti Bersyarat (klien dewasa)
-- **Litmas Anak** — Penyusunan Litmas untuk klien anak
-- **Kalkulasi Asesmen Otomatis** — Skor RRI dan Kebutuhan Kriminogenik dihitung otomatis, bebas salah hitung
-- **Narasi Otomatis** — Data dirangkai menjadi paragraf laporan yang profesional dan terstandar
-- **Export `.docx`** — Laporan final langsung siap pakai di Microsoft Word
-- **Fail Kerja Terenkripsi** — Simpan dan lanjutkan progres kapan saja; file `.json` terenkripsi, hanya bisa dibuka lewat aplikasi
-- **Templat Data Pribadi** — Buat satu file master berisi data UPT & petugas untuk mempercepat laporan baru
-- **Registrasi TPP** — Pendaftaran otomatis ke Google Form TPP via Selenium
-- **Fitur Pengingat Kolom Kosong** — Otomatis mendeteksi field yang belum diisi sebelum dokumen dibuat
-- **Autosave** — Data tersimpan otomatis setiap 10 detik
-- **21 Pilihan Tema** — Tampilan dapat dikustomisasi sesuai selera
-- **Pintasan Keyboard** — SHIFT+F3 (ubah format huruf), Ctrl+Z/Y, Ctrl+±/scroll (zoom)
-- **Sistem Trial** — Berlaku sampai 23 Mei 2026, atau 14 hari sejak pertama dibuka
-- **Registrasi Perangkat** — Sistem aktivasi berbasis UUID perangkat (HWID)
+- **Litmas Integrasi**: Penyusunan Litmas untuk Program Pembebasan Bersyarat dan Cuti Bersyarat (klien dewasa)
+- **Litmas Anak**: Penyusunan Litmas untuk klien anak
+- **Kalkulasi Asesmen Otomatis**: Skor RRI dan Kebutuhan Kriminogenik dihitung otomatis, bebas salah hitung
+- **Narasi Otomatis**: Data dirangkai menjadi paragraf laporan yang profesional dan terstandar
+- **Export `.docx`**: Laporan final langsung siap pakai di Microsoft Word
+- **Fail Kerja Terenkripsi**: Simpan dan lanjutkan progres kapan saja; file `.json` terenkripsi, hanya bisa dibuka lewat aplikasi
+- **Templat Data Pribadi**: Buat satu file master berisi data UPT & petugas untuk mempercepat laporan baru
+- **Registrasi TPP**: Pendaftaran otomatis ke Google Form TPP via Selenium
+- **Fitur Pengingat Kolom Kosong**: Otomatis mendeteksi field yang belum diisi sebelum dokumen dibuat
+- **Autosave**: Data tersimpan otomatis setiap 10 detik
+- **21 Pilihan Tema**: Tampilan dapat dikustomisasi sesuai selera
+- **Pintasan Keyboard**: SHIFT+F3 (ubah format huruf), Ctrl+Z/Y, Ctrl+±/scroll (zoom)
+- **Auto-Update**: Notifikasi dan unduhan versi terbaru otomatis dari GitHub Releases *(baru di v2.0.1)*
+- **Sistem Trial**: Berlaku sampai 23 Mei 2026, atau 14 hari sejak pertama dibuka
+- **Registrasi Perangkat**: Sistem aktivasi berbasis UUID perangkat (HWID)
+
+---
+
+## Screenshot
+
+**Launcher & Splash Screen**
+
+<table>
+  <tr>
+    <td><img src="assets/screenshots/Screenshot (3).png" width="280"/></td>
+    <td><img src="assets/screenshots/Screenshot (4).png" width="280"/></td>
+  </tr>
+</table>
+
+**Tampilan Form, Berbagai Tema**
+
+<table>
+  <tr>
+    <td align="center">Default (Navy Gold)</td>
+    <td align="center">Arctic White</td>
+    <td align="center">Warm Paper</td>
+  </tr>
+  <tr>
+    <td><img src="assets/screenshots/Screenshot (5).png" width="280"/></td>
+    <td><img src="assets/screenshots/Screenshot (6).png" width="280"/></td>
+    <td><img src="assets/screenshots/Screenshot (7).png" width="280"/></td>
+  </tr>
+  <tr>
+    <td align="center">Warm Cocoa</td>
+    <td align="center">Crimson Dark</td>
+    <td align="center">Corona</td>
+  </tr>
+  <tr>
+    <td><img src="assets/screenshots/Screenshot (8).png" width="280"/></td>
+    <td><img src="assets/screenshots/Screenshot (9).png" width="280"/></td>
+    <td><img src="assets/screenshots/Screenshot (10).png" width="280"/></td>
+  </tr>
+  <tr>
+    <td align="center">Jason</td>
+    <td align="center">Omni</td>
+    <td align="center">Matcha Zen</td>
+  </tr>
+  <tr>
+    <td><img src="assets/screenshots/Screenshot (11).png" width="280"/></td>
+    <td><img src="assets/screenshots/Screenshot (13).png" width="280"/></td>
+    <td><img src="assets/screenshots/Screenshot (14).png" width="280"/></td>
+  </tr>
+  <tr>
+    <td align="center">Preorder</td>
+    <td align="center">Ceremonial</td>
+    <td align="center">Banyan Tree</td>
+  </tr>
+  <tr>
+    <td><img src="assets/screenshots/Screenshot (15).png" width="280"/></td>
+    <td><img src="assets/screenshots/Screenshot (16).png" width="280"/></td>
+    <td><img src="assets/screenshots/Screenshot (17).png" width="280"/></td>
+  </tr>
+  <tr>
+    <td align="center">VSCode</td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td><img src="assets/screenshots/Screenshot (18).png" width="280"/></td>
+    <td></td>
+    <td></td>
+  </tr>
+</table>
 
 ---
 
@@ -69,8 +147,8 @@ Keamanan data rahasia klien dijamin melalui enkripsi fail kerja dan validasi per
 
 1. Salin file `LIBERO.exe` ke lokasi yang diinginkan
 2. Jalankan `LIBERO.exe`
-3. Jika WebView2 Runtime belum terinstall, akan muncul jendela instalasi otomatis — tunggu hingga selesai
-4. Saat pertama kali dibuka, layar pembuka dengan *progress bar* akan muncul — tunggu hingga penuh
+3. Jika WebView2 Runtime belum terinstall, akan muncul jendela instalasi otomatis, tunggu hingga selesai
+4. Saat pertama kali dibuka, layar pembuka dengan *progress bar* akan muncul, tunggu hingga penuh
 5. Pada pembukaan pertama, masa trial dimulai secara otomatis
 6. Daftarkan perangkat via tombol **Daftar Perangkat** di launcher agar dapat terus digunakan setelah trial berakhir
 
@@ -78,7 +156,7 @@ Keamanan data rahasia klien dijamin melalui enkripsi fail kerja dan validasi per
 
 ## Registrasi Perangkat
 
-Registrasi diperlukan untuk menggunakan LIBERO setelah masa trial berakhir. UUID perangkat dideteksi otomatis dari *motherboard* (*Hardware ID*) — satu UUID berlaku untuk satu perangkat.
+Registrasi diperlukan untuk menggunakan LIBERO setelah masa trial berakhir. UUID perangkat dideteksi otomatis dari *motherboard* (*Hardware ID*), satu UUID berlaku untuk satu perangkat.
 
 **Langkah registrasi:**
 1. Klik tombol **Daftar Perangkat** di halaman launcher
@@ -88,9 +166,9 @@ Registrasi diperlukan untuk menggunakan LIBERO setelah masa trial berakhir. UUID
 5. Setelah disetujui, restart LIBERO
 
 **Status pendaftaran:**
-- `Menunggu persetujuan` — Data terkirim, tunggu konfirmasi pengembang
-- `Aktif` — Perangkat sudah dapat digunakan penuh
-- `Dinonaktifkan` — Akses dicabut oleh pengembang
+- `Menunggu persetujuan`: Data terkirim, tunggu konfirmasi pengembang
+- `Aktif`: Perangkat sudah dapat digunakan penuh
+- `Dinonaktifkan`: Akses dicabut oleh pengembang
 
 > Perangkat yang UUID-nya tidak terdaftar tidak dapat menjalankan aplikasi dan program akan tertutup secara otomatis.
 
@@ -106,36 +184,16 @@ Registrasi diperlukan untuk menggunakan LIBERO setelah masa trial berakhir. UUID
 
 ---
 
-## Struktur Proyek
 
-```
-LIBERO\
-├── build_LIBERO.ps1          # Script build PyInstaller
-├── gitpush.bat               # Script push ke GitHub
-├── README.md
-├── .gitignore
-├── src\
-│   ├── launcher.py           # Entry point utama
-│   ├── integrasi.py          # Modul Litmas Integrasi
-│   └── litmasanak.py         # Modul Litmas Anak
-├── views\
-│   ├── launcher_view.html    # UI Launcher
-│   ├── integrasi.html        # UI Litmas Integrasi
-│   ├── litmasanak.html       # UI Litmas Anak
-│   └── registrasi.html       # UI Registrasi Perangkat
-├── assets\
-│   ├── icons\
-│   │   └── LIBERO.ico
-│   └── images\
-│       ├── LIBERO.png
-│       ├── imipas.png
-│       ├── ttde.png
-│       └── pemasyarakatan.png
-├── archive\
-│   └── MicrosoftEdgeWebview2Setup.exe
-└── dist\
-    └── LIBERO.exe            # Hasil build (tidak di-push ke repo)
-```
+## Keamanan Data
+
+LIBERO dirancang dengan prinsip perlindungan data klien:
+
+- Data autosave disimpan dalam format terenkripsi menggunakan algoritma berbasis AES
+- Fail kerja hanya dapat dibuka melalui aplikasi LIBERO
+- Validasi perangkat berbasis Hardware ID (HWID) mencegah penggunaan di perangkat tidak sah
+- Tidak ada data klien yang dikirim ke server eksternal; semua data diproses secara lokal
+- Komunikasi dengan server hanya terjadi untuk keperluan verifikasi status aktivasi perangkat
 
 ---
 
@@ -177,6 +235,47 @@ Script akan otomatis:
 
 ---
 
+## Changelog
+
+### v2.0.1
+- Sistem auto-update via GitHub Releases
+- Perbaikan stabilitas autosave
+- Optimasi loading awal aplikasi
+
+### v2.0.0
+- Antarmuka berbasis WebView2 (HTML/CSS/JS)
+- Sistem trial dengan deteksi manipulasi tanggal
+- Registrasi perangkat berbasis HWID
+- Tema tambahan (21 pilihan)
+- Enkripsi fail kerja
+
+### v1.0.0
+- Rilis awal
+- Litmas Integrasi dan Litmas Anak
+- Kalkulasi asesmen RRI otomatis
+- Export dokumen `.docx`
+
+---
+
+## FAQ
+
+**Apakah aplikasi ini bisa digunakan tanpa internet?**
+Ya, setelah perangkat terdaftar dan disetujui. Internet hanya dibutuhkan saat registrasi dan verifikasi aktivasi.
+
+**Apakah data litmas klien dikirim ke server?**
+Tidak. Semua data diproses secara lokal di komputer pengguna. Server hanya menerima UUID perangkat untuk keperluan aktivasi.
+
+**Apakah aplikasi ini resmi dari Kemenkumham?**
+Tidak. LIBERO adalah alat bantu kerja yang dikembangkan secara mandiri oleh PK Bapas Kelas I Jambi dan tidak berafiliasi dengan Kemenkumham atau Ditjen Pemasyarakatan.
+
+**Apakah LIBERO bisa diinstal di banyak komputer?**
+Setiap perangkat membutuhkan registrasi tersendiri. Satu UUID hanya berlaku untuk satu perangkat.
+
+**Bagaimana jika komputer diganti atau diformat?**
+Hubungi pengembang untuk memindahkan aktivasi ke perangkat baru.
+
+---
+
 ## Troubleshooting
 
 **Aplikasi tidak bisa dibuka / diblokir SmartScreen**
@@ -196,13 +295,30 @@ Script akan otomatis:
 > Pastikan semua field wajib sudah diisi. Field yang belum diisi ditandai merah **(BELUM DIISI)** pada dokumen hasil.
 
 **Aplikasi lambat saat pertama dibuka**
-> Normal — proses ekstraksi file dari dalam exe membutuhkan waktu beberapa detik pada pembukaan pertama.
+> Normal, proses ekstraksi file dari dalam exe membutuhkan waktu beberapa detik pada pembukaan pertama.
 
 **Autosave tidak berfungsi**
 > Autosave berjalan setiap 10 detik setelah ada perubahan data. Pastikan aplikasi tidak ditutup paksa.
 
 **Data hilang setelah aplikasi ditutup**
 > Gunakan tombol **SIMPAN DATA** sebelum menutup, atau manfaatkan fitur autosave. Buka kembali file `.json` via tombol **LANJUTKAN DATA**.
+
+---
+
+## Lisensi Penggunaan
+
+Aplikasi LIBERO didistribusikan sebagai perangkat lunak *proprietary* (hak milik).
+
+Pengguna diperbolehkan menggunakan aplikasi ini untuk keperluan pekerjaan resmi Pembimbing Kemasyarakatan (PK) dan Asisten Pembimbing Kemasyarakatan (APK) di lingkungan Pemasyarakatan Republik Indonesia.
+
+Dilarang keras:
+- Memodifikasi, mengubah, atau membongkar kode aplikasi dalam bentuk apapun
+- Mendistribusikan ulang aplikasi tanpa izin tertulis dari pemegang hak cipta
+- Melakukan *reverse engineering* terhadap aplikasi
+- Menggunakan aplikasi untuk keperluan di luar tugas kedinasan resmi
+- Menyewakan atau memperjualbelikan aplikasi kepada pihak lain
+
+Pelanggaran terhadap ketentuan ini dapat dikenakan sanksi sesuai Undang-Undang Nomor 28 Tahun 2014 tentang Hak Cipta dan peraturan perundang-undangan lain yang berlaku.
 
 ---
 
