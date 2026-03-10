@@ -1,9 +1,7 @@
 # LIBERO
 **Litmas Berbasis Elektronik, Ringkas dan Optimal**
 
-Dibuat oleh Rinaldi Yudistira Nachrawy,
-Pembimbing Kemasyarakatan Pertama, Balai Pemasyarakatan Kelas I Jambi
-
+Dibuat oleh Rinaldi Yudistira Nachrawy
 [![Hak Cipta](https://img.shields.io/badge/HKI-EC00202514424-gold?style=flat-square)](https://dgip.go.id)
 [![Platform](https://img.shields.io/badge/Platform-Windows%2010%2F11-blue?style=flat-square&logo=windows)](https://github.com/inaldy31/LIBERO/releases/latest)
 [![Versi](https://img.shields.io/badge/Versi-2.0.1-brightgreen?style=flat-square)](https://github.com/inaldy31/LIBERO/releases/latest)
@@ -14,20 +12,25 @@ Pembimbing Kemasyarakatan Pertama, Balai Pemasyarakatan Kelas I Jambi
 ---
 
 ## Daftar Isi
-- [Tentang Aplikasi](#tentang-aplikasi)
-- [Fitur](#fitur)
-- [Screenshot](#screenshot)
-- [Persyaratan Sistem](#persyaratan-sistem)
-- [Instalasi & Penggunaan](#instalasi--penggunaan)
-- [Registrasi Perangkat](#registrasi-perangkat)
-- [Sistem Trial](#sistem-trial)
-- [Keamanan Data](#keamanan-data)
-- [Build dari Source](#build-dari-source)
-- [Changelog](#changelog)
-- [FAQ](#faq)
-- [Troubleshooting](#troubleshooting)
-- [Lisensi Penggunaan](#lisensi-penggunaan)
-- [Hak Cipta](#hak-cipta)
+- [LIBERO](#libero)
+  - [Daftar Isi](#daftar-isi)
+  - [Tentang Aplikasi](#tentang-aplikasi)
+  - [Fitur](#fitur)
+  - [Screenshot](#screenshot)
+  - [Persyaratan Sistem](#persyaratan-sistem)
+  - [Instalasi \& Penggunaan](#instalasi--penggunaan)
+  - [Registrasi Perangkat](#registrasi-perangkat)
+  - [Sistem Trial](#sistem-trial)
+  - [Keamanan Data](#keamanan-data)
+  - [Build dari Source](#build-dari-source)
+  - [Changelog](#changelog)
+    - [v2.0.1](#v201)
+    - [v2.0.0](#v200)
+    - [v1.0.0](#v100)
+  - [FAQ](#faq)
+  - [Troubleshooting](#troubleshooting)
+  - [Lisensi Penggunaan](#lisensi-penggunaan)
+  - [Hak Cipta](#hak-cipta)
 
 ---
 
@@ -86,19 +89,9 @@ Keamanan data rahasia klien dijamin melalui enkripsi fail kerja dan validasi per
     <td><img src="assets/screenshots/Screenshot (7).png" width="280"/></td>
   </tr>
   <tr>
-    <td align="center">Warm Cocoa</td>
-    <td align="center">Crimson Dark</td>
-    <td align="center">Corona</td>
-  </tr>
-  <tr>
     <td><img src="assets/screenshots/Screenshot (8).png" width="280"/></td>
     <td><img src="assets/screenshots/Screenshot (9).png" width="280"/></td>
     <td><img src="assets/screenshots/Screenshot (10).png" width="280"/></td>
-  </tr>
-  <tr>
-    <td align="center">Jason</td>
-    <td align="center">Omni</td>
-    <td align="center">Matcha Zen</td>
   </tr>
   <tr>
     <td><img src="assets/screenshots/Screenshot (11).png" width="280"/></td>
@@ -106,19 +99,9 @@ Keamanan data rahasia klien dijamin melalui enkripsi fail kerja dan validasi per
     <td><img src="assets/screenshots/Screenshot (14).png" width="280"/></td>
   </tr>
   <tr>
-    <td align="center">Preorder</td>
-    <td align="center">Ceremonial</td>
-    <td align="center">Banyan Tree</td>
-  </tr>
-  <tr>
     <td><img src="assets/screenshots/Screenshot (15).png" width="280"/></td>
     <td><img src="assets/screenshots/Screenshot (16).png" width="280"/></td>
     <td><img src="assets/screenshots/Screenshot (17).png" width="280"/></td>
-  </tr>
-  <tr>
-    <td align="center">VSCode</td>
-    <td></td>
-    <td></td>
   </tr>
   <tr>
     <td><img src="assets/screenshots/Screenshot (18).png" width="280"/></td>
