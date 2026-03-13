@@ -281,7 +281,7 @@ File `.docx` hasil export bisa dibuka di mana saja. Tapi file kerja `.lit` hanya
 Ya, file autosave disimpan dalam format terenkripsi dan tidak bisa dibaca di luar aplikasi.
 
 **Apakah aplikasi ini resmi dari Kementerian Imigrasi dan Pemasyarakatan/Direktorat Jenderal Pemasyarakatan?**
-Tidak. LIBERO adalah inisiatif mandiri yang belum memiliki afiliasi resmi dengan Kementerian Imigrasi dan Pemasyarakatan maupun Direktorat Jenderal Pemasyarakatan. Namun pengembang terbuka untuk kolaborasi dan pengembangan lebih lanjut bersama pihak yang berwenang.
+Tidak. LIBERO murni inisiatif mandiri dari pegawai yang ingin membantu menyederhanakan dan meringankan beban kerja harian. Saat ini aplikasi belum memiliki afiliasi resmi dengan Kementerian Imigrasi dan Pemasyarakatan maupun Direktorat Jenderal Pemasyarakatan, namun pengembang terbuka untuk kolaborasi lebih lanjut.
 
 **Apakah LIBERO bisa dipakai di Windows 7 atau 8?**
 Tidak. LIBERO membutuhkan Windows 10 atau 11 karena bergantung pada WebView2 Runtime yang tidak tersedia di versi Windows lebih lama.
