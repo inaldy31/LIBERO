@@ -259,18 +259,23 @@ Script akan otomatis:
 ## FAQ
 
 **Apakah aplikasi ini bisa digunakan tanpa internet?**
+
 Ya, setelah perangkat terdaftar dan disetujui. Internet hanya dibutuhkan saat registrasi dan verifikasi aktivasi.
 
 **Apakah data litmas klien dikirim ke server?**
+
 Tidak. Semua data diproses secara lokal di komputer pengguna. Server hanya menerima UUID perangkat untuk keperluan aktivasi.
 
 **Apakah aplikasi ini resmi dari Kemenkumham?**
+
 Tidak. LIBERO adalah alat bantu kerja yang dikembangkan secara mandiri oleh PK Bapas Kelas I Jambi dan tidak berafiliasi dengan Kemenkumham atau Ditjen Pemasyarakatan.
 
 **Apakah LIBERO bisa diinstal di banyak komputer?**
+
 Setiap perangkat membutuhkan registrasi tersendiri. Satu UUID hanya berlaku untuk satu perangkat.
 
 **Bagaimana jika komputer diganti atau diformat?**
+
 Hubungi pengembang untuk memindahkan aktivasi ke perangkat baru.
 
 ---
