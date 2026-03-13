@@ -71,8 +71,8 @@ Keamanan data rahasia klien dijamin melalui enkripsi fail kerja dan validasi per
 
 <table>
   <tr>
-    <td><img src="assets/screenshots/Screenshot (3).png" width="280"/></td>
-    <td><img src="assets/screenshots/Screenshot (4).png" width="280"/></td>
+    <td><img src="assets/screenshots/Screenshot (23).png" width="280"/></td>
+    <td><img src="assets/screenshots/Screenshot (24).png" width="280"/></td>
   </tr>
 </table>
 
@@ -80,32 +80,47 @@ Keamanan data rahasia klien dijamin melalui enkripsi fail kerja dan validasi per
 
 <table>
   <tr>
-    <td align="center">Default (Navy Gold)</td>
-    <td align="center">Arctic White</td>
-    <td align="center">Warm Paper</td>
+    <td><img src="assets/screenshots/Screenshot (25).png" width="280"/></td>
+    <td><img src="assets/screenshots/Screenshot (26).png" width="280"/></td>
+    <td><img src="assets/screenshots/Screenshot (27).png" width="280"/></td>
   </tr>
   <tr>
-    <td><img src="assets/screenshots/Screenshot (5).png" width="280"/></td>
-    <td><img src="assets/screenshots/Screenshot (6).png" width="280"/></td>
-    <td><img src="assets/screenshots/Screenshot (7).png" width="280"/></td>
+    <td><img src="assets/screenshots/Screenshot (28).png" width="280"/></td>
+    <td><img src="assets/screenshots/Screenshot (29).png" width="280"/></td>
+    <td><img src="assets/screenshots/Screenshot (30).png" width="280"/></td>
   </tr>
   <tr>
-    <td><img src="assets/screenshots/Screenshot (8).png" width="280"/></td>
-    <td><img src="assets/screenshots/Screenshot (9).png" width="280"/></td>
-    <td><img src="assets/screenshots/Screenshot (10).png" width="280"/></td>
+    <td><img src="assets/screenshots/Screenshot (31).png" width="280"/></td>
+    <td><img src="assets/screenshots/Screenshot (32).png" width="280"/></td>
+    <td><img src="assets/screenshots/Screenshot (33).png" width="280"/></td>
   </tr>
   <tr>
-    <td><img src="assets/screenshots/Screenshot (11).png" width="280"/></td>
-    <td><img src="assets/screenshots/Screenshot (13).png" width="280"/></td>
-    <td><img src="assets/screenshots/Screenshot (14).png" width="280"/></td>
+    <td><img src="assets/screenshots/Screenshot (34).png" width="280"/></td>
+    <td><img src="assets/screenshots/Screenshot (35).png" width="280"/></td>
+    <td><img src="assets/screenshots/Screenshot (36).png" width="280"/></td>
   </tr>
   <tr>
-    <td><img src="assets/screenshots/Screenshot (15).png" width="280"/></td>
-    <td><img src="assets/screenshots/Screenshot (16).png" width="280"/></td>
-    <td><img src="assets/screenshots/Screenshot (17).png" width="280"/></td>
+    <td><img src="assets/screenshots/Screenshot (37).png" width="280"/></td>
+    <td><img src="assets/screenshots/Screenshot (38).png" width="280"/></td>
+    <td><img src="assets/screenshots/Screenshot (39).png" width="280"/></td>
   </tr>
   <tr>
-    <td><img src="assets/screenshots/Screenshot (18).png" width="280"/></td>
+    <td><img src="assets/screenshots/Screenshot (40).png" width="280"/></td>
+    <td><img src="assets/screenshots/Screenshot (41).png" width="280"/></td>
+    <td><img src="assets/screenshots/Screenshot (42).png" width="280"/></td>
+  </tr>
+  <tr>
+    <td><img src="assets/screenshots/Screenshot (43).png" width="280"/></td>
+    <td><img src="assets/screenshots/Screenshot (45).png" width="280"/></td>
+    <td><img src="assets/screenshots/Screenshot (46).png" width="280"/></td>
+  </tr>
+  <tr>
+    <td><img src="assets/screenshots/Screenshot (47).png" width="280"/></td>
+    <td><img src="assets/screenshots/Screenshot (48).png" width="280"/></td>
+    <td><img src="assets/screenshots/Screenshot (49).png" width="280"/></td>
+  </tr>
+  <tr>
+    <td><img src="assets/screenshots/Screenshot (50).png" width="280"/></td>
     <td></td>
     <td></td>
   </tr>
