@@ -266,9 +266,9 @@ Ya, setelah perangkat terdaftar dan disetujui. Internet hanya dibutuhkan saat re
 
 Tidak. Semua data diproses secara lokal di komputer pengguna. Server hanya menerima UUID perangkat untuk keperluan aktivasi.
 
-**Apakah aplikasi ini resmi dari Kemenkumham?**
+**Apakah aplikasi ini resmi dari Ditjenpas?**
 
-Tidak. LIBERO adalah alat bantu kerja yang dikembangkan secara mandiri oleh PK Bapas Kelas I Jambi dan tidak berafiliasi dengan Kemenkumham atau Ditjen Pemasyarakatan.
+Tidak. LIBERO adalah alat bantu kerja yang dikembangkan secara mandiri.
 
 **Apakah LIBERO bisa diinstal di banyak komputer?**
 
@@ -276,7 +276,7 @@ Setiap perangkat membutuhkan registrasi tersendiri. Satu UUID hanya berlaku untu
 
 **Bagaimana jika komputer diganti atau diformat?**
 
-Hubungi pengembang untuk memindahkan aktivasi ke perangkat baru.
+Silakan melakukan pendaftaran ulang di perangkat baru melalui aplikasi.
 
 ---
 
