@@ -25,6 +25,7 @@ Dibuat oleh Rinaldi Yudistira Nachrawy
   - [Keamanan Data](#keamanan-data)
   - [Build dari Source](#build-dari-source)
   - [Changelog](#changelog)
+    - [v2.0.2](#v202)
     - [v2.0.1](#v201)
     - [v2.0.0](#v200)
     - [v1.0.0](#v100)
@@ -236,6 +237,15 @@ Script akan otomatis:
 
 ## Changelog
 
+### v2.0.2
+- Data Manager: kelola file kerja langsung dari dalam aplikasi
+- Field teks memanjang otomatis mengikuti isi
+- 4 tema baru: Grandma, Snake, Justin, Queasy
+- Perbaikan mekanisme auto-update
+- Tema diperbarui: Kilpin (menggantikan crimson-dark), Westfalen (menggantikan solar-flare)
+- Kompatibilitas offline: Google Fonts dihapus dari launcher
+- Perbaikan konsistensi warna tema di semua modul
+
 ### v2.0.1
 - Sistem auto-update via GitHub Releases
 - Perbaikan stabilitas autosave
@@ -251,7 +261,7 @@ Script akan otomatis:
 ### v1.0.0
 - Rilis awal
 - Litmas Integrasi dan Litmas Anak
-- Kalkulasi asesmen RRI otomatis
+- Kalkulasi asesmen RRI dan Kriminogenik otomatis
 - Export dokumen `.docx`
 
 ---
@@ -259,24 +269,40 @@ Script akan otomatis:
 ## FAQ
 
 **Apakah aplikasi ini bisa digunakan tanpa internet?**
-
-Ya, setelah perangkat terdaftar dan disetujui. Internet hanya dibutuhkan saat registrasi dan verifikasi aktivasi.
+Ya, setelah perangkat terdaftar dan disetujui. Internet hanya dibutuhkan saat registrasi awal dan verifikasi aktivasi.
 
 **Apakah data litmas klien dikirim ke server?**
+Tidak. Semua data diproses secara lokal di komputer pengguna. Server hanya menerima UUID perangkat untuk keperluan verifikasi aktivasi, bukan data klien.
 
-Tidak. Semua data diproses secara lokal di komputer pengguna. Server hanya menerima UUID perangkat untuk keperluan aktivasi.
+**Apakah file litmas bisa dibuka di komputer lain?**
+File `.docx` hasil export bisa dibuka di mana saja. Tapi file kerja `.lit` hanya bisa dibuka lewat aplikasi LIBERO di perangkat yang terdaftar.
 
-**Apakah aplikasi ini resmi dari Ditjenpas?**
+**Apakah data autosave ikut terenkripsi?**
+Ya, file autosave disimpan dalam format terenkripsi dan tidak bisa dibaca di luar aplikasi.
 
-Tidak. LIBERO adalah alat bantu kerja yang dikembangkan secara mandiri.
+**Apakah ada biaya untuk menggunakan LIBERO?**
+Tidak, LIBERO gratis untuk digunakan oleh PK dan APK di lingkungan Direktorat Jenderal Pemasyarakatan.
+
+**Apakah aplikasi ini resmi dari Kementerian Imigrasi dan Pemasyarakatan/Direktorat Jenderal Pemasyarakatan?**
+Tidak. LIBERO adalah inisiatif mandiri yang belum memiliki afiliasi resmi dengan Kementerian Imigrasi dan Pemasyarakatan maupun Direktorat Jenderal Pemasyarakatan. Namun pengembang terbuka untuk kolaborasi dan pengembangan lebih lanjut bersama pihak yang berwenang.
+
+**Apakah LIBERO bisa dipakai di Windows 7 atau 8?**
+Tidak. LIBERO membutuhkan Windows 10 atau 11 karena bergantung pada WebView2 Runtime yang tidak tersedia di versi Windows lebih lama.
+
+**Kenapa ada pesan "Windows protected your PC" saat pertama dibuka?**
+Karena LIBERO belum memiliki code signing certificate. Klik **More info** lalu **Run anyway** untuk tetap menjalankan aplikasi.
+
+**Apakah LIBERO bisa digunakan offline sepenuhnya setelah aktivasi?**
+Hampir sepenuhnya. Fitur yang tetap membutuhkan internet adalah registrasi TPP via Selenium dan pengecekan update otomatis.
+
+**Berapa lama proses persetujuan registrasi?**
+Tidak ada jaminan waktu pasti, tergantung ketersediaan pengembang. Biasanya diproses dalam 1x24 jam.
 
 **Apakah LIBERO bisa diinstal di banyak komputer?**
-
 Setiap perangkat membutuhkan registrasi tersendiri. Satu UUID hanya berlaku untuk satu perangkat.
 
 **Bagaimana jika komputer diganti atau diformat?**
-
-Silakan melakukan pendaftaran ulang di perangkat baru melalui aplikasi.
+Lakukan pendaftaran ulang di perangkat baru melalui tombol **Daftar Perangkat** di launcher, lalu tunggu persetujuan pengembang.
 
 ---
 
