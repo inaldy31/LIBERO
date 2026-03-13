@@ -121,8 +121,8 @@ Keamanan data rahasia klien dijamin melalui enkripsi fail kerja dan validasi per
   </tr>
   <tr>
     <td><img src="assets/screenshots/Screenshot (50).png" width="280"/></td>
-    <td></td>
-    <td></td>
+    <td><img src="assets/screenshots/Screenshot (53).png" width="280"/></td>
+    <td><img src="assets/screenshots/Screenshot (51).png" width="280"/></td>
   </tr>
 </table>
 
