@@ -280,9 +280,6 @@ File `.docx` hasil export bisa dibuka di mana saja. Tapi file kerja `.lit` hanya
 **Apakah data autosave ikut terenkripsi?**
 Ya, file autosave disimpan dalam format terenkripsi dan tidak bisa dibaca di luar aplikasi.
 
-**Apakah ada biaya untuk menggunakan LIBERO?**
-Tidak, LIBERO gratis untuk digunakan oleh PK dan APK di lingkungan Direktorat Jenderal Pemasyarakatan.
-
 **Apakah aplikasi ini resmi dari Kementerian Imigrasi dan Pemasyarakatan/Direktorat Jenderal Pemasyarakatan?**
 Tidak. LIBERO adalah inisiatif mandiri yang belum memiliki afiliasi resmi dengan Kementerian Imigrasi dan Pemasyarakatan maupun Direktorat Jenderal Pemasyarakatan. Namun pengembang terbuka untuk kolaborasi dan pengembangan lebih lanjut bersama pihak yang berwenang.
 
