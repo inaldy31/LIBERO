@@ -24,8 +24,8 @@ Dibuat oleh Rinaldi Yudistira Nachrawy
   - [Sistem Trial](#sistem-trial)
   - [Keamanan Data](#keamanan-data)
   - [Build dari Source](#build-dari-source)
-  - [Changelog](#changelog)
-    - [v2.0.2](#v202)
+- [Changelog](#changelog)
+  - [v2.0.2](#v202)
     - [v2.0.1](#v201)
     - [v2.0.0](#v200)
     - [v1.0.0](#v100)
@@ -235,17 +235,21 @@ Script akan otomatis:
 
 ---
 
-## Changelog
-
-### v2.0.2
+# Changelog
+ 
+## v2.0.2
+ 
 - Data Manager: kelola file kerja langsung dari dalam aplikasi
 - Field teks memanjang otomatis mengikuti isi
-- 4 tema baru: Grandma, Snake, Justin, Queasy
+- 9 tema baru: Grandma, Snake, Justin, Strauss, Brooks, Harbor, Car Call, Servant, Nastasic
+- Penghapusan tema Queasy dan Vistuco
+- Pembaruan palet tema 9 to 5 (Desert Dusk) dan More Relevant (Rainforest)
 - Perbaikan mekanisme auto-update
 - Tema diperbarui: Kilpin (menggantikan crimson-dark), Westfalen (menggantikan solar-flare)
 - Kompatibilitas offline: Google Fonts dihapus dari launcher
 - Perbaikan konsistensi warna tema di semua modul
 - Litmas Anak: perbaikan fullscreen shortcut, field ganti rugi korban, riwayat pernikahan, Alm. di nama klien, TTD PNG, konfirmasi overwrite, dan berbagai perbaikan narasi dokumen
+ 
 
 ### v2.0.1
 - Sistem auto-update via GitHub Releases
