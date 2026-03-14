@@ -245,6 +245,7 @@ Script akan otomatis:
 - Tema diperbarui: Kilpin (menggantikan crimson-dark), Westfalen (menggantikan solar-flare)
 - Kompatibilitas offline: Google Fonts dihapus dari launcher
 - Perbaikan konsistensi warna tema di semua modul
+- Litmas Anak: perbaikan fullscreen shortcut, field ganti rugi korban, riwayat pernikahan, Alm. di nama klien, TTD PNG, konfirmasi overwrite, dan berbagai perbaikan narasi dokumen
 
 ### v2.0.1
 - Sistem auto-update via GitHub Releases
