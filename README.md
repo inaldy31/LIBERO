@@ -25,6 +25,7 @@ Dibuat oleh Rinaldi Yudistira Nachrawy
   - [Keamanan Data](#keamanan-data)
   - [Build dari Source](#build-dari-source)
 - [Changelog](#changelog)
+  - [v2.0.3](#v203)
   - [v2.0.2](#v202)
     - [v2.0.1](#v201)
     - [v2.0.0](#v200)
@@ -237,6 +238,12 @@ Script akan otomatis:
 
 # Changelog
  
+ 
+## v2.0.3
+
+- Perbaikan antarmuka pada mode jendela
+- Perbaikan bug dan penambahan efek suara
+
 ## v2.0.2
  
 - Data Manager: kelola file kerja langsung dari dalam aplikasi
