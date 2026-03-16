@@ -242,7 +242,11 @@ Script akan otomatis:
 
 ## v2.0.4
 
-- Perbaikan fitur kritis tombol tema
+- Perbaikan kritis tombol tema di kedua fitur
+- Perbaikan beberapa bug paa fitur muat ulang
+- Perbaikan grafik antarmuka (UI)
+- Perbaikan antarmuka pada mode jendela
+- Perbaikan bug dan penambahan efek suara
  
 ## v2.0.3
 
