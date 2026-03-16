@@ -25,6 +25,7 @@ Dibuat oleh Rinaldi Yudistira Nachrawy
   - [Keamanan Data](#keamanan-data)
   - [Build dari Source](#build-dari-source)
 - [Changelog](#changelog)
+  - [v2.0.4](#v204)
   - [v2.0.3](#v203)
   - [v2.0.2](#v202)
     - [v2.0.1](#v201)
@@ -237,7 +238,11 @@ Script akan otomatis:
 ---
 
 # Changelog
- 
+
+
+## v2.0.4
+
+- Perbaikan fitur kritis tombol tema
  
 ## v2.0.3
 
