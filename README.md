@@ -3,7 +3,7 @@
 
 Dibuat oleh Rinaldi Yudistira Nachrawy
 
-> ⚡ Membuat Laporan Litmas lebih cepat, akurat, dan terstandarisasi. Proses manual berjam-jam menjadi otomatis dalam hitungan menit.
+> Membuat Laporan Litmas lebih cepat, akurat, dan terstandarisasi. Proses manual berjam-jam menjadi otomatis dalam hitungan menit.
 
 [![Hak Cipta](https://img.shields.io/badge/HKI-EC00202514424-gold?style=flat-square)](https://dgip.go.id)
 [![Platform](https://img.shields.io/badge/Platform-Windows%2010%2F11-blue?style=flat-square&logo=windows)](https://github.com/inaldy31/LIBERO/releases/latest)
