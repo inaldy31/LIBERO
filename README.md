@@ -3,6 +3,8 @@
 
 Dibuat oleh Rinaldi Yudistira Nachrawy
 
+> ⚡ Membuat Laporan Litmas lebih cepat, akurat, dan terstandarisasi. Proses manual berjam-jam menjadi otomatis dalam hitungan menit.
+
 [![Hak Cipta](https://img.shields.io/badge/HKI-EC00202514424-gold?style=flat-square)](https://dgip.go.id)
 [![Platform](https://img.shields.io/badge/Platform-Windows%2010%2F11-blue?style=flat-square&logo=windows)](https://github.com/inaldy31/LIBERO/releases/latest)
 [![Versi](https://img.shields.io/badge/Versi-2.0.1-brightgreen?style=flat-square)](https://github.com/inaldy31/LIBERO/releases/latest)
@@ -16,6 +18,7 @@ Dibuat oleh Rinaldi Yudistira Nachrawy
 - [LIBERO](#libero)
   - [Daftar Isi](#daftar-isi)
   - [Tentang Aplikasi](#tentang-aplikasi)
+  - [Masalah yang Diselesaikan](#masalah-yang-diselesaikan)
   - [Fitur](#fitur)
   - [Screenshot](#screenshot)
   - [Persyaratan Sistem](#persyaratan-sistem)
@@ -45,6 +48,19 @@ Dibuat oleh Rinaldi Yudistira Nachrawy
 Aplikasi ini mengatasi tantangan efisiensi dan akurasi dalam alur kerja manual dengan menyediakan formulir isian terstruktur, kalkulasi otomatis asesmen Risiko Residivisme Indonesia (RRI) dan Kebutuhan Kriminogenik, serta fitur perangkaian data cerdas menjadi narasi laporan profesional yang diekspor ke format Microsoft Word (`.docx`).
 
 Keamanan data rahasia klien dijamin melalui enkripsi fail kerja dan validasi perangkat berbasis *Hardware ID* (HWID) untuk mencegah penggunaan ilegal.
+
+---
+
+## Masalah yang Diselesaikan
+
+Dalam praktik penyusunan Litmas, sering ditemui:
+
+- Penulisan laporan manual yang menyita waktu dan tenaga
+- Risiko salah hitung pada asesmen RRI dan Kebutuhan Kriminogenik
+- Format laporan yang tidak seragam antar petugas atau UPT
+- Input data yang berulang untuk setiap laporan baru
+
+LIBERO hadir untuk mengatasi hal tersebut dengan otomatisasi kalkulasi, standarisasi format, dan efisiensi alur kerja dari awal hingga ekspor dokumen.
 
 ---
 
@@ -302,7 +318,7 @@ File `.docx` hasil export bisa dibuka di mana saja. Tapi file kerja `.lit` hanya
 Ya, file autosave disimpan dalam format terenkripsi dan tidak bisa dibaca di luar aplikasi.
 
 **Apakah aplikasi ini resmi dari Kementerian Imigrasi dan Pemasyarakatan/Direktorat Jenderal Pemasyarakatan?**
-Tidak. LIBERO murni inisiatif mandiri dari pegawai yang ingin membantu menyederhanakan dan meringankan beban kerja harian. Saat ini aplikasi belum memiliki afiliasi resmi dengan Kementerian Imigrasi dan Pemasyarakatan maupun Direktorat Jenderal Pemasyarakatan, namun pengembang terbuka untuk kolaborasi lebih lanjut.
+LIBERO merupakan inisiatif mandiri yang dikembangkan untuk mendukung efisiensi kerja Pembimbing Kemasyarakatan. Aplikasi ini tidak berafiliasi secara resmi dengan Kementerian Imigrasi dan Pemasyarakatan maupun Direktorat Jenderal Pemasyarakatan, namun dirancang sesuai kebutuhan praktis di lapangan dan terbuka untuk kolaborasi lebih lanjut.
 
 **Apakah LIBERO bisa dipakai di Windows 7 atau 8?**
 Tidak. LIBERO membutuhkan Windows 10 atau 11 karena bergantung pada WebView2 Runtime yang tidak tersedia di versi Windows lebih lama.
