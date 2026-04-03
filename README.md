@@ -7,7 +7,7 @@ Dibuat oleh Rinaldi Yudistira Nachrawy
 
 [![Hak Cipta](https://img.shields.io/badge/HKI-EC00202514424-gold?style=flat-square)](https://dgip.go.id)
 [![Platform](https://img.shields.io/badge/Platform-Windows%2010%2F11-blue?style=flat-square&logo=windows)](https://github.com/inaldy31/LIBERO/releases/latest)
-[![Versi](https://img.shields.io/badge/Versi-2.0.1-brightgreen?style=flat-square)](https://github.com/inaldy31/LIBERO/releases/latest)
+[![Versi](https://img.shields.io/badge/Versi-2.0.6-brightgreen?style=flat-square)](https://github.com/inaldy31/LIBERO/releases/latest)
 [![Trial](https://img.shields.io/badge/Trial-s.d.%2023%20Mei%202026-orange?style=flat-square)](https://github.com/inaldy31/LIBERO/releases/latest)
 ![GitHub release (latest)](https://img.shields.io/github/v/release/inaldy31/LIBERO?style=flat-square&label=Rilis+Terbaru)
 ![Downloads](https://img.shields.io/github/downloads/inaldy31/LIBERO/total?style=flat-square&label=Total+Unduhan)
@@ -28,6 +28,8 @@ Dibuat oleh Rinaldi Yudistira Nachrawy
   - [Keamanan Data](#keamanan-data)
   - [Build dari Source](#build-dari-source)
 - [Changelog](#changelog)
+  - [v2.0.6](#v206)
+  - [v2.0.5](#v205)
   - [v2.0.4](#v204)
   - [v2.0.3](#v203)
   - [v2.0.2](#v202)
@@ -255,6 +257,17 @@ Script akan otomatis:
 
 # Changelog
 
+
+## v2.0.6
+
+- Perbaikan logika asesmen Kebutuhan Kriminogenik: tidak lagi ditampilkan saat RRI rendah dan tidak ada jawaban "Ya" pada Bagian B, C, maupun D (berlaku di tabel dan bagian kesimpulan laporan asesmen)
+- Perbaikan tampilan multi-perkara di halaman sampul Litmas Integrasi: pasal-pasal untuk perkara lebih dari satu kini ditampilkan dengan benar
+
+## v2.0.5
+
+- Fitur multi-perkara: satu klien dapat memiliki lebih dari satu perkara dan pasal (klik **+ Tambah Perkara**) di Litmas Integrasi dan Litmas Anak
+- Fitur pin/tetapkan field: nilai di field tertentu dapat ditetapkan sebagai default untuk laporan berikutnya
+- Perbaikan minor antarmuka dan narasi dokumen
 
 ## v2.0.4
 
