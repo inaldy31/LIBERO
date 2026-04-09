@@ -7,7 +7,7 @@ Dibuat oleh Rinaldi Yudistira Nachrawy
 
 [![Hak Cipta](https://img.shields.io/badge/HKI-EC00202514424-gold?style=flat-square)](https://dgip.go.id)
 [![Platform](https://img.shields.io/badge/Platform-Windows%2010%2F11-blue?style=flat-square&logo=windows)](https://github.com/inaldy31/LIBERO/releases/latest)
-[![Versi](https://img.shields.io/badge/Versi-2.0.6-brightgreen?style=flat-square)](https://github.com/inaldy31/LIBERO/releases/latest)
+[![Versi](https://img.shields.io/badge/Versi-2.1.0-brightgreen?style=flat-square)](https://github.com/inaldy31/LIBERO/releases/latest)
 [![Trial](https://img.shields.io/badge/Trial-s.d.%2023%20Mei%202026-orange?style=flat-square)](https://github.com/inaldy31/LIBERO/releases/latest)
 ![GitHub release (latest)](https://img.shields.io/github/v/release/inaldy31/LIBERO?style=flat-square&label=Rilis+Terbaru)
 ![Downloads](https://img.shields.io/github/downloads/inaldy31/LIBERO/total?style=flat-square&label=Total+Unduhan)
@@ -28,6 +28,7 @@ Dibuat oleh Rinaldi Yudistira Nachrawy
   - [Keamanan Data](#keamanan-data)
   - [Build dari Source](#build-dari-source)
 - [Changelog](#changelog)
+  - [v2.1.0](#v210)
   - [v2.0.6](#v206)
   - [v2.0.5](#v205)
   - [v2.0.4](#v204)
@@ -80,7 +81,7 @@ LIBERO hadir untuk mengatasi hal tersebut dengan otomatisasi kalkulasi, standari
 - **Autosave**: Data tersimpan otomatis setiap 10 detik
 - **21 Pilihan Tema**: Tampilan dapat dikustomisasi sesuai selera
 - **Pintasan Keyboard**: SHIFT+F3 (ubah format huruf), Ctrl+Z/Y, Ctrl+±/scroll (zoom)
-- **Auto-Update**: Notifikasi dan unduhan versi terbaru otomatis dari GitHub Releases *(baru di v2.0.1)*
+- **Auto-Update**: Notifikasi dan unduhan installer versi terbaru dari GitHub Releases *(baru di v2.0.1)*
 - **Sistem Trial**: Berlaku sampai 23 Mei 2026, atau 14 hari sejak pertama dibuka
 - **Registrasi Perangkat**: Sistem aktivasi berbasis UUID perangkat (HWID)
 
@@ -159,18 +160,20 @@ LIBERO hadir untuk mengatasi hal tersebut dengan otomatisasi kalkulasi, standari
 | RAM | Minimal 4 GB |
 | Storage | Minimal 200 MB |
 
-> **Catatan:** Python **tidak perlu** diinstall di PC target. Semua dependensi sudah dibundle di dalam file `.exe`.
+> **Catatan:** Python **tidak perlu** diinstall di PC target. Semua dependensi sudah dibundle di dalam paket instalasi.
 
 ---
 
 ## Instalasi & Penggunaan
 
-1. Salin file `LIBERO.exe` ke lokasi yang diinginkan
-2. Jalankan `LIBERO.exe`
-3. Jika WebView2 Runtime belum terinstall, akan muncul jendela instalasi otomatis, tunggu hingga selesai
-4. Saat pertama kali dibuka, layar pembuka dengan *progress bar* akan muncul, tunggu hingga penuh
+1. Unduh installer `Setup_LIBERO_v<versi>.exe` dari GitHub Releases
+2. Jalankan installer dan ikuti langkahnya
+3. Buka LIBERO dari Start Menu atau shortcut Desktop
+4. Jika WebView2 Runtime belum terinstall, akan muncul instalasi otomatis, tunggu hingga selesai
 5. Pada pembukaan pertama, masa trial dimulai secara otomatis
 6. Daftarkan perangkat via tombol **Daftar Perangkat** di launcher agar dapat terus digunakan setelah trial berakhir
+
+> **Catatan pengguna lama:** Jika masih memakai `LIBERO.exe` (onefile), jalankan sekali untuk migrasi otomatis ke versi installer.
 
 ---
 
@@ -222,12 +225,13 @@ LIBERO dirancang dengan prinsip perlindungan data klien:
 **Prasyarat:**
 - Python 3.11+ dengan virtual environment (`.venv`)
 - Semua dependensi terinstall di `.venv`
+- Inno Setup 6 (ISCC.exe) untuk membuat installer
 
 **Langkah build:**
 
 ```powershell
 # Jalankan dari root project
-.\build_LIBERO.ps1
+.\scripts\build_LIBERO.ps1
 ```
 
 Script akan otomatis:
@@ -235,8 +239,9 @@ Script akan otomatis:
 2. Mengecek dan menginstall PyInstaller, pywebview, dan Pillow jika belum ada
 3. Mengunduh WebView2 Bootstrapper jika belum ada di folder `archive\`
 4. Memvalidasi semua file yang dibutuhkan
-5. Menjalankan PyInstaller dengan konfigurasi lengkap
-6. Membuka folder `dist\` jika build berhasil
+5. Menjalankan PyInstaller (mode onedir) dengan konfigurasi lengkap
+6. Membuat installer `Setup_LIBERO_v<versi>.exe` via Inno Setup
+7. Membuka folder `dist\` jika build berhasil
 
 **Dependensi utama:**
 
@@ -256,6 +261,15 @@ Script akan otomatis:
 ---
 
 # Changelog
+
+
+## v2.1.0
+
+- Distribusi diganti ke installer (Setup_*.exe) untuk startup lebih cepat
+- Auto-update sekarang mengunduh dan menjalankan installer
+- Migrasi otomatis dari `LIBERO.exe` (onefile) lama ke installer
+- Optimasi loading awal: patch HTML di background + cache
+- Validasi perangkat dilakukan di background setelah launcher tampil
 
 
 ## v2.0.6
@@ -372,7 +386,7 @@ Lakukan pendaftaran ulang di perangkat baru melalui tombol **Daftar Perangkat** 
 > Pastikan semua field wajib sudah diisi. Field yang belum diisi ditandai merah **(BELUM DIISI)** pada dokumen hasil.
 
 **Aplikasi lambat saat pertama dibuka**
-> Normal, proses ekstraksi file dari dalam exe membutuhkan waktu beberapa detik pada pembukaan pertama.
+> Jika masih menggunakan versi onefile lama, pembukaan pertama bisa agak lambat karena proses ekstraksi. Versi installer sudah lebih cepat.
 
 **Autosave tidak berfungsi**
 > Autosave berjalan setiap 10 detik setelah ada perubahan data. Pastikan aplikasi tidak ditutup paksa.
