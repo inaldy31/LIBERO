@@ -8,4 +8,5 @@ pycryptodome
 tkcalendar
 lxml
 requests
+google-genai
 pyinstaller
