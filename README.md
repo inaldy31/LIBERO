@@ -7,7 +7,7 @@ Dibuat oleh Rinaldi Yudistira Nachrawy
 
 [![Hak Cipta](https://img.shields.io/badge/HKI-EC00202514424-gold?style=flat-square)](https://dgip.go.id)
 [![Platform](https://img.shields.io/badge/Platform-Windows%2010%2F11-blue?style=flat-square&logo=windows)](https://github.com/inaldy31/LIBERO/releases/latest)
-[![Versi](https://img.shields.io/badge/Versi-2.1.0-brightgreen?style=flat-square)](https://github.com/inaldy31/LIBERO/releases/latest)
+[![Versi](https://img.shields.io/badge/Versi-2.2.0-brightgreen?style=flat-square)](https://github.com/inaldy31/LIBERO/releases/latest)
 [![Trial](https://img.shields.io/badge/Trial-s.d.%2023%20Mei%202026-orange?style=flat-square)](https://github.com/inaldy31/LIBERO/releases/latest)
 ![GitHub release (latest)](https://img.shields.io/github/v/release/inaldy31/LIBERO?style=flat-square&label=Rilis+Terbaru)
 ![Downloads](https://img.shields.io/github/downloads/inaldy31/LIBERO/total?style=flat-square&label=Total+Unduhan)
@@ -28,6 +28,7 @@ Dibuat oleh Rinaldi Yudistira Nachrawy
   - [Keamanan Data](#keamanan-data)
   - [Build dari Source](#build-dari-source)
 - [Changelog](#changelog)
+  - [v2.2.0](#v220)
   - [v2.1.0](#v210)
   - [v2.0.6](#v206)
   - [v2.0.5](#v205)
@@ -262,6 +263,11 @@ Script akan otomatis:
 
 # Changelog
 
+
+## v2.2.0
+
+- **Fitur Baru: Stopper Partner (AI PDF Extractor)**. Menggunakan teknologi kecerdasan buatan (*Artificial Intelligence*) untuk membaca, mengekstrak, dan memproses dokumen PDF pendukung (seperti BAP, Putusan Pengadilan, BA-8, dll) secara otomatis. Data hasil ekstraksi kini akan disuntikkan secara cerdas langsung ke dalam *field* formulir Litmas Anda tanpa lewat ketik manual.
+- Menyediakan fleksibilitas konfigurasi model AI secara agnostik (dapat mengakomodasi Google Gemini, Anthropic, maupun sistem OpenAI).
 
 ## v2.1.0
 
