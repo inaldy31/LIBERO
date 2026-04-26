@@ -7,7 +7,7 @@ Dibuat oleh Rinaldi Yudistira Nachrawy
 
 [![Hak Cipta](https://img.shields.io/badge/HKI-EC00202514424-gold?style=flat-square)](https://dgip.go.id)
 [![Platform](https://img.shields.io/badge/Platform-Windows%2010%2F11-blue?style=flat-square&logo=windows)](https://github.com/inaldy31/LIBERO/releases/latest)
-[![Versi](https://img.shields.io/badge/Versi-2.2.0-brightgreen?style=flat-square)](https://github.com/inaldy31/LIBERO/releases/latest)
+[![Versi](https://img.shields.io/badge/Versi-2.2.1-brightgreen?style=flat-square)](https://github.com/inaldy31/LIBERO/releases/latest)
 [![Trial](https://img.shields.io/badge/Trial-s.d.%2023%20Mei%202026-orange?style=flat-square)](https://github.com/inaldy31/LIBERO/releases/latest)
 ![GitHub release (latest)](https://img.shields.io/github/v/release/inaldy31/LIBERO?style=flat-square&label=Rilis+Terbaru)
 ![Downloads](https://img.shields.io/github/downloads/inaldy31/LIBERO/total?style=flat-square&label=Total+Unduhan)
@@ -28,6 +28,7 @@ Dibuat oleh Rinaldi Yudistira Nachrawy
   - [Keamanan Data](#keamanan-data)
   - [Build dari Source](#build-dari-source)
 - [Changelog](#changelog)
+  - [v2.2.1](#v221)
   - [v2.2.0](#v220)
   - [v2.1.0](#v210)
   - [v2.0.6](#v206)
@@ -263,6 +264,15 @@ Script akan otomatis:
 
 # Changelog
 
+
+## v2.2.1
+
+- **Fitur Baru: Stopper AI Pencarian Perkara**. Kemampuan kecerdasan buatan untuk menelusuri dan mengekstrak data perkara klien secara otomatis langsung dari *database* pengadilan melalui WebView2 terintegrasi, dilengkapi dengan mekanisme *fallback bypass* untuk proteksi anti-bot Cloudflare.
+- **Fitur Baru: Stopper AI Audio-to-Chronology**. Mengonversi rekaman suara atau file audio impor (hasil wawancara klien) secara otomatis menjadi teks narasi kronologi kejadian tindak pidana yang terstruktur menggunakan eksekusi AI multi-model.
+- **Stabilitas & Performa Audio (Chunked IPC)**: Pembaruan sistem transfer memori untuk pemrosesan file audio berukuran raksasa guna mencegah *crash* (WebView2) dan lonjakan RAM (*RAM spike*).
+- **Konsistensi Antarmuka (UI)**: Standarisasi desain seluruh varian tombol Stopper agar terintegrasi sempurna dengan variabel tema *glassmorphism* bawaan aplikasi.
+- **Perbaikan Autosave**: Penyelesaian isu (*bug fix*) di mana data tautan rekaman audio sebelumnya terlewatkan saat siklus penyimpanan otomatis (*autosave*) berjalan.
+- **Optimasi Startup**: Waktu muat awal aplikasi (*loading*) dipercepat secara masif melalui mekanisme *background preload* modul tersembunyi.
 
 ## v2.2.0
 
