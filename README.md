@@ -5,7 +5,7 @@ Dibuat oleh Rinaldi Yudistira Nachrawy
 
 [![Hak Cipta](https://img.shields.io/badge/HKI-EC00202514424-gold?style=flat-square)](https://dgip.go.id)
 [![Platform](https://img.shields.io/badge/Platform-Windows%2010%2F11-blue?style=flat-square&logo=windows)](https://github.com/inaldy31/LIBERO/releases/latest)
-[![Versi](https://img.shields.io/badge/Versi-2.2.1-brightgreen?style=flat-square)](https://github.com/inaldy31/LIBERO/releases/latest)
+[![Versi](https://img.shields.io/badge/Versi-2.2.4-brightgreen?style=flat-square)](https://github.com/inaldy31/LIBERO/releases/latest)
 [![Trial](https://img.shields.io/badge/Trial-s.d.%2023%20Mei%202026-orange?style=flat-square)](https://github.com/inaldy31/LIBERO/releases/latest)
 ![GitHub release (latest)](https://img.shields.io/github/v/release/inaldy31/LIBERO?style=flat-square&label=Rilis+Terbaru)
 ![Downloads](https://img.shields.io/github/downloads/inaldy31/LIBERO/total?style=flat-square&label=Total+Unduhan)
@@ -26,6 +26,9 @@ Dibuat oleh Rinaldi Yudistira Nachrawy
   - [Keamanan Data](#keamanan-data)
   - [Build dari Source](#build-dari-source)
 - [Changelog](#changelog)
+  - [v2.2.4](#v224)
+  - [v2.2.3](#v223)
+  - [v2.2.2](#v222)
   - [v2.2.1](#v221)
   - [v2.2.0](#v220)
   - [v2.1.0](#v210)
@@ -262,6 +265,37 @@ Script akan otomatis:
 
 # Changelog
 
+
+## v2.2.4
+
+- **Konsumsi RAM jauh lebih ringan**: Tab Litmas Integrasi dan Litmas Anak sekarang dibuka secara bertahap, sehingga aplikasi tidak langsung memuat seluruh form sekaligus dan penggunaan RAM menjadi lebih hemat.
+- **Form lebih ringan dan tidak mudah lag**: Bagian form yang sedang tidak digunakan dapat dilepas sementara dari tampilan, sehingga aplikasi tetap lebih responsif saat mengisi Litmas yang panjang.
+- **Data tetap aman saat disimpan atau diselesaikan**: Saat menyimpan, mengecek kolom kosong, atau membuat dokumen, semua tab tetap ikut dibaca meskipun sedang tidak terbuka.
+- **Muat ulang form lebih rapi**: Tombol muat ulang sekarang lebih konsisten membersihkan isian, tetapi tetap menjaga field yang sudah dipin sebagai default.
+- **Preview audio lebih ringan**: File audio di Data Manager sekarang bisa diputar dengan cara yang lebih ringan, terutama untuk file rekaman berukuran besar.
+- **Installer diperbarui**: File pendukung untuk peningkatan performa sudah dimasukkan ke paket build dan installer.
+- **Pembersihan memori lebih baik**: Aplikasi lebih aktif membersihkan memori setelah modul form tidak digunakan, sehingga pemakaian RAM lebih terkendali saat aplikasi dipakai lama.
+
+## v2.2.3
+
+- **Stopper AI pengisian dokumen lebih stabil**: Pemilihan dan pemrosesan dokumen pendukung diperbaiki, termasuk saat pengguna hanya memilih satu file.
+- **Data keluarga dan pasangan lebih akurat**: Data dari Kartu Keluarga lebih baik terbaca, termasuk pengisian otomatis data suami/istri, status pernikahan, dan jenis kelamin klien.
+- **Kronologi dari Stopper AI lebih lengkap**: Narasi kronologi kini lebih baik membaca pidana denda, subsider, dan bagian putusan lain yang sebelumnya bisa terlewat.
+- **Pencarian perkara lebih kuat**: Pencarian data perkara dibuat lebih mudah menyesuaikan berbagai sumber, alamat situs, dan halaman yang memiliki proteksi.
+- **Pemilih file diperbaiki**: Jendela pemilih file lebih stabil saat dipakai dari Litmas Integrasi maupun Litmas Anak.
+- **Pesan error lebih jelas**: Jika pemilih file belum siap atau gagal dibuka, aplikasi memberi notifikasi yang lebih mudah dipahami.
+- **Reset data TPP lebih bersih**: Data pendaftaran TPP, screenshot, tabel, dan input file ikut dibersihkan dengan benar saat form dimuat ulang.
+- **AI lebih hati-hati membaca pasangan**: AI diperbaiki agar tidak keliru membaca kata BIN/BINTI sebagai data pasangan, dan lebih bisa membedakan pasangan klien dari pasangan penjamin.
+
+## v2.2.2
+
+- **Stopper AI Pencarian Perkara**: Aplikasi bisa membantu mencari dan mengambil data perkara klien secara otomatis dari sumber pengadilan melalui browser bawaan.
+- **Stopper AI Audio-to-Chronology**: Rekaman wawancara atau file audio dapat diubah menjadi narasi kronologi tindak pidana yang lebih rapi.
+- **Stopper AI Narrative-to-Chronology**: Catatan mentah, teks acak, atau draf bebas dapat dirapikan menjadi kronologi yang siap dipakai.
+- **Proses audio besar lebih stabil**: Pengiriman data audio dibuat bertahap agar aplikasi tidak mudah berat atau crash saat memproses rekaman besar.
+- **Autosave audio diperbaiki**: Data dan tautan file rekaman audio lebih aman tersimpan saat autosave berjalan.
+- **Aplikasi lebih cepat dibuka**: Proses persiapan awal dibuat berjalan di latar belakang agar aplikasi terasa lebih cepat saat mulai digunakan.
+- **Tampilan tombol Stopper dirapikan**: Tombol dan elemen Stopper dibuat lebih seragam dengan tema aplikasi.
 
 ## v2.2.1
 
