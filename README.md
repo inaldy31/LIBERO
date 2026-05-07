@@ -8,7 +8,7 @@ Dibuat oleh Rinaldi Yudistira Nachrawy
 [![Versi](https://img.shields.io/badge/Versi-2.2.5-brightgreen?style=flat-square)](https://github.com/inaldy31/LIBERO/releases/latest)
 [![Trial](https://img.shields.io/badge/Trial-s.d.%2023%20Mei%202026-orange?style=flat-square)](https://github.com/inaldy31/LIBERO/releases/latest)
 ![GitHub release (latest)](https://img.shields.io/github/v/release/inaldy31/LIBERO?style=flat-square&label=Rilis+Terbaru)
-![Downloads](https://img.shields.io/github/downloads/inaldy31/LIBERO/total?style=flat-square&label=Total+Unduhan)
+[![Total Unduhan](https://img.shields.io/github/downloads/inaldy31/LIBERO/total.svg?style=flat-square&label=Total%20Unduhan&logo=github)](https://github.com/inaldy31/LIBERO/releases)
 
 ---
 
