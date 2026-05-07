@@ -5,7 +5,7 @@ Dibuat oleh Rinaldi Yudistira Nachrawy
 
 [![Hak Cipta](https://img.shields.io/badge/HKI-EC00202514424-gold?style=flat-square)](https://dgip.go.id)
 [![Platform](https://img.shields.io/badge/Platform-Windows%2010%2F11-blue?style=flat-square&logo=windows)](https://github.com/inaldy31/LIBERO/releases/latest)
-[![Versi](https://img.shields.io/badge/Versi-2.2.4-brightgreen?style=flat-square)](https://github.com/inaldy31/LIBERO/releases/latest)
+[![Versi](https://img.shields.io/badge/Versi-2.2.5-brightgreen?style=flat-square)](https://github.com/inaldy31/LIBERO/releases/latest)
 [![Trial](https://img.shields.io/badge/Trial-s.d.%2023%20Mei%202026-orange?style=flat-square)](https://github.com/inaldy31/LIBERO/releases/latest)
 ![GitHub release (latest)](https://img.shields.io/github/v/release/inaldy31/LIBERO?style=flat-square&label=Rilis+Terbaru)
 ![Downloads](https://img.shields.io/github/downloads/inaldy31/LIBERO/total?style=flat-square&label=Total+Unduhan)
@@ -26,6 +26,7 @@ Dibuat oleh Rinaldi Yudistira Nachrawy
   - [Keamanan Data](#keamanan-data)
   - [Build dari Source](#build-dari-source)
 - [Changelog](#changelog)
+  - [v2.2.5](#v225)
   - [v2.2.4](#v224)
   - [v2.2.3](#v223)
   - [v2.2.2](#v222)
@@ -265,6 +266,18 @@ Script akan otomatis:
 
 # Changelog
 
+
+## v2.2.5
+
+- **Fitur baru: Ambil Data Wilayah**. Form Litmas Integrasi dan Litmas Anak kini dapat mengambil data wilayah dari alamat klien/penjamin, mencocokkan Provinsi, Kab/Kota, Kecamatan, sampai Desa/Kelurahan melalui Wilayah.id, lalu menyusun rekomendasi kondisi lingkungan sosial budaya dengan bantuan BPS WebAPI dan AI.
+- **Pencocokan alamat wilayah lebih kuat**: Alamat tanpa koma seperti `Desa ... Kecamatan ... Kabupaten ... Provinsi ...` kini lebih tepat dibaca sampai level desa/kelurahan dan kecamatan, termasuk nama kecamatan yang mengandung kata `Kota`.
+- **Preview Data Wilayah sebelum diterapkan**: Hasil wilayah, sumber data, status rekomendasi, dan Catatan AI ditampilkan di jendela preview terlebih dahulu sebelum pengguna memilih data yang akan diterapkan ke form.
+- **Perbaikan lazy tab untuk progress dan Data TPP**: Progress ring di sidenav dan proses muat Data TPP sekarang memastikan tab tersembunyi sudah siap dibaca, sehingga data dari tab yang belum dibuka tidak terlewat.
+- **Stopper AI PDF lebih aman untuk multi-tab**: Ekstraksi PDF memastikan seluruh tab form siap sebelum membaca field dan sebelum mengisi hasil AI, sehingga pengisian lintas tab tetap berjalan walaupun tab belum pernah dibuka.
+- **Loading Stopper AI diperbarui**: Semua proses Stopper AI memakai loading yang seragam dengan ring progress, animasi logo breathe/pulse, dan label `STOPPER AI` tanpa tambahan nama proses.
+- **Kursor saat loading diperbaiki**: Overlay loading tidak lagi membuat kursor Windows ikut berputar.
+- **Stopper AI Kronologi Integrasi diperbaiki**: Nomor putusan/perkara dari pencarian perkara lebih konsisten terisi otomatis, termasuk saat mengambil kronologi dari hasil perkara.
+- **Teks pencarian perkara dirapikan**: Label dan pesan pencarian dibuat lebih netral tanpa tambahan istilah yang tidak perlu.
 
 ## v2.2.4
 
