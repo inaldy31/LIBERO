@@ -30,6 +30,49 @@
   var restoringAll = false;
   var resetInProgress = false;
 
+  function preserveActiveScroll() {
+    var main = document.querySelector('.main');
+    var top = main ? main.scrollTop : null;
+    var active = document.activeElement;
+    var tag = active && active.tagName;
+    var isField = tag && /^(INPUT|TEXTAREA|SELECT)$/.test(tag);
+    var selection = null;
+
+    if (!main || !isField || !main.contains(active)) {
+      return function () { };
+    }
+
+    try {
+      if (typeof active.selectionStart === 'number') {
+        selection = {
+          start: active.selectionStart,
+          end: active.selectionEnd,
+          dir: active.selectionDirection
+        };
+      }
+    } catch (_) { }
+
+    return function restore() {
+      try {
+        if (main && top != null) main.scrollTop = top;
+        if (active && document.contains(active)) {
+          active.focus({ preventScroll: true });
+          if (selection && typeof active.setSelectionRange === 'function') {
+            active.setSelectionRange(selection.start, selection.end, selection.dir || 'none');
+          }
+          if (main && top != null) main.scrollTop = top;
+        }
+      } catch (_) { }
+    };
+  }
+
+  function restoreSoon(restore) {
+    if (typeof restore !== 'function') return;
+    restore();
+    setTimeout(restore, 0);
+    if (typeof requestAnimationFrame === 'function') requestAnimationFrame(restore);
+  }
+
   function safe(fn, fallback) {
     try { return fn(); } catch (e) {
       try { console.warn('[lazy-tabs]', e); } catch (_) { }
@@ -90,6 +133,18 @@
     });
   }
 
+  function activeIndexSet() {
+    if (typeof window.__LIBERO_ACTIVE_TAB_INDEXES !== 'function') return null;
+    var arr = safe(function () { return window.__LIBERO_ACTIVE_TAB_INDEXES(); }, null);
+    if (!Array.isArray(arr)) return null;
+    var set = {};
+    arr.forEach(function (idx) {
+      idx = toIdx(idx);
+      if (idx >= 0) set[idx] = true;
+    });
+    return set;
+  }
+
   function postMount(idx) {
     setTimeout(function () {
       runCommonRefresh();
@@ -97,13 +152,23 @@
   }
 
   function runCommonRefresh() {
-    safe(function () { if (typeof window.updateProgress === 'function') window.updateProgress(); });
-    safe(function () { if (typeof window.updateTabRings === 'function') window.updateTabRings(); });
-    safe(function () { if (typeof window.updateAccHeaderRings === 'function') window.updateAccHeaderRings(); });
+    var restore = preserveActiveScroll();
+    var progressUpdated = false;
+    safe(function () {
+      if (typeof window.updateProgress === 'function') {
+        window.updateProgress();
+        progressUpdated = true;
+      }
+    });
+    if (!progressUpdated) {
+      safe(function () { if (typeof window.updateTabRings === 'function') window.updateTabRings(); });
+      safe(function () { if (typeof window.updateAccHeaderRings === 'function') window.updateAccHeaderRings(); });
+    }
     safe(function () { if (typeof window.updateLitmasInfo === 'function') window.updateLitmasInfo(); });
     safe(function () { if (typeof window.updateClockPetugas === 'function') window.updateClockPetugas(); });
     safe(function () { if (typeof window.toggleRekomendasiUI === 'function') window.toggleRekomendasiUI(); });
     safe(function () { if (typeof window.syncKesimpulanCDVisibility === 'function') window.syncKesimpulanCDVisibility(); });
+    restoreSoon(restore);
   }
 
   function installEventFallbacks() {
@@ -116,7 +181,6 @@
         runCommonRefresh();
       }, 0);
     }
-    document.addEventListener('input', schedule, true);
     document.addEventListener('change', schedule, true);
   }
 
@@ -169,12 +233,14 @@
   }
 
   function prepareAllMounted(delay) {
+    var restore = preserveActiveScroll();
     holdAllMounted();
     return new Promise(function (resolve) {
       requestAnimationFrame(function () {
         safe(function () { if (typeof window._resizeFinp === 'function') window._resizeFinp(); });
         collectMounted();
         releaseAllMounted(delay == null ? 1500 : delay);
+        restoreSoon(restore);
         resolve();
       });
     });
@@ -252,13 +318,17 @@
   function patchCollectors() {
     var originalCollect = window.collectAllTabs;
     window.collectAllTabs = function () {
+      var restore = preserveActiveScroll();
       holdAllMounted();
       collectMounted();
       var out = {};
+      var activeSet = activeIndexSet();
       eachPanel(function (idx) {
+        if (activeSet && !activeSet[idx]) return;
         if (dataCache[idx] && typeof dataCache[idx] === 'object') Object.assign(out, dataCache[idx]);
       });
       releaseAllMounted(1500);
+      restoreSoon(restore);
       if (!Object.keys(out).length && typeof originalCollect === 'function') {
         return safe(function () { return originalCollect(); }, {});
       }
@@ -272,12 +342,14 @@
 
     var originalValidate = window.validateAllTabs;
     window.validateAllTabs = function () {
+      var restore = preserveActiveScroll();
       holdAllMounted();
       var miss = [];
       if (typeof originalValidate === 'function') {
         miss = safe(function () { return originalValidate(); }, []) || [];
       }
       releaseAllMounted(1500);
+      restoreSoon(restore);
       return Array.isArray(miss) ? miss : [];
     };
   }

@@ -1,0 +1,2030 @@
+ 
+ 
+ 
+ 
+ 
+i 
+ 
+HALAMAN SAMPUL 
+ 
+
+
+ 
+ii 
+ 
+ 
+ 
+
+
+ 
+ 
+ 
+ 
+ 
+iii 
+ 
+KATA PENGANTAR 
+ 
+Puji syukur kehadirat Tuhan Yang Maha Esa, 
+Buku panduan ini hadir sebagai bagian dari upaya pengembang untuk memastikan aplikasi 
+LIBERO (Litmas Berbasis Elektronik, Ringkas dan Optimal) dapat dimanfaatkan secara 
+optimal oleh setiap pengguna. Inovasi berbasis teknologi informasi merupakan langkah 
+nyata dalam mendukung transformasi digital tugas dan fungsi Pemasyarakatan, khususnya 
+dalam penyusunan Laporan Penelitian Kemasyarakatan (Litmas) yang lebih efisien, akurat, 
+dan terstandar.  
+Penyusunan Laporan Penelitian Kemasyarakatan (Litmas) secara manual, baik 
+untuk program integrasi maupun Litmas Anak, seringkali dihadapkan pada tantangan 
+efisiensi dan potensi kesalahan manusia (human error), terutama dalam kalkulasi asesmen 
+RRI dan Kebutuhan Kriminogenik. Beban kerja ini semakin meningkat seiring dengan telah 
+diberlakukannya KUHP baru pada tahun 2026.  
+Aplikasi LIBERO dikembangkan sebagai solusi konkret untuk menjawab tantangan 
+tersebut. Dengan fitur input data terstruktur, kalkulasi asesmen otomatis, standardisasi 
+format laporan ke Microsoft Word, serta mekanisme keamanan data melalui enkripsi dan 
+validasi HWID, LIBERO bertujuan mentransformasi alur kerja menjadi lebih efisien, akurat, 
+terstandar, dan aman. Saat ini, aplikasi mencakup penyusunan Litmas Program Integrasi 
+untuk klien dewasa dan Litmas Anak.  
+Panduan ini disusun secara bertahap dan menyeluruh, mulai dari proses pendaftaran 
+perangkat, pengisian data, penggunaan fitur otomatisasi, hingga langkah menghasilkan 
+laporan akhir. Semoga panduan ini memudahkan setiap pengguna dalam memaksimalkan 
+seluruh fitur yang tersedia. 
+Kepada seluruh Pejabat Fungsional Pembimbing Kemasyarakatan (PK) dan Asisten 
+Pembimbing Kemasyarakatan (APK) selaku pengguna aplikasi ini, penulis berharap agar 
+buku panduan ini dapat menjadi pedoman yang praktis dan bermanfaat. Kritik serta saran 
+yang membangun sangat terbuka demi penyempurnaan aplikasi dan panduan ini ke depan. 
+Semoga aplikasi LIBERO dan panduannya ini memberikan manfaat yang sebesar-
+besarnya bagi peningkatan kualitas Laporan Penelitian Kemasyarakatan. Selamat bekerja. 
+ 
+ 
+Jambi, Maret 2026 
+Pengembang, 
+ 
+ 
+ 
+Rinaldi Yudistira Nachrawy 
+
+
+ 
+iv 
+ 
+ 
+URAIAN SINGKAT APLIKASI  
+ 
+LIBERO (Litmas Berbasis Elektronik, Ringkas dan Optimal) adalah aplikasi desktop mandiri 
+untuk sistem operasi Windows yang dirancang sebagai solusi teknis untuk penyusunan 
+Laporan Penelitian Kemasyarakatan (Litmas) Program Integrasi dan Litmas Anak bagi 
+Pembimbing Kemasyarakatan dan Asisten Pembimbing Kemasyarakatan. Aplikasi ini 
+secara langsung mengatasi tantangan efisiensi dan akurasi dalam alur kerja manual dengan 
+menyediakan formulir isian terstruktur yang meniadakan proses pengetikan ulang, serta fitur 
+kalkulasi otomatis asesmen Risiko Residivisme Indonesia (RRI) dan Kebutuhan 
+Kriminogenik untuk menghilangkan risiko salah hitung. Lebih lanjut, aplikasi ini mampu 
+merangkai data secara cerdas menjadi narasi laporan yang profesional dan mengekspor 
+hasilnya ke format Microsoft Word (.docx/.doc) yang standar. Untuk menunjang efisiensi, 
+pengguna dapat menyimpan progres pekerjaan melalui fail kerja terenkripsi yang hanya 
+bisa dibuka kembali oleh aplikasi, serta membuat templat data berulang untuk mempercepat 
+pembuatan laporan baru. Keamanan data rahasia klien menjadi prioritas utama, yang 
+dijamin melalui enkripsi fail dan validasi perangkat berbasis Hardware ID (HWID) untuk 
+mencegah penggunaan ilegal. Saat ini, cakupan aplikasi meliputi Litmas Program Integrasi 
+untuk Klien Dewasa dan Litmas Anak. 
+ 
+ 
+
+
+ 
+ 
+ 
+ 
+ 
+v 
+ 
+ 
+DAFTAR ISI 
+ 
+HALAMAN SAMPUL............................................................................................................ i 
+KATA PENGANTAR .......................................................................................................... iii 
+URAIAN SINGKAT APLIKASI ........................................................................................... iv 
+DAFTAR ISI ......................................................................................................................... v 
+I. PENDAHULUAN .............................................................................................................. 1 
+II. PENDAFTARAN PERANGKAT BARU ........................................................................... 2 
+A. Buka Formulir Pendaftaran ....................................................................................... 2 
+B. Isi Data Pendaftaran ................................................................................................. 2 
+C. Kirim Kode ke Pengembang ..................................................................................... 2 
+D. Jalankan di Perangkat yang Telah Terdaftar ............................................................ 3 
+III. KEAMANAN, FITUR UTAMA, PINTASAN KEYBOARD, DAN SARAN PRAKTIS ....... 3 
+A. Koneksi Internet ........................................................................................................ 3 
+B. Validasi dan Kerahasiaan Data ................................................................................. 4 
+C. Tombol Aksi Utama .................................................................................................. 5 
+D. Fitur Universal dan Pintasan Keyboard .................................................................... 7 
+E. Fitur Pengingat untuk Melacak Kolom Kosong ......................................................... 9 
+F. Penanganan Data Kosong pada Laporan Akhir ........................................................ 9 
+G. Fitur Tetapkan Data ................................................................................................ 10 
+H. Fitur Penyimpanan Otomatis .................................................................................. 11 
+I. Fitur Pembaruan Otomatis (Auto-Update) ................................................................ 11 
+J. Tema Tampilan ........................................................................................................ 13 
+IV. CARA MENJALANKAN APLIKASI ............................................................................. 16 
+V. MENGISI DATA UMUM ................................................................................................ 17 
+A. Data UPT (Unit Pelaksana Teknis) ......................................................................... 17 
+B. Data Surat Dinas (Opsional) ................................................................................... 19 
+C. Halaman Sampul Litmas ......................................................................................... 20 
+VI. MENGISI PENDAHULUAN .......................................................................................... 21 
+VII. MENGISI IDENTITAS KLIEN, KELUARGA, DAN PENJAMIN/WALI ........................ 22 
+A. Data Klien ............................................................................................................... 22 
+B. Data Ayah, Ibu, Suami/Istri, Penjamin, dan Wali ..................................................... 25 
+C. Susunan Keluarga .................................................................................................. 26 
+
+
+ 
+vi 
+ 
+VIII. MENGISI RIWAYAT HIDUP DAN PERKEMBANGAN KLIEN .................................. 28 
+A. Riwayat Kelahiran, Pertumbuhan, dan Perkembangan Klien.................................. 28 
+B. Riwayat Pendidikan ................................................................................................ 29 
+C. Riwayat Tingkah Laku Klien .................................................................................... 31 
+D. Riwayat Pernikahan Klien ....................................................................................... 33 
+IX. MENGISI KONDISI KLIEN ANAK ............................................................................... 33 
+A. Status dan Kondisi Klien Anak ................................................................................ 33 
+B. Kemandirian dan Relasi Sosial ............................................................................... 34 
+X. MENGISI KONDISI PENJAMIN/ORANG TUA/WALI ................................................... 35 
+A. Riwayat Pernikahan Penjamin/Orang Tua/Wali ...................................................... 35 
+B. Relasi dalam Keluarga ............................................................................................ 36 
+C. Relasi dengan Masyarakat ..................................................................................... 36 
+D. Pekerjaan dan Keadaan Ekonomi .......................................................................... 36 
+XI. MENGISI KONDISI LINGKUNGAN SOSIAL BUDAYA ............................................... 38 
+A. Relasi Sosial Antar Anggota Masyarakat ................................................................ 38 
+B. Kondisi Sosial, Budaya, dan Lingkungan ................................................................ 38 
+XII. MENGISI RIWAYAT (DUGAAN) TINDAK PIDANA ................................................... 40 
+A. Latar Belakang Tindak Pidana ................................................................................ 40 
+B. Kronologis ............................................................................................................... 40 
+C. Keadaan Korban dan Tanggapan Korban .............................................................. 41 
+D. Akibat Tindak Pidana Terhadap Klien, Orang Tua/Keluarga, dan Masyarakat ....... 41 
+XIII. MENGISI TANGGAPAN BERBAGAI PIHAK ............................................................ 41 
+A. Tanggapan Klien ..................................................................................................... 42 
+B. Tanggapan Keluarga Klien...................................................................................... 42 
+C. Tanggapan Pihak Korban ....................................................................................... 42 
+D. Tanggapan Masyarakat .......................................................................................... 43 
+E. Tanggapan Pemerintah Setempat .......................................................................... 43 
+XIV. MENGISI EVALUASI PERKEMBANGAN PEMBINAAN KLIEN DI LAPAS ............. 43 
+A. Evaluasi Pelaksanaan Program Admisi, Orientasi, dan Observasi ......................... 43 
+B. Tahapan Pembinaan ............................................................................................... 43 
+C. Program Pembinaan Kepribadian dan Program Pembinaan Kemandirian ............. 44 
+D. Relasi Sosial Klien Selama di Dalam Lapas ........................................................... 44 
+XV. MENGISI HASIL/REKOMENDASI ASESMEN ........................................................... 45 
+A. Asesmen Risiko Residivisme Indonesia (RRI) ........................................................ 46 
+
+
+ 
+ 
+ 
+ 
+ vii 
+ 
+B. Asesmen Kebutuhan Kriminogenik ......................................................................... 47 
+C. Opsi Laporan Asesmen .......................................................................................... 49 
+XVI. MENGISI PELAKSANAAN DIVERSI ........................................................................ 50 
+A. Syarat Formil Diversi ............................................................................................... 50 
+B. Persetujuan Korban ................................................................................................ 50 
+XVII. MENGISI ANALISIS ................................................................................................. 50 
+XVIII. MENGISI KESIMPULAN DAN REKOMENDASI ..................................................... 52 
+A. Kesimpulan ............................................................................................................. 52 
+B. Rekomendasi .......................................................................................................... 53 
+C. Pendaftaran TPP Secara Daring (Khusus Balai Pemasyarakatan Kelas I Jambi) .. 54 
+XIX. MENGISI BAGIAN PENUTUP ................................................................................... 56 
+A. Tanda Tangan Petugas........................................................................................... 56 
+B. Lampirkan Dokumentasi ......................................................................................... 56 
+C. Langkah Terakhir: Menghasilkan Dokumen............................................................ 57 
+D. Langkah Final Sebelum Mengirim Laporan Penelitian Kemasyarakatan ................ 58 
+XX. PENUTUP ................................................................................................................... 58 
+ 
+ 
+ 
+
+
+ 
+viii 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+ 
+ 
+ 
+ 
+ 
+1 
+ 
+ 
+PANDUAN PENGGUNAAN APLIKASI LIBERO 
+(LITMAS BERBASIS ELEKTRONIK RINGKAS DAN OPTIMAL) 
+ 
+I. PENDAHULUAN 
+Seiring dengan meningkatnya jumlah permohonan penelitian kemasyarakatan, baik untuk 
+Program Integrasi maupun Litmas Anak, beban kerja penyusunan Laporan Penelitian 
+Kemasyarakatan (Litmas) secara manual menjadi semakin berat dan tidak lagi efektif. 
+Proses yang mengandalkan pengetikan ulang tidak hanya memakan waktu yang lama, 
+tetapi juga sangat rentan terhadap human error seperti kesalahan pengetikan, inkonsistensi 
+format, dan yang paling krusial, kesalahan kalkulasi pada asesmen RRI dan Kebutuhan 
+Kriminogenik. Hal ini berisiko menurunkan kualitas Laporan Penelitian Kemasyarakatan, 
+menyebabkan bias pada kategori risiko klien, dan memperlambat pemenuhan hak klien 
+pemasyarakatan. Selain itu, ketergantungan pada proses manual berbasis kertas juga 
+menimbulkan inefisiensi sumber daya, mulai dari biaya operasional ATK (alat tulis kantor) 
+hingga risiko kehilangan atau kerusakan dokumen fisik. 
+Tantangan ini semakin krusial dengan telah diberlakukannya Undang-Undang Nomor 
+1 Tahun 2023 tentang Kitab Undang-Undang Hukum Pidana (KUHP baru) secara efektif 
+pada 2 Januari 2026. KUHP baru ini membawa perubahan fundamental dengan 
+mengedepankan pidana alternatif, yang secara langsung menciptakan lonjakan 
+eksponensial beban kerja bagi Pejabat Fungsional Pembimbing Kemasyarakatan (PK) dan 
+Asisten Pembimbing Kemasyarakatan (APK). Sistem kerja manual yang ada dinilai tidak 
+memadai untuk menghadapi peningkatan beban kerja masif tersebut. 
+Untuk menjawab tantangan operasional saat ini dan tantangan strategis ke depan, 
+aplikasi LIBERO (Litmas Berbasis Elektronik Ringkas dan Optimal) dirancang sebagai 
+solusi teknis yang komprehensif. Tujuannya adalah untuk mentransformasi alur kerja 
+manual yang lambat dan berisiko menjadi sebuah alur kerja yang terstruktur, efisien, akurat, 
+dan terstandar. Aplikasi ini saat ini mencakup penyusunan Litmas program integrasi bagi 
+klien dewasa dan Litmas Anak. Semua instrumen di dalamnya, termasuk asesmen, 
+mengikuti standar penilaian yang berlaku untuk masing-masing jenis Litmas. Ke depan, 
+cakupan aplikasi dapat diperluas untuk jenis Litmas lain sesuai kebutuhan dan ketentuan 
+yang berlaku, setelah dilakukan penyesuaian pada instrumen, Standar Kualitas Hasil Kerja, 
+dan templat Laporan Penelitian Kemasyarakatan. 
+Buku panduan ini disusun untuk menjadi pedoman operasional dalam memanfaatkan 
+seluruh fitur aplikasi secara maksimal. Panduan ini akan membedah setiap fitur secara 
+mendalam, mulai dari Input Data Terstruktur yang menghilangkan proses pengetikan ulang; 
+Kalkulasi Asesmen Otomatis yang menjamin akurasi skor; Standardisasi Laporan Akhir 
+yang menjamin konsistensi format; hingga Mekanisme Keamanan Berlapis yang melindungi 
+data rahasia klien melalui enkripsi fail dan validasi perangkat (HWID). 
+Dengan memanfaatkan panduan ini, pengguna diharapkan dapat menghasilkan 
+laporan Litmas yang tidak hanya cepat dan efisien, tetapi juga memiliki tingkat akurasi, 
+konsistensi, dan kualitas yang jauh lebih tinggi, sejalan dengan amanat transformasi digital 
+yang dicanangkan oleh pemerintah. 
+
+
+ 
+2 
+ 
+II. PENDAFTARAN PERANGKAT BARU 
+Aplikasi LIBERO dilengkapi dengan masa percobaan (trial) selama 14 hari sejak pertama 
+kali dijalankan. Selama masa trial, aplikasi dapat digunakan secara penuh tanpa perlu 
+mendaftar terlebih dahulu. Setelah masa trial berakhir dan perangkat belum terdaftar, 
+aplikasi akan menampilkan pesan bahwa masa trial telah habis, lalu secara otomatis 
+menghapus file aplikasi (LIBERO.exe) dari perangkat sebagai mekanisme keamanan.  
+ 
+Oleh karena itu, pengguna sangat disarankan untuk melakukan pendaftaran sebelum masa 
+trial berakhir. Prosedur pendaftaran dilakukan langsung dari dalam aplikasi sebagai berikut. 
+ 
+A. Buka Formulir Pendaftaran 
+Saat masa trial habis, aplikasi akan secara otomatis menampilkan formulir pendaftaran. 
+Pengguna juga dapat membuka formulir ini kapan saja melalui tombol 'Daftar Perangkat' 
+di halaman utama aplikasi. Kode UUID perangkat akan terdeteksi secara otomatis oleh 
+aplikasi. 
+ 
+B. Isi Data Pendaftaran 
+Lengkapi formulir yang tersedia dengan data diri pengguna, meliputi nama, NIP, jabatan, 
+kantor wilayah, dan UPT. Setelah semua data terisi, klik tombol kirim. Aplikasi akan 
+mengirimkan data beserta kode UUID perangkat kepada pengembang secara otomatis. 
+     
+ 
+C. Kirim Kode ke Pengembang 
+Setelah pendaftaran berhasil dikirim, status perangkat akan menjadi 'menunggu 
+persetujuan'. Pengembang akan melakukan verifikasi bahwa pendaftar adalah Pejabat 
+Fungsional 
+Pembimbing 
+Kemasyarakatan 
+(PK) 
+atau 
+Asisten 
+Pembimbing 
+
+
+ 
+ 
+ 
+ 
+ 
+3 
+ 
+Kemasyarakatan (APK). Pengguna akan mendapat konfirmasi setelah pengembang 
+memberikan persetujuan. 
+ 
+D. Jalankan di Perangkat yang Telah Terdaftar 
+Setelah mendapat konfirmasi persetujuan dari pengembang, buka kembali aplikasi 
+LIBERO. Aplikasi akan berjalan secara normal. 
+ 
+III. KEAMANAN, FITUR UTAMA, PINTASAN KEYBOARD, DAN SARAN PRAKTIS 
+Bab ini adalah bagian paling penting untuk dipahami sebelum memulai pengisian data. 
+Bagian ini menjelaskan cara kerja keamanan aplikasi, fungsi tombol-tombol utama, 
+pintasan keyboard yang tersedia, serta fitur-fitur pendukung lainnya.  
+A. Koneksi Internet 
+Aplikasi LIBERO tidak memerlukan koneksi internet untuk digunakan sehari-hari. Seluruh 
+proses pengisian data, kalkulasi asesmen, simpan/muat fail kerja, hingga menghasilkan 
+dokumen laporan Word, semuanya dapat berjalan sepenuhnya secara luring (offline). 
+Koneksi internet hanya diperlukan untuk empat hal berikut: 
+
+
+ 
+4 
+ 
+Fitur 
+Keterangan 
+Pendaftaran perangkat 
+Mengirim data pendaftaran ke server pengembang 
+Verifikasi token di latar 
+belakang 
+Memperbarui status izin perangkat secara berkala 
+Pengecekan pembaruan 
+Memeriksa ketersediaan versi terbaru aplikasi 
+Mengunduh pembaruan 
+Mengunduh fail LIBERO.exe versi terbaru 
+ 
+B. Validasi dan Kerahasiaan Data 
+Aplikasi ini dibangun dengan fondasi keamanan yang kuat untuk melindungi data sensitif 
+yang akan dikelola. 
+1. Kerahasiaan Data dan Mencegah Penyalahgunaan 
+Aplikasi ini dirancang dengan kesadaran penuh bahwa Laporan Penelitian 
+Kemasyarakatan (Litmas) adalah dokumen yang mengandung informasi sensitif dan 
+bersifat Rahasia. Karena di dalamnya tercatat data pribadi klien dan keluarga, maka 
+setiap pengguna memegang amanah besar untuk menjaga integritas dan kerahasiaan 
+data tersebut. Fitur keamanan di bawah ini adalah wujud dari komitmen tersebut. 
+2. Sistem Verifikasi Perangkat 
+Untuk memastikan aplikasi hanya digunakan oleh pihak yang berwenang, setiap 
+perangkat harus terdaftar dan terverifikasi oleh pengembang. Aplikasi menggunakan 
+sistem kunci digital berbasis HWID (Hardware ID), yaitu kode unik yang dihasilkan dari 
+identitas perangkat keras komputer. 
+a. Pemeriksaan Saat Aplikasi Dibuka 
+Setiap kali dibuka, aplikasi akan membaca HWID komputer pengguna, lalu 
+memeriksa apakah terdapat token izin (lbtoken.dat) yang valid dan sesuai di 
+perangkat. Jika token ditemukan dan valid, aplikasi langsung berjalan normal tanpa 
+memerlukan koneksi internet sama sekali. 
+b. Verifikasi Online di Latar Belakang 
+Setelah aplikasi berjalan, pembaruan status izin dilakukan secara daring ke server 
+pengembang di latar belakang. Proses ini sepenuhnya tidak mengganggu aktivitas 
+pengguna dan akan dilewati otomatis jika tidak ada koneksi internet. Fungsinya 
+adalah memperbarui token lokal agar tetap mutakhir, serta mendeteksi apabila 
+status perangkat berubah. 
+c. Hasil 
+Jika perangkat terdaftar dan token valid, aplikasi akan berjalan normal. Jika 
+perangkat tidak terdaftar, masa trial telah berakhir, atau status dinonaktifkan oleh 
+pengembang, aplikasi akan menampilkan pesan pemberitahuan. Selanjutnya, file 
+formulir pendaftaran berisi UUID perangkat akan disalin secara otomatis ke Desktop 
+pengguna, dan program LIBERO.exe akan terhapus dari perangkat sebagai 
+mekanisme pencegahan penggunaan ilegal. 
+ 
+
+
+ 
+ 
+ 
+ 
+ 
+5 
+ 
+C. Tombol Aksi Utama 
+Setelah jenis pengerjaan litmas dipilih dari menu dan jendela pengisian data terbuka, 
+seluruh tombol aksi dapat diakses melalui tombol Aksi yang berada di bilah atas (topbar) 
+layar. Klik tombol tersebut untuk membuka panel berisi enam tombol kendali. 
+                                           
+                               
+1. Tombol "Keluar" 
+Menutup aplikasi sepenuhnya dan kembali ke Desktop. Akan muncul dialog konfirmasi 
+sebelum aplikasi benar-benar ditutup. 
+ 
+ 
+2. Tombol "Kembali" 
+Menutup modul yang sedang aktif dan kembali ke halaman utama Launcher, tanpa 
+menutup keseluruhan aplikasi. 
+ 
+3. Tombol "Muat Ulang" 
+Mengosongkan semua data yang sudah diisi di sesi pengerjaan saat ini. Akan muncul 
+dialog konfirmasi sebelum data benar-benar dikosongkan. 
+
+
+ 
+6 
+ 
+ 
+4. Tombol "Simpan Data" 
+a. Fungsi 
+Menyimpan semua progres pengerjaan ke dalam sebuah fail kerja. Fitur ini bekerja 
+sepenuhnya secara luring. 
+b. Nama Fail Otomatis 
+Aplikasi akan menyarankan nama fail dengan format: Data Litmas [Nama Klien] 
+bin/binti [Nama Ayah], menyesuaikan jenis kelamin klien secara otomatis. Fail 
+tersimpan di folder Dokumen → Data LIBERO → [Nama Modul] secara default. 
+ 
+c. Catatan Kerahasiaan 
+Fail kerja ini terenkripsi dan berekstensi .lit, sehingga tidak dapat dibaca oleh 
+program lain seperti Notepad. Fail ini hanya dapat dibuka kembali melalui aplikasi 
+LIBERO. 
+ 
+5. Tombol "LANJUTKAN DATA" 
+Membuka fail kerja (.lit) yang sudah disimpan sebelumnya. Setelah fail dipilih, seluruh 
+kolom pada aplikasi akan terisi secara otomatis sesuai hasil pengisian terakhir. Fitur 
+ini bekerja sepenuhnya secara luring.  
+
+
+ 
+ 
+ 
+ 
+ 
+7 
+ 
+ 
+6. Tombol "SELESAIKAN" 
+a. Fungsi:  
+Membuat dokumen laporan Litmas final dalam format Microsoft Word (.docx atau 
+.doc). Fitur ini bekerja sepenuhnya secara luring. 
+b. Nama Fail Otomatis: 
+Litmas [Jenis Program] [Nama Klien] bin/binti [Nama Ayah].docx/.doc sesuai 
+dengan jenis kelamin klien. 
+ 
+D. Fitur Universal dan Pintasan Keyboard 
+Fitur berikut dapat digunakan di kolom isian mana pun untuk mempercepat pekerjaan. 
+1. Mengubah Format Teks 
+Mengubah format huruf pada teks (besar/kecil/judul) tanpa mengetik ulang. Setiap kali 
+ditekan pintasan keyboard SHIFT+F3, formatnya akan berubah: teks biasa → TEKS 
+KAPITAL → teks kecil → Teks Judul. 
+ 
+ 
+ 
+2. Undo & Redo 
+Membatalkan (Ctrl + Z) atau mengembalikan (Ctrl + Y) aksi pengetikan terakhir. 
+3. Salin & Tempel (Copy & Paste) 
+Menyalin dan menempelkan teks dengan cara menggunakan pintasan keyboard 
+Ctrl+C dan Ctrl+V. 
+
+
+ 
+8 
+ 
+4. Memperbesar/Memperkecil Tampilan (Zoom In/Zoom Out) 
+Jika tulisan pada aplikasi terasa terlalu kecil atau terlalu besar, pengguna dapat 
+menyesuaikan ukuran huruf agar lebih nyaman dibaca dengan tiga cara: 
+a. Ikok +/-: Klik ikon  +  dan  -  yang berada di pojok kanan bawah jendela aplikasi. 
+ 
+b. Pintasan Keyboard: Tekan Ctrl dan tombol + atau = untuk memperbesar; Ctrl dan 
+tombol − untuk memperkecil; Ctrl+0 untuk mereset zoom ke 100% 
+c. Pintasan Mouse: Tahan tombol Ctrl sambil menggulirkan scroll wheel mouse ke 
+atas (memperbesar) atau ke bawah (memperkecil). 
+5. Navigasi Antar Tab 
+Berpindah antar tab pengisian data menggunakan tombol ◀ dan ▶ di panel bawah 
+layar, atau dengan pintasan keyboard Ctrl+← dan Ctrl+→. 
+ 
+6. Panel Navigasi Samping (Side Navigation) 
+Di sisi kiri layar terdapat panel navigasi samping yang memuat daftar seluruh tab 
+pengisian. Setiap item menampilkan nama tab beserta indikator progres berbentuk 
+lingkaran di sisinya yang terisi secara proporsional seiring bertambahnya kolom yang 
+diisi. Di bagian bawah panel terdapat progress bar keseluruhan beserta 
+persentasenya, menunjukkan total kelengkapan pengisian dari seluruh tab sekaligus. 
+Klik salah satu item untuk langsung berpindah ke tab yang dimaksud. Panel ini dapat 
+disembunyikan atau ditampilkan kembali dengan mengklik tombol ◀ di sudut kiri atas 
+panel. Menyembunyikan panel berguna untuk memperluas area isian, terutama pada 
+layar yang lebih kecil. 
+     
+     
+ 
+7. Layar Penuh (Fullscreen) 
+Tekan F11 untuk masuk ke mode layar penuh. Tekan F11 kembali atau Esc untuk 
+keluar dari mode layar penuh. 
+
+
+ 
+ 
+ 
+ 
+ 
+9 
+ 
+E. Fitur Pengingat untuk Melacak Kolom Kosong 
+Sebelum membuat dokumen akhir, aplikasi memiliki fitur pengingat otomatis untuk 
+membantu melacak setiap kolom yang mungkin terlewat atau belum diisi. Saat tombol 
+"Selesaikan" diklik, aplikasi akan terlebih dahulu memindai seluruh tab. Jika ditemukan 
+ada kolom yang masih kosong, sebuah jendela konfirmasi akan muncul, menampilkan 
+daftar rinci semua kolom yang belum terisi lengkap dengan nama tab dan bagiannya. 
+Fitur ini bekerja sepenuhnya secara luring. 
+ 
+Di jendela peringatan ini, terdapat dua pilihan: 
+1. Jika memilih 'Tidak' 
+Proses pembuatan dokumen akan dibatalkan dan memberikan kesempatan untuk 
+kembali dan melengkapi data yang terlewat pada daftar yang ditampilkan. 
+2. Jika memilih 'Ya' 
+Proses akan tetap dilanjutkan, dan dokumen Word akan dibuat. Setiap kolom yang 
+kosong tersebut akan ditandai dengan tulisan (BELUM DIISI) berwarna merah tebal 
+yang akan dijelaskan pada bagian fitur selanjutnya. 
+F. Penanganan Data Kosong pada Laporan Akhir 
+Kemudian salah satu fitur penting dari aplikasi ini adalah kemampuan untuk secara 
+otomatis menandai data yang belum diisi pada dokumen Word yang dihasilkan. Jika ada 
+kolom isian di dalam aplikasi yang dikosongkan atau tidak diisi, maka pada saat menekan 
+tombol "SELESAIKAN", aplikasi akan memberikan tanda di laporan akhir. 
+
+
+ 
+10 
+ 
+ 
+Sebagai gantinya, aplikasi akan secara otomatis menuliskan teks BELUM DIISI. Fitur ini 
+berfungsi sebagai pengingat visual yang sangat jelas, memudahkan proses riviu dan 
+koreksi untuk memastikan tidak ada informasi penting yang terlewat sebelum laporan 
+final diserahkan. 
+G. Fitur Tetapkan Data 
+Karena banyak data yang akan selalu sama untuk setiap laporan yang dibuat (seperti 
+nama UPT, alamat, nama petugas, dan lain-lain), aplikasi menyediakan fitur Tetapkan 
+Data untuk menyimpan nilai suatu kolom secara permanen sebagai nilai bawaan 
+(default). Dengan fitur ini, pengguna tidak perlu mengisi ulang data tersebut setiap kali 
+membuat laporan baru. Fitur ini bekerja sepenuhnya secara luring. 
+1. Cara Menetapkan Data 
+Di bagian Data Umum, beberapa kolom memiliki tombol ✓ di sisinya. Isi kolom 
+tersebut dengan data yang diinginkan, lalu klik tombol ✓. Tombol akan berubah 
+tampilan dan judulnya menjadi "Sudah Ditetapkan" sebagai penanda bahwa nilai 
+kolom tersebut telah disimpan. Kolom-kolom yang dapat ditetapkan antara lain: Kantor 
+Wilayah, Nama UPT, Alamat UPT, Laman UPT, Nama Kepala UPT, Kode Surat UPT, 
+Nama Petugas, NIP Petugas, dan Jabatan. 
+2. Cara Kerja 
+Nilai yang ditetapkan disimpan langsung ke pengaturan aplikasi di perangkat. Setiap 
+kali modul dibuka kembali, termasuk saat memulai laporan baru yang benar-benar 
+kosong. Kolom-kolom yang sudah ditetapkan akan terisi secara otomatis. Nilai yang 
+ditetapkan juga akan selalu dipertahankan saat memuat fail kerja (.lit), sehingga kolom 
+tersebut tidak pernah tertimpa oleh data lama dari fail yang dibuka. 
+3. Cara Melepas Penetapan 
+Klik kembali tombol ✓ pada kolom yang sudah ditetapkan untuk melepasnya. Tombol 
+akan kembali ke tampilan semula dengan judul "Tetapkan", dan kolom tersebut tidak 
+akan lagi terisi otomatis saat aplikasi dibuka. 
+ 
+
+
+ 
+ 
+ 
+ 
+ 
+11 
+ 
+ 
+H. Fitur Penyimpanan Otomatis 
+1. Penjelasan Fitur Simpan Otomatis (AutoSave) 
+Aplikasi dilengkapi fitur Simpan Otomatis (AutoSave) untuk membantu mencegah 
+hilangnya data apabila terjadi keadaan yang tidak diinginkan, misalnya aplikasi 
+tertutup secara tiba-tiba, listrik padam, atau komputer melakukan mulai ulang. Selama 
+Petugas mengisi data, aplikasi akan menyimpan kemajuan pengisian secara otomatis 
+setiap 10 detik ke dalam fail sementara terenkripsi di komputer. Status dan waktu 
+terakhir simpan otomatis dapat dipantau pada keterangan Autosave di panel bawah 
+layar. Penyimpanan ini bersifat sementara dan bukan merupakan penyimpanan arsip, 
+sehingga Petugas tetap wajib menekan tombol Simpan Data setelah seluruh 
+pengisian selesai. Fitur ini bekerja sepenuhnya secara luring. 
+2. Cara Kerja Pemulihan Data Terakhir (AutoLoad) 
+Pada saat aplikasi dibuka kembali, sistem akan memeriksa apakah masih terdapat 
+data terakhir yang belum sempat disimpan. Apabila terdapat data tersebut, akan 
+muncul konfirmasi “Lanjutkan Data Terakhir?”. 
+a. Pilih Ya, apabila Petugas ingin melanjutkan pengisian dari data terakhir tersebut. 
+b. Pilih Tidak, apabila Petugas ingin mengabaikan data terakhir dan memulai pengisian 
+dari awal. 
+ 
+Setelah Petugas berhasil menekan SIMPAN DATA, data sementara ini akan 
+dibersihkan secara otomatis sehingga konfirmasi pemulihan tidak muncul lagi pada 
+saat aplikasi dibuka berikutnya. 
+I. Fitur Pembaruan Otomatis (Auto-Update) 
+Fitur ini memerlukan koneksi internet. 
+1. Cara Kerja Pengecekan Versi 
+Setiap kali aplikasi dibuka, aplikasi secara otomatis memeriksa ketersediaan versi 
+terbaru melalui repositori resmi pengembang. Proses pengecekan ini berjalan di latar 
+
+
+ 
+12 
+ 
+belakang dan tidak mengganggu aktivitas pengguna. Apabila tidak ada koneksi 
+internet, pengecekan ini dilewati secara otomatis tanpa pesan error. Apabila ditemukan 
+versi yang lebih baru, sebuah notifikasi "Update Tersedia" akan muncul di layar menu 
+beserta informasi nomor versi terbaru. 
+ 
+2. Cara Melakukan Pembaruan 
+Pada notifikasi yang muncul, terdapat dua pilihan: 
+a. Klik tombol "⬇ Update ke v[nomor versi]" untuk memulai proses unduhan seketika. 
+Progress bar akan muncul menampilkan persentase unduhan secara real-time. 
+Setelah unduhan selesai, aplikasi akan menutup diri secara otomatis untuk 
+menerapkan pembaruan. 
+b. Klik tombol "Nanti saja" untuk menutup notifikasi dan melanjutkan penggunaan versi 
+saat ini. Notifikasi akan muncul kembali pada sesi berikutnya selama versi terbaru 
+belum dipasang. 
+ 
+3. Catatan Penting Setelah Pembaruan 
+Setelah aplikasi menutup diri untuk menerapkan pembaruan, tunggu sekitar 2 menit 
+sebelum mencoba membuka kembali LIBERO.exe. Waktu ini diperlukan agar proses 
+penggantian file aplikasi selesai sepenuhnya. Membuka aplikasi terlalu cepat sebelum 
+proses selesai dapat menyebabkan aplikasi gagal terbuka. 
+ 
+
+
+ 
+ 
+ 
+ 
+ 13 
+ 
+J. Tema Tampilan 
+Aplikasi LIBERO menyediakan pilihan tema tampilan untuk menyesuaikan warna dan 
+nuansa antarmuka sesuai preferensi pengguna. Fitur ini bekerja sepenuhnya secara 
+luring dan pilihan tema tersimpan secara permanen di pengaturan perangkat, serta 
+diterapkan secara konsisten ke seluruh jenis pengerjaan Litmas yang tersedia. 
+1. Cara Mengganti Tema 
+Tema dapat diganti di dua tempat: 
+a. Di menu utama, klik tombol ikon palet di pojok kiri bawah layar. Sebuah panel akan 
+muncul ke atas menampilkan seluruh pilihan tema dalam susunan grid. Klik salah 
+satu untuk langsung menerapkannya. Tema yang sedang aktif ditampilkan dengan 
+latar yang lebih terang dan teks yang lebih tebal. Klik di luar panel atau klik kembali 
+ikon palet untuk menutupnya. 
+ 
+b. Saat sedang mengerjakan Litmas, klik tombol berlabel nama tema yang sedang 
+aktif di panel bawah layar, tepatnya di sebelah kiri tombol zoom. Panel pilihan tema 
+akan muncul dengan cara kerja yang sama seperti di menu utama. 
+ 
+
+
+ 
+14 
+ 
+2. Daftar Tema yang Tersedia 
+Aplikasi saat ini menyediakan 28 pilihan tema: Standar, Blau, Weekday, 9 to 5, Future, 
+Omni, More Relevant, Screwdriver, Ceremonial, Pentahelix, Corona, Jason, Banyan 
+Tree, Preorder, College, Clown, Bucharest, Strauss, Brooks, Harbor, Car Call, Servant, 
+Nastasic, Kilpin, Westfalen, Grandma, Snake, dan Justin. 
+     
+ 
+      
+     
+  
+     
+     
+  
+
+
+ 
+ 
+ 
+ 
+ 15 
+ 
+     
+ 
+ 
+ 
+     
+ 
+ 
+ 
+     
+ 
+
+
+ 
+16 
+ 
+ 
+ 
+     
+ 
+     
+  
+     
+ 
+IV. CARA MENJALANKAN APLIKASI 
+Cari file aplikasi LIBERO di komputer, yang bernama LIBERO.exe atau LIBERO dengan 
+lambang aplikasi, kemudian klik dua kali untuk menjalankannya. 
+Jika pertama kali dijalankan di komputer baru, aplikasi akan terlebih dahulu memeriksa 
+apakah komponen Microsoft WebView2 Runtime sudah terpasang. Komponen ini 
+diperlukan agar aplikasi dapat berjalan. Apabila belum terpasang, jendela "Instalasi 
+Komponen" akan muncul secara otomatis disertai progress bar dan proses instalasi akan 
+berjalan sendiri. Tunggu hingga selesai, lalu buka kembali LIBERO.exe. 
+Setelah komponen siap, aplikasi akan menampilkan layar pembuka (splash screen) 
+yang memuat logo LIBERO, animasi lingkaran, dot loader, teks "Memuat..." yang berganti 
+dalam beberapa bahasa secara bergantian, serta indikator progres berbentuk busur yang 
+
+
+ 
+ 
+ 
+ 
+ 17 
+ 
+terisi dari 0% hingga 100%. Setelah penuh, layar akan menampilkan animasi gerbang yang 
+menutup lalu terbuka, kemudian menu utama siap digunakan. 
+ 
+Saat kembali dari jenis pengerjaan Litmas ke menu utama, animasi gerbang yang 
+sama akan muncul kembali secara singkat sebelum menu utama ditampilkan. 
+V. MENGISI DATA UMUM 
+Bagian Data Umum adalah langkah pertama dalam pembuatan laporan. Bagian ini 
+berisi semua informasi yang akan digunakan untuk membuat kop surat, halaman sampul, 
+dan surat dinas. Kolom-kolom yang memiliki tombol ✓ di sisinya dapat ditetapkan sebagai 
+nilai bawaan permanen menggunakan fitur Tetapkan Data yang dijelaskan pada Bab 
+III.G.Bagian ini terbagi menjadi tiga bagian utama: Data UPT, Opsi Menambahkan Surat 
+Dinas, dan Halaman Cover. 
+A. Data UPT (Unit Pelaksana Teknis) 
+Bagian ini identik di kedua jenis pengerjaan Litmas. Digunakan untuk mengisi identitas 
+UPT yang akan tercetak pada kop surat resmi. 
+ 
+1. Kantor Wilayah 
+Untuk kolom 'Kantor Wilayah', pilih nama Kantor Wilayah dari daftar yang tersedia. 
+Pilihan ini akan secara otomatis ditampilkan pada kop surat dan digunakan untuk 
+membentuk kode Kanwil pada penomoran surat resmi.  
+
+
+ 
+18 
+ 
+ 
+2. Nama UPT 
+Untuk kolom 'Nama UPT', isikan nama Unit Pelaksana Teknis secara lengkap (contoh: 
+Balai Pemasyarakatan Kelas I Wakanda). Nama yang diisikan ini akan secara otomatis 
+dicetak tebal dan kapital sebagai identitas utama UPT pada kop surat dan di beberapa 
+bagian lain. 
+3. Alamat UPT 
+Untuk kolom 'Alamat UPT', isikan alamat lengkap UPT. Alamat ini akan tercetak di 
+bawah nama UPT pada kop surat. Pengguna juga dapat menggunakan tombol Enter 
+untuk membuat baris baru. 
+4. Laman dan Email UPT 
+Untuk kolom 'Laman UPT' dan 'Email UPT', isikan alamat situs web dan email resmi 
+UPT. Kedua informasi ini akan tercetak pada baris kontak di kop surat (contoh: 
+bapaswakanda.go.id & bapaswakanda@forever.go.id). 
+5. Tanggal Surat Litmas 
+Untuk kolom 'Tanggal Surat Litmas', isikan tanggal resmi penerbitan laporan. 
+Pengisian dapat dilakukan dengan dua cara, yaitu dengan mengklik ikon kalender atau 
+mengetik/menempelkan tanggal secara manual dengan format Hari-Bulan-Tahun (DD-
+MM-YYYY). Aplikasi dapat menerima berbagai pemisah (separator) seperti -, /, atau . 
+(contoh: 24-09-2025). Tanggal yang diisikan ini akan menjadi tanggal resmi yang 
+tercetak pada surat dinas dan halaman penutup laporan. 
+ 
+ 
+
+
+ 
+ 
+ 
+ 
+ 19 
+ 
+6. Nama Kepala UPT 
+Untuk kolom 'Nama Kepala UPT', isikan nama lengkap Kepala UPT. Nama ini akan 
+tercetak pada bagian tanda tangan, baik di surat dinas maupun di bagian 
+penandatanganan Litmas. 
+Data yang telah diisi pada bagian di atas akan secara otomatis disusun oleh aplikasi 
+menjadi format kop surat dan bagian penandatanganan. 
+ 
+ 
+B. Data Surat Dinas (Opsional) 
+Bagian ini bersifat opsional. pengguna hanya perlu mengisinya jika laporan Litmas yang 
+dibuat akan disertai dengan surat dinas resmi. 
+1. Tambahkan Halaman Surat Dinas 
+Kolom ini berfungsi untuk mengontrol apakah halaman surat dinas akan dibuat atau 
+tidak di dalam laporan akhir. Pilih 'Ya' untuk mengaktifkan dan menyertakan halaman 
+surat dinas, atau pilih 'Tidak' jika tidak diperlukan. 
+ 
+2. Nomor Surat Litmas (Hanya Nomor Akhir Saja) 
+Untuk kolom 'Nomor Surat Litmas', isikan hanya nomor urut terakhir dari surat. Aplikasi 
+akan secara otomatis melengkapi format WP.[KodeKanwil]-[KodeUPT].PK.06.01-
+[Nomor]. Sebagai contoh, jika nomor surat lengkap adalah WP.46-PAS.44.PK.06.01-
+1234, cukup ketik 1234 di kolom ini. 
+3. Kode Surat UPT 
+Untuk kolom 'Kode Surat UPT', isikan kode unik UPT yang biasa digunakan untuk 
+melengkapi format nomor surat otomatis (contoh: PAS.1). Kolom ini dapat 
+dikosongkan jika tidak ada.  
+4. Tembusan Pengadilan dan Tembusan Kejaksaan (Khusus Litmas Anak) 
+Dua kolom ini hanya tersedia pada Litmas Anak. Isikan nama instansi pengadilan dan 
+kejaksaan yang akan menerima tembusan surat dinas. Kedua kolom bersifat opsional. 
+ 
+
+
+ 
+20 
+ 
+C. Halaman Sampul Litmas 
+Bagian ini berisi informasi yang akan ditampilkan di halaman sampul laporan. Sebagian 
+besar isian pada bagian ini sama di kedua jenis pengerjaan Litmas, kecuali pada kolom 
+pertama. 
+ 
+1. Program 
+Pada Litmas Integrasi, kolom ini bernama Program. Pilih jenis program dari daftar: 
+Integrasi Pembebasan Bersyarat, Integrasi Cuti Bersyarat, Pelimpahan Integrasi 
+Pembebasan Bersyarat, atau Pelimpahan Integrasi Cuti Bersyarat. 
+Jika dipilih salah satu opsi Pelimpahan, beberapa perubahan otomatis terjadi: 
+kolom Tujuan Pelimpahan muncul dan wajib diisi; kolom Nomor Telepon Penjamin 
+akan muncul di tab Identitas sesuai pilihan penjamin; kolom Tanggal Wawancara 
+Penjamin di tab Pendahuluan disembunyikan; serta tab Kondisi Penjamin dan 
+Lingkungan Sosial Budaya disembunyikan karena tidak relevan untuk laporan 
+pelimpahan. 
+ 
+Pada Litmas Anak, kolom ini bernama Jenis Litmas. Pilih salah satu dari dua opsi 
+yang tersedia yaitu Diversi atau Sidang Anak. 
+ 
+2. Nama Petugas 
+Untuk kolom 'Nama Petugas', isikan nama lengkap Pembimbing Kemasyarakatan 
+(PK) atau Asisten Pembimbing Kemasyarakatan (APK). Nama ini akan tercetak 
+sebagai pembuat laporan di halaman sampul dan di bagian penandatanganan Litmas. 
+3. NIP Petugas 
+Untuk kolom 'NIP Petugas', isikan Nomor Induk Pegawai (NIP). NIP ini akan tercetak 
+di bawah nama petugas pada halaman sampul. 
+
+
+ 
+ 
+ 
+ 
+ 21 
+ 
+4. Jabatan 
+Untuk kolom 'Jabatan', pilih jabatan fungsional dari daftar yang tersedia. Jabatan ini 
+akan tercetak pada halaman sampul dan halaman penutup laporan. 
+ 
+5. Kota Pembuatan 
+Untuk kolom 'Kota Pembuatan', isikan nama kota tempat laporan dibuat (contoh: 
+Wakanda). Informasi ini akan tercetak di bagian bawah halaman sampul sebagai 
+lokasi penerbitan laporan. 
+6. Tahun Pembuatan 
+Untuk kolom 'Tahun Pembuatan', isikan tahun laporan dibuat (contoh: 1996). Tahun 
+ini akan tercetak di bawah nama kota pada halaman sampul laporan. 
+Data yang diisi pada bagian Halaman Cover akan dirangkai secara otomatis oleh aplikasi 
+menjadi halaman sampul yang terstruktur. 
+ 
+VI. MENGISI PENDAHULUAN 
+Bagian Pendahuluan berisi data-data mengenai dasar hukum dan administrasi dari 
+permintaan pembuatan laporan Litmas. Informasi yang diisi di sini akan menjadi landasan 
+paragraf pembuka pada dokumen Word yang dihasilkan nanti. Berikut adalah tampilan dan 
+penjelasan untuk setiap kolom isian pada bagian ini. 
+
+
+ 
+22 
+ 
+ 
+1. Asal Permintaan 
+Isi atau tempel (paste) nama UPT yang mengirim permintaan Litmas (contoh: Lembaga 
+Pemasyarakatan Kelas I Wakanda). 
+2. Nomor Surat Permintaan 
+Masukkan atau tempel (paste) nomor surat resmi dari UPT yang mengirim permintaan 
+Litmas (contoh: WP10-PAS.2.PK.06.01-1234). 
+3. Perihal Surat Permintaan 
+Tuliskan atau tempel (paste) perihal dari surat permintaan tersebut. 
+4. Tanggal Surat Permintaan, Tanggal Penerimaan, Tanggal Wawancara 
+Untuk semua kolom tanggal, cara mengisinya dengan cara klik ikon kalender dan pilih 
+tanggal yang sesuai. 
+ 
+Dapat juga diisi dengan cara ketik manual langsung atau tempel (paste) di kolom dengan 
+format Hari-Bulan-Tahun (DD-MM-YYYY). Aplikasi ini cukup fleksibel terhadap karakter 
+pemisah (separator) yang pengguna gunakan. Contoh: 24-09-2025, 24/09/2025, atau 
+24.09.2025 semuanya akan diterima oleh sistem. 
+VII. MENGISI IDENTITAS KLIEN, KELUARGA, DAN PENJAMIN/WALI 
+Bagian Identitas adalah inti dari pengisian data yang berisi semua informasi mengenai klien, 
+keluarga, dan penjamin atau wali. Akurasi data di sini sangat penting karena seluruh 
+informasi ini akan ditampilkan secara rinci pada dokumen Litmas yang dihasilkan. 
+A. Data Klien 
+Bagian ini berfokus pada semua data diri klien. Sebagian besar kolom sama di kedua 
+jenis pengerjaan Litmas, namun ada beberapa perbedaan penting yang dijelaskan di 
+bawah. 
+
+
+ 
+ 
+ 
+ 
+ 23 
+ 
+1. Nama Klien 
+Isikan nama lengkap klien saja tanpa bin/binti. Aplikasi akan menambahkan bin atau 
+binti secara otomatis di dokumen berdasarkan data Ayah dan jenis kelamin. 
+2. Perkara & Pasal 
+Isi jenis tindak pidana dan pasal yang menjerat klien. 
+3. Ancaman Pidana (Khusus Litmas Anak) 
+Kolom ini hanya ada pada Litmas Anak. Isikan ancaman pidana dalam tahun dan 
+bulan. Aplikasi akan secara otomatis mendeteksi apakah ancaman pidana mencapai 
+7 tahun atau lebih, yang merupakan salah satu syarat pertimbangan diversi, dan 
+menampilkan indikator keterangan di sebelah kolom. 
+4. Nomor Register Litmas 
+Isi nomor registrasi yang sesuai. 
+5. Nomor Register Lapas dan Nomor Putusan Pengadilan (Khusus Litmas 
+Integrasi) 
+Kedua kolom ini hanya ada pada Litmas Integrasi. Isi masing-masing sesuai data klien. 
+6. Tempat & Tanggal Lahir 
+Isi sesuai data KTP atau identitas resmi klien. Untuk tanggal, gunakan pemilih 
+kalender atau ketik manual (DD-MM-YYYY). 
+7. Lama Pidana dan Denda (Khusus Litmas Integrasi) 
+Kolom Lama Pidana hanya ada pada Litmas Integrasi. Tuliskan vonis pidana sesuai 
+putusan pengadilan. Pilih Ya pada kolom Apakah Ada Denda jika putusan 
+mencantumkan pidana denda; kolom Denda dan Subsider akan muncul untuk diisi. 
+8. Agama, Suku, Bangsa, Warga Negara 
+Pilih dari daftar yang tersedia atau isi sesuai data klien. 
+9. Pekerjaan Semula 
+Pada Litmas Integrasi kolom ini bernama Pekerjaan Semula dan bersifat wajib, 
+merujuk pada pekerjaan terakhir klien sebelum menjalani pidana. Pada Litmas Anak 
+kolom ini bernama Pekerjaan dan bersifat opsional. 
+10. Tanggal Putusan dan Tanggal Ekspirasi (Khusus Litmas Integrasi) 
+Masukkan tanggal ekspirasi klien. Gunakan pemilih kalender, ketik manual atau 
+tempel (paste) di kolom dengan format Hari-Bulan-Tahun (DD-MM-YYYY). 
+11. Jenis Kelamin 
+Pilih jenis kelamin klien (Laki-laki atau Perempuan). Pilihan ini sangat penting karena 
+akan secara otomatis menentukan format penamaan lengkap klien di seluruh 
+dokumen dengan menggunakan kata 'bin' untuk laki-laki atau 'binti' untuk perempuan. 
+Selain itu, narasi di dalam laporan juga akan menyesuaikan, seperti penggunaan kata 
+'suami' atau 'istri', dan akan bekerja sama dengan 'Status Pernikahan' untuk 
+menampilkan bagian Data Suami/Istri yang sesuai. 
+12. Pendidikan 
+Pilih tingkat pendidikan terakhir. Kolom "Apakah Tamat?" hanya relevan untuk jenjang 
+di bawah Perguruan Tinggi (SD s/d SMA/SMK/MA). 
+13. Masih Berstatus Pelajar/Mahasiswa (Khusus Litmas Anak) 
+Kolom ini hanya ada pada Litmas Anak. Pilih Ya atau Tidak sesuai kondisi klien saat 
+ini. 
+14. Status Pernikahan 
+
+
+ 
+24 
+ 
+Pilih status pernikahan klien yang sesuai. Kolom ini akan secara otomatis 
+menampilkan bagian Data Suami/Istri pada tab ini jika pengguna memilih opsi 
+'Menikah', dan juga akan mengaktifkan bagian 'Riwayat Pernikahan' di tab selanjutnya 
+jika statusnya selain 'Belum Menikah'. 
+15. Alamat 
+Gunakan kolom ini untuk mengisi alamat lengkap klien. 
+16. Ciri-ciri Khusus 
+Isikan ciri fisik yang menonjol dari klien (contoh: Tato lambang Jolly Roger di pipi). 
+17. Penjamin (Khusus Litmas Integrasi) 
+Pilih siapa yang akan menjadi penjamin utama dari daftar (Ayah, Ibu, Suami, Istri, 
+Lainnya). Pilihan ini memiliki dua fungsi otomatis: 
+a. Jika memilih "Lainnya", maka bagian "Data Penjamin" akan muncul di tab ini untuk 
+pengguna isi biodatanya. 
+b. Jika pengguna memilih "Ayah", "Ibu", "Suami", atau "Istri", maka judul sub-bab untuk 
+biodata mereka di dalam dokumen Word yang dihasilkan akan otomatis 
+ditambahkan label /Penjamin. Misalnya jika memilih "Ayah" sebagai penjamin, maka 
+judul di laporannya akan menjadi "1. Ayah/Penjamin". 
+ 
+18. Apakah Klien Anak Memiliki Wali (Khusus Litmas Anak) 
+Kolom ini hanya ada pada Litmas Anak. Pilih Ya jika klien memiliki wali selain orang 
+tua; bagian Data Wali akan muncul untuk diisi. 
+       
+ 
+Data yang diisi pada bagian Identitas akan disusun oleh aplikasi menjadi format biodata 
+dan tabel yang rapi di dalam laporan. 
+
+
+ 
+ 
+ 
+ 
+ 25 
+ 
+ 
+B. Data Ayah, Ibu, Suami/Istri, Penjamin, dan Wali 
+ 
+ 
+ 
+
+
+ 
+26 
+ 
+1. Data Orang Tua (Ayah dan Ibu) 
+Pada bagian ini, pengguna perlu melengkapi biodata untuk Ayah dan Ibu kandung 
+klien. Isian mencakup informasi standar seperti nama lengkap, tempat dan tanggal 
+lahir, agama, pendidikan terakhir, pekerjaan, serta alamat. Yang terpenting adalah 
+perhatikan pengisian pada kolom "Masih Hidup". Jika pengguna memilih "Tidak", 
+aplikasi akan secara otomatis menambahkan gelar "Alm." (Almarhum) untuk Ayah 
+atau "Almh." (Almarhumah) untuk Ibu di depan nama mereka pada dokumen laporan. 
+2. Data Pasangan (Suami/Istri) 
+Bagian ini hanya akan muncul jika Status Pernikahan klien adalah "Menikah". Sesuai 
+dengan Jenis Kelamin klien, bagian ini akan secara otomatis menampilkan judul "Data 
+Istri" (untuk klien Laki-laki) atau "Data Suami" (untuk klien Perempuan). Lengkapi 
+semua biodata pasangan, mulai dari nama, tempat tanggal lahir, hingga pekerjaan dan 
+alamat. 
+3. Data Penjamin (Jika Memilih 'Lainnya') 
+Bagian ini hanya akan muncul jika pada kolom "Penjamin" di Data Klien, pengguna 
+memilih opsi "Lainnya". Gunakan bagian ini untuk mengisi biodata penjamin yang 
+bukan merupakan keluarga inti (Ayah, Ibu, atau Pasangan). Isiannya mencakup 
+biodata lengkap seperti nama dan alamat, serta kolom khusus "Hubungan dengan 
+Klien" untuk memperjelas status penjamin. 
+4. Data Wali (Khusus Litmas Anak) 
+Bagian ini hanya muncul jika kolom Apakah Klien Anak Memiliki Wali diisi dengan Ya. 
+Isi biodata wali beserta kolom Hubungan dengan Klien Anak. 
+C. Susunan Keluarga 
+Bagian ini digunakan untuk mendata semua anggota keluarga yang tinggal bersama 
+klien. Cara kerjanya sama di kedua jenis pengerjaan Litmas, dengan satu perbedaan 
+istilah: pada Litmas Integrasi perbandingannya adalah antara keluarga klien dan 
+penjamin, sedangkan pada Litmas Anak perbandingannya adalah antara keluarga klien 
+dan orang tua. 
+1. Menentukan Susunan Keluarga 
+Jawab pertanyaan di bagian atas: apakah susunan keluarga klien dan penjamin/orang 
+tua sama? Jika Ya, hanya satu tabel yang muncul untuk diisi bersama. Jika Tidak, dua 
+tabel terpisah akan muncul: satu untuk susunan keluarga klien dan satu lagi untuk 
+susunan keluarga penjamin atau orang tua. Pada Litmas Integrasi dengan program 
+Pelimpahan, saat memilih Tidak akan muncul opsi Limpahkan di sebelah judul tabel 
+penjamin; centang opsi ini jika data susunan keluarga penjamin akan dilimpahkan dari 
+UPT asal. 
+ 
+
+
+ 
+ 
+ 
+ 
+ 27 
+ 
+ 
+2. Cara Mengisi Tabel 
+Isi kolom-kolom yang tersedia (Nama, L/P, Usia, Pendidikan, Pekerjaan, Keterangan), 
+lalu klik tombol + Tambah. Untuk kolom Usia, dapat diisi langsung dengan angka usia, 
+tanggal lahir (DD/MM/YYYY), atau tahun lahir (YYYY); aplikasi akan menghitung usia 
+saat ini secara otomatis. Untuk mempercepat pengisian, gunakan fitur Ambil Data: 
+pilih sumber data dari dropdown (Klien, Ayah, Ibu, Suami/Istri, Penjamin/Wali), lalu klik 
+Ambil Data. Pada Litmas Integrasi terdapat opsi tambahan centang Juga Penjamin 
+apabila orang yang datanya diambil juga berperan sebagai penjamin. Form akan terisi 
+otomatis dan tinggal diklik Tambah. 
+ 
+a. Setelah kolom terisi, klik tombol "+ Tambah Anggota Keluarga". Data akan muncul 
+sebagai baris baru di dalam tabel di bawahnya. 
+ 
+b. Ulangi proses ini untuk semua anggota keluarga yang perlu didata. 
+3. Cara Mengelola Data di Dalam Tabel 
+Ada beberapa cara mudah untuk mengelola data yang sudah masuk ke dalam tabel. 
+a. Menghapus Data 
+Untuk menghapus, klik satu baris di dalam tabel yang ingin dihapus, lalu klik tombol 
+"Hapus Anggota Keluarga". 
+b. Mengedit Data 
+Klik dua kali (double click) langsung pada kolom yang ingin diubah (misalnya pada 
+kolom nama atau usia). Petugas bisa langsung mengetik perubahan di sana. 
+
+
+ 
+28 
+ 
+ 
+c. Mengubah Urutan (Drag & Drop) 
+Jika pengguna salah memasukkan urutan, pengguna tidak perlu menghapus dan 
+menambah ulang. Cukup klik dan tahan (drag) pada baris yang ingin dipindahkan, 
+lalu geser (drop) ke posisi yang baru. Nomor urut akan diperbarui secara otomatis. 
+ 
+ 
+VIII. MENGISI RIWAYAT HIDUP DAN PERKEMBANGAN KLIEN 
+Bagian ini berfungsi untuk merekam riwayat hidup dan perkembangan klien secara 
+komprehensif, mencakup aspek-aspek sejak masa kelahiran, riwayat pendidikan, hingga 
+pola perilaku sosialnya. Data yang terkumpul pada bagian ini akan menjadi dasar utama 
+untuk analisis mengenai faktor-faktor yang membentuk kepribadian klien. Setiap pilihan 
+akan menghasilkan paragraf yang berbeda, sehingga pastikan untuk memilih opsi yang 
+paling tepat dan mengisi detail yang muncul dengan lengkap agar laporan menjadi akurat. 
+A. Riwayat Kelahiran, Pertumbuhan, dan Perkembangan Klien 
+Bagian ini bertujuan untuk merekam data fundamental mengenai awal kehidupan klien, 
+mencakup 
+proses 
+kelahiran, 
+kondisi 
+pertumbuhan 
+fisik, 
+dan 
+perkembangan 
+psikososialnya. 
+1. Riwayat Kelahiran 
+Pada bagian ini, pengguna akan mengisi data seputar kelahiran klien. Lengkapi kolom 
+Bantuan Persalinan, Kondisi Persalinan, serta isikan urutan Anak Ke- dan total Jumlah 
+Saudara yang dimiliki klien. 
+
+
+ 
+ 
+ 
+ 
+ 29 
+ 
+ 
+2. Riwayat Pertumbuhan Fisik 
+Selanjutnya, pilih satu kondisi yang paling menggambarkan riwayat pertumbuhan fisik 
+klien dari daftar yang tersedia. Pilihan pengguna pada kolom ini tidak hanya akan 
+menampilkan kolom isian tambahan yang relevan di dalam aplikasi, tetapi juga akan 
+menentukan kalimat atau narasi yang terbentuk secara otomatis di dalam dokumen 
+laporan Word. Setiap pilihan akan menghasilkan paragraf yang berbeda, sehingga 
+pastikan pengguna memilih opsi yang paling tepat dan mengisi detail yang muncul 
+dengan lengkap agar laporan menjadi akurat. 
+ 
+3. Perkembangan Psikososial 
+Bagian ini digunakan untuk mencatat riwayat perkembangan kejiwaan dan sosial klien. 
+Pilih kondisi yang sesuai dari daftar (Normal atau Tidak Normal). Sama seperti bagian 
+sebelumnya, pilihan pengguna di sini akan memengaruhi tampilan aplikasi sekaligus 
+narasi di laporan akhir. Jika pengguna memilih 'Tidak Normal', maka akan muncul 
+kolom tambahan untuk mengisi 'Usia Gangguan' dan 'Penyebab Gangguan'. Data ini 
+akan digunakan untuk membentuk kalimat penjelasan yang spesifik di dalam 
+dokumen. Jika pengguna memilih 'Normal', maka tidak ada isian tambahan dan narasi 
+laporan akan menyatakan bahwa perkembangan psikososial klien berjalan wajar. 
+ 
+B. Riwayat Pendidikan  
+1. Pendidikan dalam Keluarga 
+Bagian ini digunakan untuk mendeskripsikan pola asuh dan pendidikan nilai yang 
+diterima klien dari keluarganya. pengguna dapat memilih dari opsi yang tersedia (Baik 
+atau Kurang Baik). Jika narasi yang ada tidak sesuai, pilih opsi 'Isi Sendiri', maka akan 
+muncul sebuah kotak teks besar di bawahnya agar pengguna dapat menuliskan narasi 
+pengguna sendiri yang akan tercetak di laporan. 
+ 
+
+
+ 
+30 
+ 
+2. Pendidikan Formal 
+Bagian ini sangat dinamis dan isiannya ditentukan oleh pilihan 'Pendidikan' di bagian 
+Identitas. Aplikasi ini akan menampilkan jenjang pendidikan secara berurutan hingga 
+tingkat tertinggi yang dipilih di tab sebelumnya.  
+ 
+Untuk setiap jenjang, pengguna akan diminta mengisi nama sekolah, riwayat tinggal 
+kelas, dan status kelulusan. Kolom seperti 'Alasan Tidak Lulus' akan muncul secara 
+otomatis jika diperlukan. Nantinya, semua data yang diisi pada bagian ini akan 
+dirangkai oleh aplikasi menjadi satu paragraf narasi yang utuh di dalam laporan Word, 
+yang menceritakan perjalanan pendidikan formal klien secara kronologis. 
+3. Pendidikan Non-Formal 
+Bagian ini untuk mencatat pendidikan di luar jalur sekolah formal. Pilih 'Ya' jika klien 
+pernah mengikutinya, maka sebuah kolom akan muncul untuk diisi jenis 
+pendidikannya. Jika tidak ada, pilih 'Tidak'. 
+ 
+
+
+ 
+ 
+ 
+ 
+ 31 
+ 
+C. Riwayat Tingkah Laku Klien 
+Bagian ini bertujuan untuk menggali lebih dalam mengenai karakter, kebiasaan, dan 
+interaksi sosial klien yang terbentuk seiring waktu. 
+1. Bakat dan Potensi yang Dimiliki 
+Bagian ini bertujuan untuk mendata bakat atau keahlian khusus yang dimiliki klien. 
+Pilih 'Ya' jika klien memilikinya, maka akan muncul kolom-kolom untuk mengisi jenis 
+bakat, spesialisasi, riwayat prestasi, serta relevansinya dengan pekerjaan.  
+ 
+Jika tidak ada, pilih opsi 'Tidak'. 
+ 
+2. Relasi Sosial dengan Keluarga 
+Di sini pengguna dapat memilih lebih dari satu jawaban. Beri tanda centang pada 
+anggota keluarga yang memiliki hubungan "Baik" dengan klien, dan/atau beri tanda 
+centang pada anggota keluarga yang hubungannya "Kurang Baik". Aplikasi akan 
+merangkai kalimat pada laporan sesuai pilihan pengguna. 
+ 
+3. Ketaatan Klien dalam Menjalani Agama 
+Pilih tingkat ketaatan klien dalam menjalankan agamanya dari daftar yang tersedia 
+(Taat atau Kurang Taat). 
+4. Kebiasaan Klien yang Baik dan Buruk 
+Gunakan dua kotak yang tersedia untuk mendaftar kebiasaan baik dan kebiasaan 
+buruk klien. Ketik satu kebiasaan di kolom isian, lalu klik tombol "+" (Tambah) untuk 
+memasukkannya ke dalam daftar. Untuk menghapus, pilih item di daftar lalu klik tombol 
+"-" (Hapus). Petugas juga dapat mengedit item dengan mengklik dua kali pada daftar 
+yang telah ditambahkan. 
+ 
+
+
+ 
+32 
+ 
+5. Sikap Klien dalam Bekerja/Sikap dalam Mengikuti Pendidikan 
+Bagian ini berbeda antara kedua jenis pengerjaan Litmas. Pada Litmas Integrasi, 
+bagian ini bernama Sikap Kerja. Isikan deskripsi singkat mengenai sikap, etos, dan 
+perilaku kerja klien pada pekerjaan terakhir sebelum menjalani pidana.  
+ 
+Pada Litmas Anak, bagian ini bernama Sikap dalam Mengikuti Pendidikan. 
+Terdapat empat kolom pilihan yang menilai sikap klien selama mengikuti pendidikan: 
+Tingkat Kehadiran (Baik atau Kurang Baik), Prestasi Akademis (Baik, Biasa Saja, atau 
+Kurang Baik), Hubungan dengan Teman (Baik atau Kurang Baik), dan Hubungan 
+dengan Guru (Baik atau Kurang Baik). 
+ 
+6. Riwayat Pelanggaran Hukum 
+Pilih 'Ya' jika klien pernah melakukan tindak pidana lain sebelum kasus ini, dan akan 
+muncul sebuah tabel. Gunakan tombol 'Tambah Pelanggaran' untuk mengisi riwayat 
+pelanggaran hukum klien satu per satu. 
+ 
+7. Riwayat Penggunaan Rokok, Alkohol, dan Napza 
+Untuk setiap kategori (rokok, minuman keras, dan napza), pilih 'Ya' jika klien pernah 
+mengonsumsi. Jika pengguna memilih 'Ya', akan muncul kolom-kolom detail untuk 
+diisi, seperti kapan mulai mengonsumsi (awal mula pemakaian), faktor penyebab, 
+status konsumsi saat ini, dan kapan berhenti (jika sudah berhenti). 
+ 
+Sebaliknya, jika pengguna memilih 'Tidak', maka narasi di laporan akan secara 
+otomatis menyatakan bahwa klien tidak pernah mengonsumsi zat tersebut. 
+
+
+ 
+ 
+ 
+ 
+ 33 
+ 
+Contohnya: "Klien mengaku tidak pernah merokok hingga saat ini." Fitur ini 
+memastikan deskripsi riwayat konsumsi klien tersaji secara runut tanpa perlu disusun 
+manual. 
+D. Riwayat Pernikahan Klien  
+Bagian ini bersifat dinamis dan hanya akan muncul jika pengguna telah memilih Status 
+Pernikahan Klien (misalnya 'Menikah', 'Cerai Hidup', atau 'Cerai Mati') pada bagian 
+Identitas. Langkah pertama di sini adalah memilih 'Jumlah Pernikahan' yang pernah 
+dijalani oleh klien. Berdasarkan angka yang pengguna pilih, aplikasi akan secara 
+otomatis menampilkan kolom isian yang sesuai untuk setiap pernikahan yang dilakukan 
+klien. Untuk setiap pernikahan, pengguna diminta melengkapi detailnya secara runut, 
+mulai dari nama pasangan, tempat dan tanggal nikah, dasar pernikahan, hingga 
+statusnya saat ini. Perhatikan bahwa kolom untuk jumlah anak akan muncul jika 
+pengguna memilih 'Ya' pada baris label 'Punya Anak', dan kolom 'Tahun Meninggal' akan 
+muncul jika pengguna memilih status 'Meninggal Dunia'. Data yang pengguna masukkan 
+di sini akan dirangkai menjadi paragraf narasi yang detail untuk setiap riwayat pernikahan 
+klien di dalam laporan akhir. 
+ 
+IX. MENGISI KONDISI KLIEN ANAK  
+Bagian ini hanya tersedia pada Litmas Anak dan berisi penilaian menyeluruh terhadap 
+kondisi klien anak selama menjalani proses pidana, mencakup status penahanan, kondisi 
+kesehatan, sikap, kemandirian, dan relasi sosialnya. Data yang diisi di sini akan membentuk 
+narasi deskriptif tentang kondisi klien di dalam dokumen laporan. 
+A. Status dan Kondisi Klien Anak 
+ 
+
+
+ 
+34 
+ 
+1. Klien Anak Ditahan? 
+Pilih Ya jika klien anak saat ini berada dalam penahanan, atau Tidak jika tidak ditahan. 
+Pilihan ini akan menentukan narasi mengenai status klien pada laporan akhir. 
+2. Kondisi Kesehatan 
+Pilih Sehat jika kondisi fisik klien anak tidak ada keluhan, atau Tidak Sehat jika klien 
+memiliki gangguan kesehatan. Jika dipilih Tidak Sehat, kolom Keluhan/Kondisi 
+Kesehatan akan muncul secara otomatis untuk diisi deskripsi singkat mengenai 
+keluhan atau kondisi kesehatan klien yang dimaksud. 
+3. Sikap Selama Menjalani Proses Pidana 
+Pilih Kooperatif jika klien bersikap terbuka dan bekerja sama selama proses pidana 
+berlangsung, atau Tidak Kooperatif jika sebaliknya. Pilihan ini akan menghasilkan 
+narasi yang berbeda di dalam laporan mengenai sikap klien terhadap proses hukum 
+yang dijalaninya. 
+4. Pendamping Selama Menjalani Proses Pidana 
+Isikan nama atau hubungan pihak yang mendampingi klien anak selama proses pidana 
+berlangsung (contoh: Ayah, Ibu, atau Wali). Informasi ini akan tercetak sebagai 
+keterangan pendampingan klien di dalam laporan. 
+B. Kemandirian dan Relasi Sosial 
+ 
+1. Klien Anak Sudah Mandiri? 
+Pilih Sudah Mandiri atau Belum Mandiri untuk menggambarkan tingkat kemandirian 
+klien. Jika dipilih Sudah Mandiri, kolom tambahan Bisa Memenuhi Kebutuhan 
+Sendiri? akan muncul secara otomatis. Isi kolom ini dengan memilih Ya atau Tidak 
+untuk menjelaskan lebih lanjut apakah klien sudah mampu mencukupi kebutuhan 
+dasarnya secara mandiri. 
+2. Relasi dengan Keluarga 
+Pilih Baik atau Kurang Baik untuk menggambarkan kualitas hubungan klien dengan 
+keluarganya. Pilihan ini akan menghasilkan narasi yang mendeskripsikan kondisi 
+hubungan klien dengan keluarga di dalam laporan. 
+3. Relasi dengan Lingkungan Sekitar 
+Pilih Baik atau Kurang Baik untuk menggambarkan kualitas hubungan klien dengan 
+lingkungan sosialnya di luar keluarga. Pilihan ini menghasilkan narasi mengenai pola 
+interaksi sosial klien dengan masyarakat sekitarnya. 
+4. Tinggal Bersama Siapa 
+Pilih Orang Tua atau Wali untuk mencatat dengan siapa klien anak tinggal sehari-hari. 
+Informasi ini akan berkaitan dengan pengisian kondisi orang tua/wali pada tab 
+berikutnya. 
+
+
+ 
+ 
+ 
+ 
+ 35 
+ 
+X. MENGISI KONDISI PENJAMIN/ORANG TUA/WALI 
+Bagian ini berfokus untuk mendalami kondisi pihak yang bertanggung jawab atas klien, 
+yang mencakup riwayat personal, relasi sosial, kondisi ekonomi, hingga keadaan tempat 
+tinggalnya. Pada Litmas Integrasi, pihak yang dimaksud adalah penjamin. Pada Litmas 
+Anak, pihak yang dimaksud adalah orang tua atau wali, tergantung kondisi klien. Informasi 
+ini sangat penting untuk menilai kelayakan dan kesiapan pihak penanggung jawab dalam 
+mendukung klien. 
+A. Riwayat Pernikahan Penjamin/Orang Tua/Wali 
+Bagian ini digunakan untuk mendata status dan riwayat pernikahan pihak penanggung 
+jawab klien. Pada Litmas Integrasi, langkah pertama adalah mengisi Jenis Kelamin 
+Penjamin. Jika penjamin yang dipilih di tab Identitas adalah Ayah, Ibu, Suami, atau Istri, 
+kolom ini akan terisi dan tersinkron secara otomatis. Pilihan Jenis Kelamin akan 
+menyesuaikan narasi pada laporan akhir, misalnya penyebutan 'suami' atau 'istri' dari 
+penjamin. Selanjutnya pilih Status Pernikahan Penjamin. Jika dipilih Menikah, pengguna 
+akan diminta memilih Jumlah Pernikahan terlebih dahulu. Selanjutnya, lengkapi formulir 
+detail yang muncul untuk setiap pernikahan, mencakup nama pasangan, tanggal nikah, 
+dan status pernikahan saat ini. 
+Pada Litmas Anak, pengisian bagian ini bergantung pada ada tidaknya wali. Jika 
+klien memiliki wali, isi Jenis Kelamin Wali dan Status Pernikahan Wali dengan cara yang 
+sama seperti pada Litmas Integrasi di atas. Jika klien tidak memiliki wali, bagian ini 
+menampilkan formulir riwayat pernikahan orang tua. Lengkapi tempat dan tanggal nikah 
+orang tua, dasar pernikahan, apakah mendapat restu orang tua, serta jumlah anak laki-
+laki dan perempuan. Selanjutnya pilih Status Perkawinan Orang Tua saat ini dari tiga 
+pilihan yang tersedia. 
+Jika dipilih Berpisah, kolom tambahan akan muncul untuk mengisi tahun cerai atau 
+berpisah, apakah masing-masing pihak telah menikah lagi, dan dengan siapa klien 
+tinggal setelah perpisahan tersebut. Jika dipilih Meninggal Dunia, kolom tambahan akan 
+muncul untuk mengisi siapa yang meninggal (Ayah atau Ibu) beserta tahun 
+meninggalnya. 
+ 
+ 
+
+
+ 
+36 
+ 
+B. Relasi dalam Keluarga 
+Bagian ini mendeskripsikan kualitas hubungan pihak penanggung jawab klien dengan 
+keluarga dan frekuensi interaksinya dengan klien. 
+ 
+Pada Litmas Integrasi, pertama pilih status Relasi Sosial dalam Keluarga Penjamin 
+(Baik atau Kurang Baik). Kemudian, tentukan frekuensi interaksi penjamin dengan klien 
+selama berada di dalam Lapas/Rutan dengan memilih opsi pada Frekuensi Kunjungan 
+ke Lapas dan Frekuensi Komunikasi Telepon (Sering, Sesekali, atau Tidak Pernah). 
+ 
+Pada Litmas Anak, pilih Hubungan Antar Keluarga (cukup baik atau kurang baik) 
+dan Kondisi Keluarga secara keseluruhan (harmonis atau tidak harmonis). Selanjutnya, 
+pilih apakah keluarga memberikan dukungan terhadap perkembangan klien anak 
+(mendukung atau tidak mendukung). 
+ 
+C. Relasi dengan Masyarakat 
+Bagian ini mendeskripsikan interaksi pihak penanggung jawab klien dengan lingkungan 
+sosialnya. Pengguna akan diminta memilih jawaban pada beberapa pertanyaan kunci, 
+seperti apakah penjamin atau orang tua/wali dikenal baik oleh masyarakat, apakah rutin 
+mengikuti kegiatan sosial, dan apakah menghadiri undangan dari tetangga. Jawaban dari 
+pertanyaan-pertanyaan ini akan secara otomatis dirangkai oleh aplikasi menjadi satu 
+paragraf utuh yang menjelaskan tingkat partisipasi sosial pihak penanggung jawab di 
+dalam laporan. 
+ 
+Pada Litmas Integrasi, pilihan jawaban adalah Ya atau Tidak. Pada Litmas Anak, 
+pilihan jawaban lebih rinci dengan tiga opsi: Ya, Jarang, atau Tidak. 
+ 
+D. Pekerjaan dan Keadaan Ekonomi 
+Bagian ini bertujuan untuk menilai stabilitas ekonomi dan kelayakan lingkungan tempat 
+tinggal pihak penanggung jawab klien, yang akan menjadi faktor pendukung penting bagi 
+klien. 
+
+
+ 
+ 
+ 
+ 
+ 37 
+ 
+1. Pekerjaan Penjamin 
+Bagian ini diawali dengan memilih status pekerjaan pihak penanggung jawab. Pada 
+Litmas Integrasi, pilih Status Pekerjaan Penjamin (Bekerja atau Tidak Bekerja). Pada 
+Litmas Anak, terdapat dua bagian terpisah: Pekerjaan Wali yang hanya muncul jika 
+klien memiliki wali, dan Pekerjaan Orang Tua yang mengisi kondisi pekerjaan Ayah 
+dan Ibu secara terpisah masing-masing.  
+ 
+Jika dipilih Bekerja, kolom yang perlu diisi adalah jenis pekerjaan, status 
+penghasilan (Tetap atau Tidak Tetap), dan nominal penghasilan per bulan. 
+ 
+Jika dipilih Tidak Bekerja, kolom yang diisi adalah data mengenai siapa pemberi 
+nafkah beserta pekerjaan dan penghasilannya. 
+2. Keadaan Rumah Tempat Tinggal 
+Bagian ini untuk mendeskripsikan kondisi tempat tinggal pihak penanggung jawab 
+secara detail, yang nantinya akan menjadi lingkungan klien setelah bebas atau setelah 
+proses pidana selesai. Isilah berbagai aspek yang tersedia, mulai dari status 
+kepemilikan (Pribadi, Kontrak, atau Menumpang), jenis bangunan (Permanen atau 
+Semi Permanen), jumlah tingkat, luas rumah, jenis lantai, hingga kondisi kelayakan 
+hunian. Untuk Ruangan Rumah dan Perabotan, cukup beri tanda centang pada semua 
+fasilitas yang ada dari daftar yang telah disediakan. Terakhir, pilih Daya Listrik dalam 
+satuan VA dan Sumber Air yang digunakan. 
+ 
+
+
+ 
+38 
+ 
+ 
+XI. MENGISI KONDISI LINGKUNGAN SOSIAL BUDAYA 
+Bagian ini bertujuan untuk mendeskripsikan lingkungan sosial dan budaya di sekitar tempat 
+tinggal penjamin atau orang tua/wali, yang akan menjadi lingkungan utama klien setelah 
+mendapat program integrasi atau setelah proses pidana selesai. Informasi di sini digunakan 
+untuk menilai tingkat dukungan dan risiko dari lingkungan tersebut. 
+A. Relasi Sosial Antar Anggota Masyarakat 
+Bagian ini digunakan untuk menilai kualitas hubungan sosial secara umum di lingkungan 
+tempat tinggal penjamin. Pilih salah satu dari dua opsi yang tersedia: 'Baik' atau 'Kurang 
+Baik'. 
+Pilihan yang dibuat di sini akan secara otomatis menghasilkan satu paragraf narasi yang 
+sudah jadi di dalam dokumen laporan. Sebagai contoh, jika dipilih 'Baik', laporan akan 
+berisi narasi yang menjelaskan bahwa masyarakatnya solid dan mengutamakan 
+musyawarah. Sebaliknya, jika dipilih 'Kurang Baik', narasi akan menjelaskan bahwa 
+masyarakatnya cenderung individualistis. 
+ 
+B. Kondisi Sosial, Budaya, dan Lingkungan 
+1. Penggolongan Profesi dan Mata Pencaharian 
+Bagian ini digunakan untuk mendata jenis-jenis pekerjaan yang umum ditekuni oleh 
+warga di lingkungan sekitar. Terdapat dua bagian: 'Pekerjaan Mayoritas' dan 
+'Pekerjaan Minoritas'. Untuk mengisi masing-masing bagian, ketik satu jenis pekerjaan 
+di kolom isian, lalu klik tombol "+" (Tambah) untuk memasukkannya ke dalam daftar.  
+ 
+
+
+ 
+ 
+ 
+ 
+ 39 
+ 
+Gunakan tombol "x" (Hapus) untuk menghapus item yang salah dari daftar. Data 
+yang dimasukkan ke dalam kedua daftar ini akan dirangkai secara otomatis menjadi 
+satu kalimat utuh di dalam laporan. 
+2. Stratifikasi Sosial Ekonomi Masyarakat 
+Pilih Stratifikasi Sosial Ekonomi Masyarakat dari daftar yang tersedia, mulai dari 'kelas 
+bawah' hingga 'kelas atas'. Selanjutnya isi kolom Pemberi Keterangan dengan 
+mencentang semua pihak yang menjadi sumber informasi dari daftar yang tersedia: 
+Klien, Keluarga Klien, Kepala Desa, Ketua RT, dan Lurah. Kemudian tentukan apakah 
+komposisi masyarakatnya 'Homogen' atau 'Heterogen', lalu isi daftar Suku Mayoritas 
+dengan cara yang sama seperti pengisian pekerjaan. Jika dipilih 'Heterogen', kolom 
+Suku Minoritas akan muncul untuk dilengkapi. 
+ 
+3. Tingkat Pendidikan Rata-Rata Warga Masyarakat 
+Lengkapi dua kolom yang tersedia yaitu 'Pendidikan Mayoritas Warga' dan 'Pendidikan 
+Minoritas Warga' dengan memilih jenjang pendidikan dari daftar. Pilihan pada kedua 
+kolom ini akan digabungkan secara otomatis dengan data Pemberi Keterangan untuk 
+menyusun sebuah kalimat deskriptif yang utuh di dalam laporan. 
+ 
+4. Pola Hubungan/Interaksi Sosial dalam Masyarakat 
+Bagian ini terdiri dari empat pilihan yang masing-masing menghasilkan paragraf narasi 
+otomatis di laporan: Kepedulian terhadap Kehidupan Masyarakat (Baik/Kurang Baik), 
+Kepedulian terhadap Pendidikan (Peduli/Kurang Peduli), Kepedulian terhadap 
+Kegiatan Keagamaan (Peduli/Kurang Peduli) beserta Agama Mayoritas yang dianut 
+warga, dan Kepedulian terhadap Penegakan Hukum (Peduli/Kurang Peduli). 
+
+
+ 
+40 
+ 
+ 
+XII. MENGISI RIWAYAT (DUGAAN) TINDAK PIDANA 
+Bagian ini berfokus pada detail tindak pidana yang dilakukan klien, mulai dari latar belakang 
+hingga dampaknya terhadap berbagai pihak. Pada Litmas Integrasi, bagian ini disebut 
+Riwayat Tindak Pidana. Pada Litmas Anak, bagian ini disebut Riwayat Dugaan Tindak 
+Pidana, sesuai dengan azas praduga tak bersalah yang berlaku bagi anak yang berkonflik 
+dengan hukum. 
+A. Latar Belakang Tindak Pidana 
+Bagian ini digunakan untuk menjelaskan faktor utama atau alasan yang melatarbelakangi 
+klien melakukan tindak pidana. Isikan deskripsi singkat mengenai penyebab kejadian. 
+Teks yang diisikan di sini akan digabungkan secara otomatis dengan data 'Perkara' dari 
+bagian Identitas untuk membentuk satu kalimat utuh di dalam laporan. 
+ 
+B. Kronologis 
+Bagian ini digunakan untuk menuliskan kronologi lengkap dari tindak pidana yang terjadi, 
+dari awal hingga akhir kejadian. Gunakan kotak teks yang tersedia untuk menulis narasi. 
+Kolom ini berukuran besar dan dapat menampung beberapa paragraf; cukup tekan 
+tombol Enter untuk membuat paragraf baru. Aplikasi juga menyediakan fitur rekam suara. 
+Klik tombol 'Rekam Suara' untuk mendiktekan kronologi secara langsung, atau impor file 
+audio yang sudah ada. Hasil rekaman akan otomatis ditranskripsi dan ditampilkan di 
+kolom teks. 
+ 
+Sebagai catatan, kolom kronologis di aplikasi bersifat opsional. Jika kronologi kejadian 
+telah tersedia dalam dokumen lain, pengguna boleh membiarkan kolom ini kosong. 
+Aplikasi akan menandainya (BELUM DIISI) pada laporan. Pengguna dapat menyalin 
+
+
+ 
+ 
+ 
+ 
+ 41 
+ 
+kronologi ke fail Microsoft Word setelah laporan jadi. Jika ingin, pengguna dapat langsung 
+mengetik kronologi singkat di kolom ini. Teks yang dimasukkan akan otomatis tercantum 
+pada laporan akhir. 
+C. Keadaan Korban dan Tanggapan Korban 
+Bagian ini mendeskripsikan siapa korban dari tindak pidana. Alur pengisiannya akan 
+berubah tergantung pada pilihan di kolom utama 'Jenis Korban'. Jika dipilih Korban 
+Perorangan atau Korban Badan Hukum/Korporasi, lengkapi data 'Nama Korban' serta 
+'Kerugian Materiel' (finansial) dan 'Imateriel' (non-finansial), dengan mengosongkan 
+Imateriel jika tidak ada. Jika dipilih Korban Negara, cukup isi kolom 'Kerugian Negara' 
+yang muncul. Jika dipilih Korban Diri Sendiri, cukup isi satu kolom 'Keadaan Klien Saat 
+Ini'. Alur ini digunakan jika tindak pidana tidak memiliki korban eksternal, contohnya 
+penyalahgunaan narkotika. 
+ 
+ 
+ 
+D. Akibat Tindak Pidana Terhadap Klien, Orang Tua/Keluarga, dan Masyarakat 
+Bagian ini hanya tersedia pada Litmas Integrasi dan berisi pertanyaan mengenai status 
+klien sebagai tulang punggung keluarga. Pilih 'Ya' jika klien adalah pencari nafkah utama, 
+atau 'Tidak' jika bukan. Jawaban ini akan menentukan secara signifikan paragraf narasi 
+di dalam laporan akhir mengenai dampak yang dialami keluarga. Pilihan 'Ya' akan 
+berfokus pada dampak ekonomi, sementara pilihan 'Tidak' akan berfokus pada dampak 
+psikologis dan stigma sosial. 
+ 
+XIII. MENGISI TANGGAPAN BERBAGAI PIHAK 
+Bab ini digunakan untuk mencatat tanggapan dari berbagai pihak terkait rencana program 
+klien. Pada Litmas Integrasi, bab ini berjudul Tanggapan Berbagai Pihak Terhadap 
+Rencana Program Integrasi. Pada Litmas Anak, bab ini berjudul Tanggapan Berbagai 
+
+
+ 
+42 
+ 
+Pihak. Setiap isian di sini akan menghasilkan paragraf narasi yang sudah jadi di dalam 
+laporan. 
+A. Tanggapan Klien 
+Terdapat dua pertanyaan untuk klien yaitu apakah klien mengakui kesalahannya dan 
+apakah klien menyesali perbuatannya. Kombinasi jawaban 'Ya' atau 'Tidak' dari kedua 
+pertanyaan ini akan menghasilkan satu dari empat kemungkinan paragraf narasi yang 
+spesifik, yang mendeskripsikan sikap klien terhadap perbuatannya. 
+ 
+B. Tanggapan Keluarga Klien 
+Pada Litmas Integrasi, pilih apakah keluarga mendukung program integrasi. Jika dipilih 
+'Tidak', kolom tambahan akan muncul untuk diisi alasan tidak mendukung. Jawaban pada 
+bagian ini akan membentuk narasi otomatis mengenai sikap keluarga terhadap rencana 
+program klien. 
+Pada Litmas Anak, pertanyaan berubah menjadi apakah keluarga masih sanggup 
+mendidik. Jika sebelumnya korban menuntut ganti rugi, akan muncul pertanyaan 
+tambahan apakah keluarga sanggup membayar ganti rugi dengan pilihan Ya, Minta 
+Keringanan, atau Tidak. Pertanyaan ini khusus digunakan sebagai salah satu syarat 
+dalam proses Diversi. 
+ 
+C. Tanggapan Pihak Korban 
+Bagian ini hanya muncul jika pada bagian Keadaan Korban sebelumnya dipilih Korban 
+Perorangan atau Korban Badan Hukum/Korporasi. Untuk jenis korban lainnya, bagian ini 
+tidak ditampilkan. 
+Pada Litmas Integrasi, pertama pilih apakah korban bisa dihubungi atau ditemui. 
+Jika dipilih 'Ya', akan muncul dua pertanyaan lanjutan yaitu apakah korban memaafkan 
+(Ya/Tidak) dan apakah korban mendukung program (Mendukung/Tidak Mendukung). 
+Pada Litmas Anak, bagian ini langsung menampilkan dua pertanyaan tanpa filter 
+dihubungi terlebih dahulu, yaitu apakah korban memaafkan (Ya/Tidak/Netral) dan 
+apakah korban menuntut ganti rugi (Ya/Tidak/Sebagian). 
+ 
+
+
+ 
+ 
+ 
+ 
+ 43 
+ 
+D. Tanggapan Masyarakat 
+Pada Litmas Integrasi, pilih apakah masyarakat di lingkungan penjamin mendukung 
+program integrasi atau tidak. Pada Litmas Anak, pilih apakah masyarakat bersedia 
+menerima kembali klien anak dengan tiga pilihan jawaban yaitu Ya, Tidak, atau Netral. 
+Pilihan yang dibuat akan menghasilkan paragraf yang menjelaskan kesiapan dan 
+penerimaan masyarakat. 
+E. Tanggapan Pemerintah Setempat 
+Pada Litmas Integrasi, pilih apakah pemerintah setempat seperti RT atau Lurah 
+mendukung program integrasi atau tidak. Pada Litmas Anak, pilih apakah aparat 
+pemerintah setempat bersedia menerima kembali klien anak dengan tiga pilihan jawaban 
+yaitu Ya, Tidak, atau Netral. Jawaban ini akan menghasilkan paragraf yang menjelaskan 
+sikap resmi pemerintah setempat. 
+XIV. MENGISI EVALUASI PERKEMBANGAN PEMBINAAN KLIEN DI LAPAS 
+Bagian ini berfungsi untuk mengevaluasi perkembangan klien selama menjalani masa 
+pidana di dalam Lapas/Rutan. Isian di sini akan menjadi dasar penilaian terhadap perilaku 
+dan partisipasi klien dalam program pembinaan. 
+A. Evaluasi Pelaksanaan Program Admisi, Orientasi, dan Observasi 
+Bagian ini digunakan untuk mengevaluasi partisipasi klien dalam program awal saat 
+pertama kali masuk Lapas/Rutan. Pilih salah satu dari dua opsi yang tersedia: 'Baik' atau 
+'Kurang Baik'. Pilihan ini akan menghasilkan paragraf narasi otomatis di dalam laporan 
+yang menjelaskan bagaimana klien mengikuti program pengenalan lingkungan. Narasi 
+tersebut juga akan secara otomatis menyertakan nama 'Asal Permintaan' yang telah diisi 
+di bagian Pendahuluan. 
+ 
+B. Tahapan Pembinaan 
+Lengkapi isian tanggal-tanggal penting tahapan pembinaan klien, yaitu tanggal 1/3, 1/2, 
+dan 2/3 tahapan pembinaan dengan menggunakan pemilih tanggal, ketik manual 
+langsung atau tempel (paste) di kolom dengan format Hari-Bulan-Tahun (DD-MM-YYYY). 
+ 
+
+
+ 
+44 
+ 
+C. Program Pembinaan Kepribadian dan Program Pembinaan Kemandirian 
+Bagian ini terdiri dari dua komponen dengan cara kerja yang identik yaitu Program 
+Pembinaan Kepribadian dan Program Pembinaan Kemandirian. 
+ 
+Untuk masing-masing komponen, pilih 'Ya' jika klien pernah mengikuti program tersebut. 
+Jika dipilih 'Ya', akan muncul sebuah daftar isian. Gunakan kolom teks dan tombol "+" 
+(Tambah) untuk mendaftar semua program relevan yang telah diikuti oleh klien. Daftar 
+program yang telah diisi akan secara otomatis dirangkai oleh aplikasi menjadi sebuah 
+kalimat narasi yang utuh di dalam laporan akhir. Jika klien tidak pernah mengikuti, cukup 
+pilih 'Tidak', dan narasi laporan akan menyesuaikan. 
+D. Relasi Sosial Klien Selama di Dalam Lapas 
+Bagian ini mendeskripsikan secara rinci interaksi sosial klien dengan berbagai pihak 
+selama berada di dalam Lapas/Rutan. 
+ 
+
+
+ 
+ 
+ 
+ 
+ 45 
+ 
+1. Dengan Sesama Warga Binaan 
+Di sini, pilih status hubungan klien dengan sesama Warga Binaan (Baik/Kurang Baik) 
+dan jawab apakah klien pernah masuk Register F (Ya/Tidak). Kombinasi dari kedua 
+jawaban ini akan menghasilkan sebuah paragraf narasi spesifik yang menggambarkan 
+perilaku dan adaptasi sosial klien di antara sesama warga binaan. 
+2. Dengan Petugas 
+Pilih status hubungan klien dengan pengguna (Baik atau Kurang Baik). Pilihan ini akan 
+menentukan narasi yang menjelaskan sikap dan kepatuhan klien terhadap pengguna 
+dan peraturan di dalam laporan. 
+3. Dengan Keluarga 
+Pilih status hubungan dengan keluarga (Baik/Kurang Baik), lalu gunakan tombol "+" 
+untuk mendaftar siapa saja anggota keluarga yang pernah berkunjung dan menelepon. 
+Kombinasi dari ketiga data ini (status hubungan, ada/tidaknya kunjungan, dan 
+ada/tidaknya komunikasi telepon) akan menghasilkan satu dari delapan kemungkinan 
+paragraf narasi yang sangat detail, yang secara otomatis menceritakan intensitas 
+hubungan klien dengan keluarganya. 
+4. Dengan Masyarakat Luar 
+Pilih status hubungan dengan masyarakat luar (teman, dll.), lalu jawab 'Ya' atau 'Tidak' 
+untuk pertanyaan apakah ada teman yang berkunjung atau menelepon. Sama seperti 
+hubungan keluarga, kombinasi dari ketiga jawaban ini juga akan menghasilkan satu 
+dari delapan kemungkinan paragraf narasi yang spesifik mengenai hubungan klien 
+dengan masyarakat luar selama menjalani pidana. 
+XV. MENGISI HASIL/REKOMENDASI ASESMEN 
+Bab ini adalah bagian teknis untuk melakukan asesmen risiko klien. Pada Litmas Integrasi, 
+asesmen menggunakan instrumen standar sesuai Keputusan Direktur Jenderal 
+Pemasyarakatan Nomor PAS-31.OT.02.02 Tahun 2021 tentang Instrumen Asesmen Risiko 
+Residivisme Indonesia (RRI) dan Instrumen Asesmen Kebutuhan Kriminogenik bagi 
+Narapidana dan Klien Pemasyarakatan Versi 02. Tujuannya adalah untuk menghasilkan 
+penilaian yang objektif dan terukur mengenai tingkat risiko residivisme dan kebutuhan 
+kriminogenik klien. Pengisian di sini bersifat kuantitatif, dan hasilnya akan diolah secara 
+otomatis oleh aplikasi untuk menjadi data pendukung utama dalam penyusunan analisis 
+dan rekomendasi di bab-bab selanjutnya. 
+Pada Litmas Anak, fitur asesmen untuk Anak yang Berkonflik dengan Hukum saat ini 
+masih dalam tahap pengembangan. Hingga panduan ini disusun, pengembang belum 
+menemukan instrumen asesmen yang sesuai berdasarkan ketentuan yang berlaku. Apabila 
+pengguna memiliki informasi atau masukan terkait panduan asesmen yang tepat, dapat 
+menyampaikannya langsung kepada pengembang melalui tautan yang tersedia pada 
+halaman tersebut. 
+ 
+
+
+ 
+46 
+ 
+ 
+A. Asesmen Risiko Residivisme Indonesia (RRI) 
+Bagian ini adalah instrumen utama untuk mengukur tingkat risiko klien mengulangi tindak 
+pidana. Pengisiannya dibagi menjadi empat bagian (A, B, C, dan D). 
+ 
+1. Bagian A: Faktor Risiko Utama 
+Ini adalah inti dari asesmen RRI. Bagian ini berisi 10 pertanyaan mengenai faktor-
+faktor risiko statis (historis) klien, seperti usia saat pertama kali ditahan dan riwayat 
+pidana sebelumnya. Skor dari Bagian A ini yang akan menentukan kategori risiko 
+utama klien (Rendah, Sedang, Tinggi, atau Sangat Tinggi). Setelah mengisi semua 
+pertanyaan di sini, klik tombol 'Hitung RRI' untuk melihat hasilnya. 
+2. Bagian B: Faktor Risiko Tambahan 
+Bagian ini berisi pertanyaan 'Ya/Tidak' mengenai faktor-faktor pemberat seperti 
+adanya peningkatan kekerasan dalam tindak pidana atau riwayat KDRT. Jawaban 'Ya' 
+di sini tidak menambah skor utama, tetapi menjadi indikator penting yang bisa memicu 
+perlunya Asesmen Kriminogenik. 
+3. Bagian C: Faktor Risiko Khusus Perempuan 
+Bagian ini hanya akan muncul jika klien berjenis kelamin 'Perempuan'. Pertanyaannya 
+mencakup isu-isu spesifik seperti melahirkan di usia dini atau keterlibatan dalam 
+
+
+ 
+ 
+ 
+ 
+ 47 
+ 
+jaringan prostitusi. Sama seperti Bagian B, jawaban 'Ya' di sini berfungsi sebagai 
+penanda risiko tambahan. 
+4. Bagian D: Faktor Risiko Khusus Narapidana/Klien Pemasyarakatan dengan 
+Tindak Pidana Narkotika/Obat-Obatan Terlarang 
+Bagian ini digunakan untuk mengidentifikasi faktor risiko yang spesifik bagi klien 
+dengan tindak pidana narkotika. Prosesnya diawali dengan pertanyaan utama: 
+"Apakah terkait tindak pidana narkotika?". 
+ 
+Jika dijawab 'Ya', maka akan muncul tiga pertanyaan lanjutan yang lebih mendalam. 
+Pertanyaan-pertanyaan ini berfokus pada isu-isu krusial seperti kemungkinan 
+keterlibatan dalam jaringan pengedar atau sikap yang mewajarkan penggunaan 
+narkoba. Jawaban 'Ya' pada bagian ini tidak menambah skor risiko utama, namun 
+berfungsi sebagai 'bendera merah' atau pemicu penting yang mengindikasikan bahwa 
+Asesmen Kebutuhan Kriminogenik wajib dilakukan. 
+B. Asesmen Kebutuhan Kriminogenik 
+Bagian ini hanya akan muncul jika hasil RRI sebelumnya menunjukkan adanya faktor 
+risiko yang perlu didalami. Tujuannya adalah untuk mengidentifikasi faktor-faktor 
+pendorong perilaku kriminal klien secara lebih spesifik, yang nantinya dapat menjadi 
+target intervensi. Asesmen ini terdiri dari 7 kategori utama yang harus diisi, yang secara 
+berurutan mencakup Keluarga dan Pernikahan untuk menilai kualitas hubungan; 
+Pendidikan dan Pekerjaan untuk mengevaluasi stabilitasnya; Penggunaan Narkotika dan 
+Alkohol untuk mengukur dampak penyalahgunaan zat; Hubungan Sosial untuk menilai 
+kualitas lingkungan pertemanan; Waktu Luang untuk melihat pemanfaatannya; 
+Manajemen Keuangan untuk menilai kemampuan finansial; serta Sikap Anti-Sosial untuk 
+mengukur pola pikir yang mendukung perilaku kriminal. 
+ 
+
+
+ 
+48 
+ 
+ 
+ 
+ 
+Setelah menjawab semua pertanyaan di 7 kategori, langkah selanjutnya adalah mengklik 
+tombol 'Hitung Nilai Kriminogenik'. Setelah tombol ini diklik, aplikasi akan secara otomatis 
+menjumlahkan skor dari setiap jawaban dan menampilkan hasilnya dalam sebuah tabel 
+rincian yang komprehensif. Tabel ini akan menunjukkan skor dan status (Rendah, 
+Sedang, Tinggi, Sangat Tinggi) untuk masing-masing dari 7 kategori, beserta total skor 
+
+
+ 
+ 
+ 
+ 
+ 49 
+ 
+keseluruhan dan status akhirnya. Informasi dari tabel hasil ini, terutama faktor-faktor 
+dominan, akan secara otomatis dirangkai menjadi paragraf simpulan di dalam laporan 
+akhir dan lampiran asesmen. 
+ 
+C. Opsi Laporan Asesmen 
+Bagian ini digunakan untuk membuat lampiran laporan asesmen yang terpisah, dan 
+pembuatannya menyesuaikan format dalam Surat Direktur Jenderal Pemasyarakatan 
+Nomor PAS-PK.02.02-1862 tanggal 30 November 2022 tentang Penggunaan Instrumen 
+Asesmen Guna Penurunan Tingkat Risiko. 
+ 
+Pilih 'Ya' jika lampiran laporan ini diperlukan sebagai data dukung resmi. Jika dipilih 
+'Ya', maka akan muncul beberapa kolom isian administratif yang perlu dilengkapi. Isilah 
+Tempat dan Tanggal Pelaksanaan asesmen dilakukan. Selanjutnya, masukkan Tanggal 
+dan Nomor Surat Tugas yang menjadi dasar pelaksanaan asesmen tersebut. 
+Di bawahnya, terdapat bagian 'Saran Pembinaan'. Untuk mengisinya, ketik satu 
+saran program di kolom teks yang tersedia, lalu klik tombol "+ Tambah". Saran tersebut 
+akan masuk ke dalam daftar di bawahnya. Ulangi untuk setiap saran. Untuk menghapus, 
+pilih salah satu item di dalam daftar, lalu klik tombol "- Hapus". Semua data yang diisi ini 
+akan digunakan untuk menyusun lampiran laporan asesmen yang lengkap dan formal. 
+
+
+ 
+50 
+ 
+XVI. MENGISI PELAKSANAAN DIVERSI 
+Bab ini hanya akan muncul jika pada bagian Data Umum dipilih jenis litmas 'Sidang Anak'. 
+Bab ini digunakan untuk mencatat hasil upaya diversi yang telah dilakukan, dan berfungsi 
+sebagai dasar penjelasan di dalam laporan mengapa diversi tidak terlaksana atau tidak 
+menghasilkan kesepakatan. 
+ 
+A. Syarat Formil Diversi 
+Bagian ini menampilkan dua kondisi yang menentukan apakah perkara memenuhi syarat 
+formil untuk diupayakan diversi sesuai Pasal 7 ayat (2) Undang-Undang Sistem Peradilan 
+Pidana Anak (UU SPPA). Kolom pertama yaitu 'Ancaman Pidana ≥ 7 Tahun' bersifat 
+hanya baca dan terisi otomatis berdasarkan data ancaman hukuman yang telah diinput 
+pada Tab Data Umum, sehingga tidak perlu diisi ulang di sini. Kolom kedua yaitu 
+'Merupakan pengulangan tindak pidana?' diisi secara manual dengan memilih 'Ya' atau 
+'Tidak'. Setelah kedua kondisi terisi, aplikasi akan menampilkan catatan otomatis yang 
+menjelaskan status kelayakan diversi dari perkara tersebut. 
+B. Persetujuan Korban 
+Bagian ini mencatat sikap korban terhadap upaya diversi. Pilih apakah korban setuju 
+diversi atau tidak. Jika dipilih 'Tidak', kolom tambahan akan muncul untuk menguraikan 
+alasan korban tidak menyetujui diversi. Perlu diperhatikan bahwa jika syarat formil diversi 
+terpenuhi yaitu ancaman pidana kurang dari 7 tahun dan bukan merupakan pengulangan 
+tindak pidana, pilihan pada bagian ini akan dikunci secara otomatis menjadi 'Tidak'. Hal 
+ini karena bab ini digunakan pada tahap Sidang Anak, sehingga persetujuan korban 
+dikunci sebagai dasar penjelasan bahwa diversi tidak terlaksana atau tidak menghasilkan 
+kesepakatan. Sebaliknya, jika syarat formil tidak terpenuhi, sikap korban tetap dicatat 
+sebagai 
+keterangan 
+tambahan, 
+namun 
+persetujuan 
+korban 
+tidak 
+dapat 
+mengesampingkan ketentuan Pasal 7 ayat (2) UU SPPA. 
+XVII. MENGISI ANALISIS 
+Bagian ini memberikan pilihan mengenai bagaimana bagian Analisis akan dibuat di dalam 
+dokumen laporan. Pilihan di sini akan menentukan apakah aplikasi menggunakan templat 
+analisis yang sudah disiapkan atau menyediakan kerangka kosong untuk diisi secara 
+manual. Langkah utama adalah memilih opsi pada pertanyaan 'Gunakan template subjudul 
+yang ada?'. 
+Jika dipilih 'Ya', aplikasi akan secara otomatis menghasilkan bagian analisis yang 
+lengkap dan terstruktur. Pada Litmas Integrasi, template yang digunakan terdiri dari empat 
+subjudul standar yaitu A. Sikap Klien Selama Menjalani Pembinaan dan Risiko 
+Pengulangan Tindak Pidana, B. Hasil yang Diperoleh Klien Setelah Mengikuti Program 
+
+
+ 
+ 
+ 
+ 
+ 51 
+ 
+Pembinaan, C. Penerimaan dan Kesiapan Masyarakat maupun Pemerintah Setempat, dan 
+D. Kelayakan Penjamin. Setiap subjudul akan diisi dengan paragraf narasi yang secara 
+dinamis dihubungkan dengan data-data yang telah diisi pada bab-bab sebelumnya. Pilihan 
+ini sangat menghemat waktu dan memastikan analisis memiliki landasan teoretis yang kuat. 
+ 
+ 
+Pada Litmas Anak, template yang digunakan terdiri dari enam subjudul yaitu A. 
+Perkembangan Klien Anak Sejak Lahir Sampai Terjadinya Dugaan Tindak Pidana, B. 
+Dugaan Tindak Pidana, C. Faktor Penyebab Terjadinya Tindak Pidana, D. Pandangan 
+Keluarga, Korban, dan Masyarakat, E. Analisis Sosiologis dan Yuridis, serta F. Hal-hal yang 
+Meringankan dan yang Memberatkan. Khusus untuk poin F, terdapat fitur tambahan berupa 
+dua daftar isian yaitu Hal-hal yang Meringankan dan Hal-hal yang Memberatkan. Klik tombol 
+'Tampilkan Otomatis' untuk mengisi poin-poin secara otomatis dari data yang telah diisi 
+pada tab sebelumnya. Poin-poin yang dihasilkan dapat diedit, ditambah, atau dihapus 
+sesuai kebutuhan. 
+ 
+
+
+ 
+52 
+ 
+ 
+Jika dipilih 'Tidak', aplikasi akan membuat bagian Analisis yang kosong dengan 
+subjudul placeholder. Bagian ini harus diisi secara manual langsung di dalam fail Microsoft 
+Word setelah laporan selesai dibuat. Pilihan ini memberikan kebebasan penuh kepada 
+pengguna untuk menyusun analisis sendiri dari awal. 
+ 
+XVIII. MENGISI KESIMPULAN DAN REKOMENDASI 
+Bagian Kesimpulan hanya akan muncul jika pada bagian Analisis sebelumnya dipilih opsi 
+'Ya' untuk menggunakan templat. 
+A. Kesimpulan 
+Bagian Kesimpulan hanya akan muncul jika pada bagian Analisis sebelumnya dipilih opsi 
+'Ya' untuk menggunakan templat. Pada Litmas Integrasi, terdapat empat poin 
+kesimpulan yaitu Sikap Klien, Hasil Pembinaan, Penerimaan Masyarakat, dan Kelayakan 
+Penjamin. Untuk setiap poin, pilih salah satu dari dua simpulan yang telah disiapkan yaitu 
+'mendukung diberikan program integrasi' atau 'tidak mendukung diberikan program 
+integrasi'. Pilihan yang dibuat akan secara otomatis dimasukkan ke dalam poin-poin 
+kesimpulan di dalam dokumen laporan akhir. 
+ 
+
+
+ 
+ 
+ 
+ 
+ 53 
+ 
+Pada Litmas Anak, kesimpulan tidak perlu diisi secara manual. Aplikasi akan 
+membuat kesimpulan secara otomatis berdasarkan isian analisis yang telah diisi pada 
+masing-masing poin A sampai F di bab sebelumnya. 
+ 
+B. Rekomendasi 
+Pada Litmas Integrasi, pilih rekomendasi akhir (Setuju atau Tidak Setuju) terkait 
+pengusulan Program Integrasi. Selanjutnya, isikan Tanggal Sidang TPP dengan cara 
+mengklik ikon kalender, ketik manual langsung, atau tempel (paste) di kolom dengan 
+format Hari-Bulan-Tahun (DD-MM-YYYY). Kedua data ini akan digabungkan oleh 
+aplikasi untuk menghasilkan paragraf rekomendasi resmi yang lengkap dan sesuai 
+format di dalam laporan Word. 
+ 
+Pada Litmas Anak, pilihan rekomendasi menyesuaikan dengan program yang 
+dipilih di Tab Data Umum. Jika programnya adalah Diversi, pilih bentuk kesepakatan 
+diversi dari daftar yang tersedia yaitu Perdamaian dengan Ganti Kerugian, Perdamaian 
+tanpa Ganti Kerugian, Pengembalian kepada Orang Tua/Wali, Keikutsertaan dalam 
+Pendidikan atau Pelatihan, Pelayanan Masyarakat, atau Rehabilitasi Medis dan 
+Psikososial. Khusus untuk tiga pilihan terakhir, kolom Tempat Pelaksanaan akan muncul 
+untuk dilengkapi. Tersedia pula kolom Dasar Hukum Rekomendasi yang bersifat 
+opsional. Terakhir, isikan Tanggal Sidang TPP dengan format Hari-Bulan-Tahun (DD-
+MM-YYYY). 
+Jika programnya adalah Sidang Anak, pilih terlebih dahulu Jenis Rekomendasi 
+antara Tindakan atau Pidana. Perlu diketahui bahwa jika usia klien di bawah 14 tahun, 
+pilihan Jenis Rekomendasi otomatis dikunci menjadi Tindakan saja. Jika dipilih Tindakan, 
+pilih jenis tindakan dari daftar yang tersedia yaitu Pengembalian kepada Orang Tua/Wali, 
+Penyerahan kepada Seseorang, Perawatan di Rumah Sakit Jiwa, Perawatan di LPKS, 
+Kewajiban Mengikuti Pendidikan Formal dan/atau Pelatihan, Pencabutan Surat Izin 
+Mengemudi, atau Perbaikan Akibat Tindak Pidana. Setiap pilihan akan menampilkan 
+kolom lanjutan yang relevan seperti kolom Penerima untuk Penyerahan kepada 
+Seseorang, kolom Tempat Pelaksanaan untuk beberapa jenis tindakan, atau kolom 
+Berupa untuk Perbaikan Akibat Tindak Pidana. 
+
+
+ 
+54 
+ 
+ 
+Jika dipilih Pidana, pilih jenis pidana dari daftar yaitu Pidana Peringatan, Pidana 
+dengan Syarat, Pelatihan Kerja, Pembinaan dalam Lembaga, atau Pidana Penjara. Jika 
+dipilih Pidana dengan Syarat, kolom subjenis akan muncul dengan pilihan Pembinaan di 
+Luar Lembaga, Pelayanan Masyarakat, atau Pengawasan, beserta kolom detail 
+lanjutannya. Untuk Pelatihan Kerja dan Pembinaan dalam Lembaga, kolom Tempat 
+Pelaksanaan akan muncul. Tersedia pula kolom Pidana Tambahan yang bersifat 
+opsional dengan pilihan Perampasan Keuntungan Hasil Tindak Pidana atau Pemenuhan 
+Kewajiban Adat. 
+Untuk Sidang Anak, tersedia pula kolom Dasar Hukum Rekomendasi yang bersifat 
+opsional. Selanjutnya isikan Tanggal Sidang TPP dengan format Hari-Bulan-Tahun (DD-
+MM-YYYY). Jika template analisis sebelumnya dipilih 'Ya', akan muncul bagian 
+Pertimbangan di bawah Tanggal Sidang TPP. Klik tombol 'Muat Poin' untuk memuat 
+daftar poin dari Hal yang Meringankan dan Hal yang Memberatkan yang telah diisi pada 
+Tab Analisis. Centang satu atau lebih poin yang ingin dimasukkan sebagai dasar 
+pertimbangan rekomendasi di dalam laporan. Gunakan tombol 'Kosongkan Pilihan' untuk 
+membatalkan semua centang sekaligus. 
+ 
+C. Pendaftaran TPP Secara Daring (Khusus Balai Pemasyarakatan Kelas I Jambi) 
+Bagian ini disediakan khusus untuk Balai Pemasyarakatan Kelas I Jambi dalam rangka 
+pendaftaran Sidang Tim Pengamat Pemasyarakatan (TPP) secara daring melalui 
+formulir resmi yang digunakan di satuan kerja. Pilih 'Ya' pada pertanyaan 'Daftarkan TPP 
+di Google Form?' untuk mengaktifkan fitur ini, lalu ikuti dua langkah berikut. 
+1. Salin dan tempel tautan (URL) Google Form pendaftaran Sidang TPP Balai 
+Pemasyarakatan Kelas I Jambi pada kolom yang tersedia. 
+ 
+2. Klik tombol 'Generate & Tampilkan Data TPP' untuk membaca data dari seluruh tab 
+dan memetakannya ke kolom-kolom Google Form. Periksa dan edit data yang 
+ditampilkan jika diperlukan, lalu klik tombol 'Daftarkan ke Google Form' untuk 
+
+
+ 
+ 
+ 
+ 
+ 55 
+ 
+melanjutkan proses pendaftaran. Screenshot bukti pendaftaran akan ditampilkan 
+secara otomatis setelah pengisian Google Form selesai.  
+ 
+ 
+3. Klik tombol 2. Daftarkan Sidang TPP untuk melanjutkan proses pendaftaran melalui 
+formulir daring sampai selesai. 
+ 
+
+
+ 
+56 
+ 
+XIX. MENGISI BAGIAN PENUTUP 
+Tab terakhir dalam aplikasi LIBERO ini berfungsi sebagai tempat konfigurasi akhir sebelum 
+menghasilkan dokumen laporan Word. Di sini, pengguna akan mengatur penyertaan tanda 
+tangan digital petugas dan lampiran dokumentasi berupa foto. 
+A. Tanda Tangan Petugas 
+Klik tombol 'Pilih...' untuk membuka jendela penjelajah file, lalu cari dan pilih file gambar 
+tanda tangan petugas. Format file yang didukung adalah .png dan .jpg. Sebaiknya 
+gunakan format .png dengan latar belakang transparan untuk hasil terbaik. Setelah 
+dipilih, pratinjau gambar tanda tangan akan ditampilkan. Klik tombol 'Hapus' jika ingin 
+mengganti atau membatalkan pilihan. 
+ 
+ 
+B. Lampirkan Dokumentasi 
+Pilih 'Ya' jika ingin menyertakan lampiran foto dokumentasi di akhir laporan. Jika dipilih 
+'Ya', tiga grup foto akan muncul untuk dikelola. Pada Litmas Integrasi, ketiga grup 
+tersebut adalah Dokumentasi dengan Klien, Dokumentasi dengan Penjamin, dan 
+Dokumentasi Lainnya. Pada Litmas Anak, grup kedua berubah menjadi Dokumentasi 
+dengan Keluarga. 
+Untuk masing-masing grup, klik tombol 'Tambah Foto...' untuk menambahkan baris 
+baru, lalu klik 'Pilih...' pada baris tersebut untuk memilih file foto. Khusus untuk grup 
+Dokumentasi Lainnya, isi kolom nama terlebih dahulu sebagai keterangan foto sebelum 
+memilih filenya. Ulangi untuk setiap foto yang ingin ditambahkan. Klik 'Hapus' pada baris 
+yang ingin dihapus. 
+ 
+
+
+ 
+ 
+ 
+ 
+ 57 
+ 
+C. Langkah Terakhir: Menghasilkan Dokumen 
+Setelah seluruh data pada semua tab selesai diisi, klik tombol Selesaikan yang tersedia 
+di bagian atas layar. Aplikasi akan membuka jendela konfirmasi untuk mengisi nama file 
+dan menentukan lokasi penyimpanan. Klik tombol Buat Dokumen untuk menghasilkan 
+dokumen laporan akhir dalam format Microsoft Word. Setelah dokumen berhasil dibuat, 
+akan muncul notifikasi yang menampilkan nama file beserta dua tombol pilihan yaitu 
+Buka Folder untuk membuka lokasi penyimpanan file, dan Buka Dokumen untuk 
+langsung membuka dokumen Word yang baru dibuat. 
+ 
+Setelah dokumen dibuka, lakukan pemeriksaan menyeluruh terhadap keseluruhan 
+isinya. Pastikan tidak ada bagian yang masih bertanda (BELUM DIISI), dan sempurnakan 
+kalimat atau narasi yang dihasilkan secara otomatis agar sepenuhnya selaras dengan 
+gaya bahasa pengguna.  
+ 
+ 
+ 
+
+
+ 
+58 
+ 
+ 
+Seperti yang terlihat, data yang diisi pada antarmuka aplikasi LIBERO diubah menjadi 
+sebuah Laporan Penelitian Kemasyarakatan yang rapi, lengkap, dan sesuai dengan tata 
+naskah dinas yang berlaku.  
+D. Langkah Final Sebelum Mengirim Laporan Penelitian Kemasyarakatan 
+Sebagai langkah final yang krusial, pengguna wajib membuka dan melakukan 
+pemeriksaan menyeluruh terhadap keseluruhan isi dokumen. Proses pemeriksaan ini 
+bertujuan untuk melakukan verifikasi data, memastikan tidak ada lagi bagian yang 
+tertanda (BELUM DIISI), serta memberikan kesempatan untuk menyempurnakan kalimat 
+atau narasi yang dihasilkan secara otomatis agar sepenuhnya selaras dengan gaya 
+bahasa dari pengguna. 
+XX. PENUTUP 
+Demikianlah buku panduan penggunaan aplikasi LIBERO (Litmas Berbasis Elektronik, 
+Ringkas dan Optimal), sebuah alat aplikasi yang dirancang untuk mempermudah dan 
+menstandarkan penyusunan Laporan Penelitian Kemasyarakatan. 
+Semoga dengan panduan yang telah disusun secara bertahap ini, setiap pengguna 
+dapat memanfaatkan seluruh fitur yang ada secara optimal, mulai dari pengisian data, 
+penggunaan fitur otomatisasi, hingga menghasilkan laporan akhir yang profesional dan 
+akurat. Penting untuk diingat bahwa aplikasi ini bersifat sebagai alat bantu yang 
+intervensinya berfokus pada tahap penyusunan di hulu, sehingga tidak mengganggu proses 
+bisnis yang telah berjalan saat ini. Pada akhirnya, aplikasi ini hanya menghasilkan dokumen 
+yang masih dapat disunting sepenuhnya, karena keputusan dan kendali penuh atas narasi 
+final Laporan Penelitian Kemasyarakatan tetap menjadi hak dan tanggung jawab setiap 
+pengguna sebagai Pejabat Fungsional Pembimbing Kemasyarakatan (PK) dan Asisten 
+Pembimbing Kemasyarakatan (APK). Selamat bekerja dan berkarya dalam mendukung 
+sistem pemasyarakatan yang lebih baik. 
+ 
+ 
+
+
+ 
+ 
+ 
+ 
+ 59 
+ 
+ 
+ 
+
+
+ 
+60 
+ 
+ 
+ 
