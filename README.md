@@ -5,7 +5,7 @@ Dibuat oleh Rinaldi Yudistira Nachrawy
 
 [![Hak Cipta](https://img.shields.io/badge/HKI-EC00202514424-gold?style=flat-square)](https://dgip.go.id)
 [![Platform](https://img.shields.io/badge/Platform-Windows%2010%2F11-blue?style=flat-square&logo=windows)](https://github.com/inaldy31/LIBERO/releases/latest)
-[![Versi](https://img.shields.io/badge/Versi-2.2.5-brightgreen?style=flat-square)](https://github.com/inaldy31/LIBERO/releases/latest)
+[![Versi](https://img.shields.io/badge/Versi-2.2.6-brightgreen?style=flat-square)](https://github.com/inaldy31/LIBERO/releases/latest)
 [![Trial](https://img.shields.io/badge/Trial-s.d.%2023%20Mei%202026-orange?style=flat-square)](https://github.com/inaldy31/LIBERO/releases/latest)
 ![GitHub release (latest)](https://img.shields.io/github/v/release/inaldy31/LIBERO?style=flat-square&label=Rilis+Terbaru)
 [![Total Unduhan](https://img.shields.io/github/downloads/inaldy31/LIBERO/total?style=flat-square&label=Total%20Unduhan&logo=github&cacheSeconds=3600)](https://github.com/inaldy31/LIBERO/releases)
@@ -26,6 +26,7 @@ Dibuat oleh Rinaldi Yudistira Nachrawy
   - [Keamanan Data](#keamanan-data)
   - [Build dari Source](#build-dari-source)
 - [Changelog](#changelog)
+  - [v2.2.6](#v226)
   - [v2.2.5](#v225)
   - [v2.2.4](#v224)
   - [v2.2.3](#v223)
@@ -266,6 +267,26 @@ Script akan otomatis:
 
 # Changelog
 
+
+## v2.2.6
+
+- **Review STOPPER sebelum menerapkan hasil**: Stopper Wilayah, PDF/foto, dan Kronologi kini menampilkan `Isi Saat Ini` sebagai pembanding sebelum data diterapkan ke form.
+- **Stopper PDF/foto lebih transparan**: Hasil ekstraksi dokumen dapat menampilkan sumber file atau catatan sumber dari AI, termasuk dukungan metadata `__sources`.
+- **Penerapan hasil lebih aman untuk data lama**: Field kosong ditampilkan sebagai `-`; pada Stopper PDF/foto, pilihan terapkan otomatis diprioritaskan untuk field yang masih kosong agar isi lama tidak mudah tertimpa.
+- **Kronologi STOPPER tidak langsung overwrite**: Hasil perbaikan narasi dan audio kini dapat ditinjau lebih dulu, dengan pilihan ganti isi lama, tambahkan di bawah, atau batal.
+- **BPS WebAPI lebih tahan gagal**: Pengambilan data wilayah mencoba domain kab/kota terlebih dahulu, fallback ke provinsi, dan menangani respons kosong/null dari API tanpa menghentikan proses.
+- **Lazy tab lebih aman saat form aktif**: Sistem lazy tab kini menjaga fokus field, posisi scroll, dan posisi caret saat tab dimount ulang untuk progress, validasi, atau collect data.
+- **Collect data tab tersembunyi lebih presisi**: Pembacaan data lintas tab dibatasi ke tab yang aktif sesuai jenis Litmas/program, sehingga data dari tab yang tidak relevan tidak ikut mengganggu hasil simpan atau validasi.
+- **Form Orang Tua/Wali Litmas Anak diperbaiki**: Bagian riwayat pernikahan serta pekerjaan/ekonomi kini memisahkan alur Wali dan Orang Tua, sehingga field ayah, ibu, wali, penghasilan, dan pemberi nafkah tidak saling tercampur saat ditampilkan, disimpan, atau dimuat ulang.
+- **Data korban Litmas Anak diperbaiki**: Sistem kartu korban kini lebih stabil untuk korban diri sendiri, perorangan/badan hukum, dan negara; minimal satu korban tetap terjaga, nama/kerugian korban tersinkron ke tanggapan pihak, dan uraian akibat korban/negara masuk lebih rapi ke dokumen.
+- **Output dokumen lebih lengkap**: Nilai uang pengganti, variasi key jenis kelamin keluarga, dan uraian akibat korban/negara/klien sendiri lebih konsisten terbaca saat dokumen dibuat.
+- **Field panjang lebih nyaman diisi**: Beberapa textarea seperti perkara dan kronologi otomatis menjaga ukuran serta posisi input agar tidak mengganggu pengetikan.
+- **Input form lebih responsif**: Delay caret saat mengetik dikurangi dengan menunda kerja progress, autosave, dan sinkronisasi tanggapan korban sampai pengguna berhenti mengetik sejenak.
+- **Splash launcher disesuaikan**: Urutan first paint, gate, dan garis splash diperhalus agar tampilan awal lebih konsisten sebelum masuk ke launcher.
+- **Shutdown WebView2 lebih aman**: Proses penutupan aplikasi dipatch agar cleanup WebView2/WinForms lebih tahan error saat user menutup atau berpindah halaman.
+- **Panduan penggunaan diperbarui**: Dokumen panduan penggunaan aplikasi ikut diperbarui di paket rilis.
+- **Riwayat versi di launcher**: Launcher kini menyediakan tombol `Riwayat Versi` untuk melihat changelog lokal dan membuka halaman GitHub/GitHub Releases.
+- **Auto update lebih halus**: Update dapat diunduh diam-diam di background, lalu menampilkan pilihan `Restart Sekarang` atau `Nanti saja` setelah installer siap.
 
 ## v2.2.5
 
