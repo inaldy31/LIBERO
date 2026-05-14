@@ -221,8 +221,9 @@ LIBERO dirancang dengan prinsip perlindungan data klien:
 - Data autosave disimpan dalam format terenkripsi menggunakan algoritma berbasis AES
 - Fail kerja hanya dapat dibuka melalui aplikasi LIBERO
 - Validasi perangkat berbasis Hardware ID (HWID) mencegah penggunaan di perangkat tidak sah
-- Tidak ada data klien yang dikirim ke server eksternal; semua data diproses secara lokal
-- Komunikasi dengan server hanya terjadi untuk keperluan verifikasi status aktivasi perangkat
+- Pada fitur inti, data klien diproses secara lokal dan tidak dikirim ke server LIBERO
+- Komunikasi dengan server LIBERO hanya terjadi untuk keperluan verifikasi status aktivasi perangkat
+- Fitur online seperti Registrasi TPP dan Stopper AI hanya mengirim data yang dipilih/diproses pengguna ke layanan terkait saat fitur tersebut dijalankan
 
 ---
 
@@ -291,7 +292,7 @@ Script akan otomatis:
 - **Toast update lebih stabil**: Toast restart di launcher, Integrasi, dan Litmas Anak diperbaiki agar tidak muncul berulang dari cache atau dari sistem toast umum.
 - **Validasi rilis GitHub lebih aman**: State update lokal divalidasi ulang terhadap GitHub Releases. Jika tag/asset rilis sudah tidak tersedia, notifikasi update lama akan dibersihkan; jika hanya koneksi yang bermasalah, installer yang sudah siap tetap dipertahankan.
 - **Retry download lebih ramah koneksi**: Kegagalan download menampilkan pemberitahuan ringan dan mencoba ulang dengan jeda bertahap.
-- **FAQ Stopper AI ditambahkan**: README kini memuat penjelasan singkat tentang apa itu Stopper AI dan cara mengaktifkannya.
+- **FAQ koneksi internet dan Stopper AI diperbarui**: README kini menjelaskan fitur mana yang bisa berjalan offline, fitur mana yang membutuhkan internet, serta cara mengaktifkan Stopper AI.
 
 ## v2.2.5
 
@@ -420,10 +421,19 @@ Script akan otomatis:
 ## FAQ
 
 **Apakah aplikasi ini bisa digunakan tanpa internet?**
-Ya, setelah perangkat terdaftar dan disetujui. Internet hanya dibutuhkan saat registrasi awal dan verifikasi aktivasi.
+Ya, untuk pekerjaan utama seperti mengisi form, menyimpan/membuka fail kerja, autosave, validasi kolom kosong, dan membuat dokumen `.docx`, LIBERO dapat digunakan tanpa internet setelah perangkat terdaftar dan status aktivasi sudah valid. Namun beberapa fitur tambahan tetap membutuhkan koneksi internet.
+
+**Fitur apa saja yang membutuhkan internet?**
+Fitur yang membutuhkan internet adalah pendaftaran perangkat dan verifikasi aktivasi saat diperlukan, auto-update dari GitHub Releases, Registrasi TPP via Google Form/Selenium, serta Stopper AI. Di dalam Stopper AI, koneksi internet dipakai untuk layanan AI, pencarian perkara/sumber online, dan Ambil Data Wilayah yang memakai Wilayah.id serta BPS WebAPI. Membuka GitHub, panduan online, atau halaman rilis juga tentu membutuhkan internet.
+
+**Apakah data litmas klien dikirim ke server LIBERO?**
+Tidak. Server LIBERO hanya dipakai untuk verifikasi perangkat/aktivasi dan tidak menerima database litmas pengguna. Data form, autosave, dan fail kerja tetap berada di perangkat pengguna.
+
+**Apakah fitur online mengirim data ke layanan luar?**
+Ya, hanya saat pengguna menjalankan fitur yang memang membutuhkan layanan luar. Contohnya: Registrasi TPP mengirim data ke Google Form TPP. Stopper AI dapat mengirim dokumen/teks/audio yang dipilih pengguna ke penyedia AI sesuai API Key yang digunakan, dan pada mode Ambil Data Wilayah dapat mengirim kata kunci alamat ke sumber wilayah/BPS. Karena itu, hasil dan data yang dikirim tetap perlu dipertimbangkan sesuai kebijakan kerja masing-masing.
 
 **Apa itu Stopper AI?**
-Stopper AI adalah kumpulan fitur bantuan berbasis AI di LIBERO untuk mempercepat pekerjaan yang biasanya memakan waktu, seperti membaca dokumen pendukung PDF/foto, merapikan kronologi dari teks atau audio, membantu pencarian data perkara, dan menyusun rekomendasi wilayah. Hasil Stopper AI tetap ditampilkan untuk ditinjau terlebih dahulu sebelum diterapkan ke form.
+Stopper AI adalah kumpulan fitur bantuan berbasis AI di LIBERO untuk mempercepat pekerjaan yang biasanya memakan waktu, seperti membaca dokumen pendukung PDF/foto, merapikan kronologi dari teks atau audio, membantu pencarian data perkara, dan Ambil Data Wilayah untuk menyusun rekomendasi lingkungan/wilayah. Hasil Stopper AI tetap ditampilkan untuk ditinjau terlebih dahulu sebelum diterapkan ke form.
 
 **Bagaimana cara memasang atau mengaktifkan Stopper AI?**
 Stopper AI tidak perlu installer terpisah karena sudah menjadi bagian dari LIBERO. Pastikan LIBERO terpasang dari installer terbaru, buka **Pengaturan**, lalu isi API Key AI yang didukung. Setelah itu fitur Stopper AI dapat dipakai dari tombol STOPPER/AI di form Litmas Integrasi atau Litmas Anak.
@@ -433,9 +443,6 @@ Tidak untuk proses yang benar-benar membutuhkan AI, seperti ekstraksi dokumen, p
 
 **Apakah hasil Stopper AI langsung mengganti isi form?**
 Tidak. Hasil Stopper AI ditampilkan dalam jendela pratinjau terlebih dahulu. Pengguna bisa membandingkan `Isi Saat Ini` dengan hasil AI, memilih field yang ingin diterapkan, atau membatalkan jika hasilnya belum sesuai.
-
-**Apakah data litmas klien dikirim ke server?**
-Tidak. Semua data diproses secara lokal di komputer pengguna. Server hanya menerima UUID perangkat untuk keperluan verifikasi aktivasi, bukan data klien.
 
 **Apakah file litmas bisa dibuka di komputer lain?**
 File `.docx` hasil export bisa dibuka di mana saja. Tapi file kerja `.lit` hanya bisa dibuka lewat aplikasi LIBERO di perangkat yang terdaftar.
@@ -451,9 +458,6 @@ Tidak. LIBERO membutuhkan Windows 10 atau 11 karena bergantung pada WebView2 Run
 
 **Kenapa ada pesan "Windows protected your PC" saat pertama dibuka?**
 Karena LIBERO belum memiliki code signing certificate. Klik **More info** lalu **Run anyway** untuk tetap menjalankan aplikasi.
-
-**Apakah LIBERO bisa digunakan offline sepenuhnya setelah aktivasi?**
-Hampir sepenuhnya. Fitur yang tetap membutuhkan internet adalah registrasi TPP via Selenium dan pengecekan update otomatis.
 
 **Berapa lama proses persetujuan registrasi?**
 Tidak ada jaminan waktu pasti, tergantung ketersediaan pengembang. Biasanya diproses dalam 1x24 jam.
