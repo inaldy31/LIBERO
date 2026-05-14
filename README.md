@@ -420,76 +420,76 @@ Script akan otomatis:
 
 ## FAQ
 
-**Apakah aplikasi ini resmi dari Kementerian Imigrasi dan Pemasyarakatan/Direktorat Jenderal Pemasyarakatan?**
+**Apakah aplikasi ini resmi dari Kementerian Imigrasi dan Pemasyarakatan/Direktorat Jenderal Pemasyarakatan?**<br>
 LIBERO merupakan inisiatif mandiri yang dikembangkan untuk mendukung efisiensi kerja Pembimbing Kemasyarakatan. Aplikasi ini tidak berafiliasi secara resmi dengan Kementerian Imigrasi dan Pemasyarakatan maupun Direktorat Jenderal Pemasyarakatan, namun dirancang sesuai kebutuhan praktis di lapangan dan terbuka untuk kolaborasi lebih lanjut.
 
-**Apakah LIBERO bisa dipakai di Windows 7 atau 8?**
+**Apakah LIBERO bisa dipakai di Windows 7 atau 8?**<br>
 Tidak. LIBERO membutuhkan Windows 10 atau 11 karena bergantung pada WebView2 Runtime yang tidak tersedia di versi Windows lebih lama.
 
-**Kenapa ada pesan "Windows protected your PC" saat pertama dibuka?**
+**Kenapa ada pesan "Windows protected your PC" saat pertama dibuka?**<br>
 Karena LIBERO belum memiliki code signing certificate. Klik **More info** lalu **Run anyway** untuk tetap menjalankan aplikasi.
 
-**Berapa lama proses persetujuan registrasi?**
+**Berapa lama proses persetujuan registrasi?**<br>
 Tidak ada jaminan waktu pasti, tergantung ketersediaan pengembang. Biasanya diproses dalam 1x24 jam.
 
-**Apakah LIBERO bisa diinstal di banyak komputer?**
+**Apakah LIBERO bisa diinstal di banyak komputer?**<br>
 Setiap perangkat membutuhkan registrasi tersendiri. Satu UUID hanya berlaku untuk satu perangkat.
 
-**Bagaimana jika komputer diganti atau diformat?**
+**Bagaimana jika komputer diganti atau diformat?**<br>
 Lakukan pendaftaran ulang di perangkat baru melalui tombol **Daftar Perangkat** di launcher, lalu tunggu persetujuan pengembang.
 
-**Apakah aplikasi ini bisa digunakan tanpa internet?**
+**Apakah aplikasi ini bisa digunakan tanpa internet?**<br>
 Ya, untuk pekerjaan utama seperti mengisi form, menyimpan/membuka fail kerja, autosave, validasi kolom kosong, dan membuat dokumen `.docx`, LIBERO dapat digunakan tanpa internet setelah perangkat terdaftar dan status aktivasi sudah valid. Namun beberapa fitur tambahan tetap membutuhkan koneksi internet.
 
-**Fitur apa saja yang membutuhkan internet?**
+**Fitur apa saja yang membutuhkan internet?**<br>
 Fitur yang membutuhkan internet adalah pendaftaran perangkat dan verifikasi aktivasi saat diperlukan, auto-update dari GitHub Releases, Registrasi TPP via Google Form/Selenium, serta Stopper AI. Di dalam Stopper AI, koneksi internet dipakai untuk layanan AI, pencarian perkara/sumber online, dan Ambil Data Wilayah yang memakai Wilayah.id serta BPS WebAPI. Membuka GitHub, panduan online, atau halaman rilis juga membutuhkan internet.
 
-**Kenapa update sudah diunduh tetapi belum langsung terpasang?**
+**Kenapa update sudah diunduh tetapi belum langsung terpasang?**<br>
 LIBERO tidak langsung memasang update agar pekerjaan pengguna tidak terputus. Setelah installer siap, pengguna dapat memilih `Restart Sekarang` untuk memasang saat itu juga atau `Pasang Saat Dibuka Lagi` agar pemasangan dilakukan pada pembukaan LIBERO berikutnya.
 
-**Apa arti Pasang Saat Dibuka Lagi?**
+**Apa arti Pasang Saat Dibuka Lagi?**<br>
 Jika pilihan ini digunakan, LIBERO tidak langsung menutup aplikasi. Saat pengguna membuka LIBERO berikutnya, installer update akan dijalankan terlebih dahulu sebelum masuk ke splash atau launcher.
 
-**Apa yang terjadi jika koneksi terputus saat update?**
+**Apa yang terjadi jika koneksi terputus saat update?**<br>
 Unduhan akan ditandai tertunda, progress disembunyikan, dan LIBERO menampilkan pemberitahuan ringan bahwa pembaruan akan dicoba lagi otomatis. Jika aplikasi ditutup lalu dibuka kembali, LIBERO akan mengecek rilis terbaru lagi.
 
-**Apakah download update dilanjutkan dari persen terakhir jika gagal?**
+**Apakah download update dilanjutkan dari persen terakhir jika gagal?**<br>
 Tidak. Jika unduhan gagal atau terputus, LIBERO akan mengunduh ulang installer dari awal. Ukuran installer relatif kecil, sehingga cara ini lebih sederhana dan lebih aman daripada menyimpan potongan file unduhan.
 
-**Apa itu Stopper AI?**
+**Apa itu Stopper AI?**<br>
 Stopper AI adalah kumpulan fitur bantuan berbasis AI di LIBERO untuk mempercepat pekerjaan yang biasanya memakan waktu, seperti membaca dokumen pendukung PDF/foto, merapikan kronologi dari teks atau audio, membantu pencarian data perkara, dan Ambil Data Wilayah untuk menyusun rekomendasi lingkungan/wilayah. Hasil Stopper AI tetap ditampilkan untuk ditinjau terlebih dahulu sebelum diterapkan ke form.
 
-**Bagaimana cara memasang atau mengaktifkan Stopper AI?**
+**Bagaimana cara memasang atau mengaktifkan Stopper AI?**<br>
 Stopper AI tidak perlu installer terpisah karena sudah menjadi bagian dari LIBERO. Pastikan LIBERO terpasang dari installer terbaru, buka **Pengaturan**, lalu isi API Key AI yang didukung. Setelah itu fitur Stopper AI dapat dipakai dari tombol STOPPER/AI di form Litmas Integrasi atau Litmas Anak.
 
-**Apakah Stopper AI bisa digunakan tanpa API Key AI?**
+**Apakah Stopper AI bisa digunakan tanpa API Key AI?**<br>
 Tidak untuk proses yang benar-benar membutuhkan AI, seperti ekstraksi dokumen, perbaikan kronologi, transkripsi audio, atau rekomendasi naratif. Beberapa fitur non-AI tetap berjalan, tetapi tombol Stopper AI akan meminta API Key jika prosesnya membutuhkan layanan AI.
 
-**Di mana API Key AI disimpan?**
+**Di mana API Key AI disimpan?**<br>
 API Key AI disimpan secara lokal di perangkat pengguna pada berkas pengaturan aplikasi LIBERO. Penyimpanan ini bertujuan agar pengguna tidak perlu memasukkan API Key berulang kali. API Key tidak dikirim ke server LIBERO, tetapi akan digunakan untuk menghubungi penyedia layanan AI saat fitur Stopper AI dijalankan.
 
-**Apakah hasil Stopper AI langsung mengganti isi form?**
+**Apakah hasil Stopper AI langsung mengganti isi form?**<br>
 Tidak. Hasil Stopper AI ditampilkan dalam jendela pratinjau terlebih dahulu. Pengguna bisa membandingkan `Isi Saat Ini` dengan hasil AI, memilih field yang ingin diterapkan, atau membatalkan jika hasilnya belum sesuai.
 
-**Apakah dokumen, foto, teks, atau audio yang dipilih untuk Stopper AI dikirim keluar?**
+**Apakah dokumen, foto, teks, atau audio yang dipilih untuk Stopper AI dikirim keluar?**<br>
 Ya, hanya saat pengguna menjalankan fitur Stopper AI yang membutuhkan layanan AI. Dokumen PDF/foto, teks, atau audio yang dipilih pengguna dapat dikirim ke penyedia AI sesuai API Key yang digunakan. Data tersebut tidak dikirim ke server LIBERO.
 
-**Apakah dokumen yang diproses Stopper AI otomatis dihapus?**
+**Apakah dokumen yang diproses Stopper AI otomatis dihapus?**<br>
 Di sisi LIBERO, dokumen asli tetap berada di perangkat pengguna dan tidak disimpan ke server LIBERO. LIBERO hanya menggunakan dokumen tersebut saat proses Stopper AI berjalan. Setelah data dikirim ke layanan AI, pengelolaannya berada di luar server LIBERO.
 
-**Apakah data litmas klien dikirim ke server LIBERO?**
+**Apakah data litmas klien dikirim ke server LIBERO?**<br>
 Tidak. Server LIBERO hanya dipakai untuk verifikasi perangkat/aktivasi dan tidak menerima database litmas pengguna. Data form, autosave, fail kerja, serta dokumen yang dipilih untuk Stopper AI tidak disimpan ke server LIBERO.
 
-**Apa bedanya fail kerja dan dokumen Word hasil ekspor?**
+**Apa bedanya fail kerja dan dokumen Word hasil ekspor?**<br>
 Fail kerja `.lit` digunakan untuk menyimpan pekerjaan agar dapat dibuka dan dilanjutkan kembali di LIBERO. Dokumen Word `.docx` adalah hasil laporan yang dapat dibuka, diedit, dicetak, atau dibagikan melalui Microsoft Word.
 
-**Apakah file litmas bisa dibuka di komputer lain?**
+**Apakah file litmas bisa dibuka di komputer lain?**<br>
 File `.docx` hasil ekspor bisa dibuka di mana saja. Namun fail kerja `.lit` hanya bisa dibuka melalui aplikasi LIBERO di perangkat yang terdaftar.
 
-**Apakah data autosave bisa dibaca di luar aplikasi?**
+**Apakah data autosave bisa dibaca di luar aplikasi?**<br>
 Tidak secara normal. Autosave disimpan dalam format terlindungi internal aplikasi dan digunakan untuk memulihkan pekerjaan saat modul dibuka kembali.
 
-**Bagaimana cara kerja autosave?**
+**Bagaimana cara kerja autosave?**<br>
 Autosave berjalan otomatis saat pengguna mengisi form Litmas Integrasi atau Litmas Anak. Jika aplikasi tertutup sebelum data disimpan manual, LIBERO dapat menawarkan pemulihan data autosave saat modul dibuka kembali. Autosave akan dibersihkan setelah data berhasil disimpan, form dikosongkan, atau pengguna memilih untuk membuang autosave.
 
 ---
