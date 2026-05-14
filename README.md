@@ -82,6 +82,7 @@ LIBERO hadir untuk mengatasi hal tersebut dengan otomatisasi kalkulasi, standari
 - **Fail Kerja Terenkripsi**: Simpan dan lanjutkan progres kapan saja; file `.json` terenkripsi, hanya bisa dibuka lewat aplikasi
 - **Templat Data Pribadi**: Buat satu file master berisi data UPT & petugas untuk mempercepat laporan baru
 - **Registrasi TPP**: Pendaftaran otomatis ke Google Form TPP via Selenium
+- **Stopper AI**: Asisten AI untuk membaca dokumen pendukung, merapikan kronologi, membantu pencarian perkara, dan menyusun rekomendasi wilayah yang dapat ditinjau sebelum diterapkan
 - **Fitur Pengingat Kolom Kosong**: Otomatis mendeteksi field yang belum diisi sebelum dokumen dibuat
 - **Autosave**: Data tersimpan otomatis setiap 10 detik
 - **21 Pilihan Tema**: Tampilan dapat dikustomisasi sesuai selera
@@ -267,7 +268,6 @@ Script akan otomatis:
 
 # Changelog
 
-
 ## v2.2.6
 
 - **Review STOPPER sebelum menerapkan hasil**: Stopper Wilayah, PDF/foto, dan Kronologi kini menampilkan `Isi Saat Ini` sebagai pembanding sebelum data diterapkan ke form.
@@ -286,7 +286,12 @@ Script akan otomatis:
 - **Shutdown WebView2 lebih aman**: Proses penutupan aplikasi dipatch agar cleanup WebView2/WinForms lebih tahan error saat user menutup atau berpindah halaman.
 - **Panduan penggunaan diperbarui**: Dokumen panduan penggunaan aplikasi ikut diperbarui di paket rilis.
 - **Riwayat versi di launcher**: Launcher kini menyediakan tombol `Riwayat Versi` untuk melihat changelog lokal dan membuka halaman GitHub/GitHub Releases.
-- **Auto update lebih halus**: Update dapat diunduh diam-diam di background, lalu menampilkan pilihan `Restart Sekarang` atau `Nanti saja` setelah installer siap.
+- **Auto update lebih halus**: Update dapat diunduh diam-diam di background, lalu menampilkan pilihan `Restart Sekarang` atau `Pasang Saat Dibuka Lagi` setelah installer siap.
+- **Update lintas jendela lebih konsisten**: Launcher, Litmas Integrasi, dan Litmas Anak memakai state update bersama, sehingga progress download dan prompt pemasangan bisa tampil di jendela yang sedang aktif.
+- **Toast update lebih stabil**: Toast restart di launcher, Integrasi, dan Litmas Anak diperbaiki agar tidak muncul berulang dari cache atau dari sistem toast umum.
+- **Validasi rilis GitHub lebih aman**: State update lokal divalidasi ulang terhadap GitHub Releases. Jika tag/asset rilis sudah tidak tersedia, notifikasi update lama akan dibersihkan; jika hanya koneksi yang bermasalah, installer yang sudah siap tetap dipertahankan.
+- **Retry download lebih ramah koneksi**: Kegagalan download menampilkan pemberitahuan ringan dan mencoba ulang dengan jeda bertahap.
+- **FAQ Stopper AI ditambahkan**: README kini memuat penjelasan singkat tentang apa itu Stopper AI dan cara mengaktifkannya.
 
 ## v2.2.5
 
@@ -416,6 +421,18 @@ Script akan otomatis:
 
 **Apakah aplikasi ini bisa digunakan tanpa internet?**
 Ya, setelah perangkat terdaftar dan disetujui. Internet hanya dibutuhkan saat registrasi awal dan verifikasi aktivasi.
+
+**Apa itu Stopper AI?**
+Stopper AI adalah kumpulan fitur bantuan berbasis AI di LIBERO untuk mempercepat pekerjaan yang biasanya memakan waktu, seperti membaca dokumen pendukung PDF/foto, merapikan kronologi dari teks atau audio, membantu pencarian data perkara, dan menyusun rekomendasi wilayah. Hasil Stopper AI tetap ditampilkan untuk ditinjau terlebih dahulu sebelum diterapkan ke form.
+
+**Bagaimana cara memasang atau mengaktifkan Stopper AI?**
+Stopper AI tidak perlu installer terpisah karena sudah menjadi bagian dari LIBERO. Pastikan LIBERO terpasang dari installer terbaru, buka **Pengaturan**, lalu isi API Key AI yang didukung. Setelah itu fitur Stopper AI dapat dipakai dari tombol STOPPER/AI di form Litmas Integrasi atau Litmas Anak.
+
+**Apakah Stopper AI bisa digunakan tanpa API Key AI?**
+Tidak untuk proses yang benar-benar membutuhkan AI, seperti ekstraksi dokumen, perbaikan kronologi, transkripsi audio, atau rekomendasi naratif. Beberapa fitur non-AI tetap berjalan, tetapi tombol Stopper AI akan meminta API Key jika prosesnya membutuhkan layanan AI.
+
+**Apakah hasil Stopper AI langsung mengganti isi form?**
+Tidak. Hasil Stopper AI ditampilkan dalam jendela pratinjau terlebih dahulu. Pengguna bisa membandingkan `Isi Saat Ini` dengan hasil AI, memilih field yang ingin diterapkan, atau membatalkan jika hasilnya belum sesuai.
 
 **Apakah data litmas klien dikirim ke server?**
 Tidak. Semua data diproses secara lokal di komputer pengguna. Server hanya menerima UUID perangkat untuk keperluan verifikasi aktivasi, bukan data klien.
