@@ -223,7 +223,7 @@ LIBERO dirancang dengan prinsip perlindungan data klien:
 - Validasi perangkat berbasis Hardware ID (HWID) mencegah penggunaan di perangkat tidak sah
 - Pada fitur inti, data klien diproses secara lokal dan tidak dikirim ke server LIBERO
 - Komunikasi dengan server LIBERO hanya terjadi untuk keperluan verifikasi status aktivasi perangkat
-- Fitur online seperti Registrasi TPP dan Stopper AI hanya mengirim data yang dipilih/diproses pengguna ke layanan terkait saat fitur tersebut dijalankan
+- Fitur online hanya mengirim data yang dipilih/diproses pengguna ke layanan terkait saat fitur tersebut dijalankan
 
 ---
 
@@ -430,7 +430,7 @@ Fitur yang membutuhkan internet adalah pendaftaran perangkat dan verifikasi akti
 Tidak. Server LIBERO hanya dipakai untuk verifikasi perangkat/aktivasi dan tidak menerima database litmas pengguna. Data form, autosave, dan fail kerja tetap berada di perangkat pengguna.
 
 **Apakah fitur online mengirim data ke layanan luar?**
-Ya, hanya saat pengguna menjalankan fitur yang memang membutuhkan layanan luar. Contohnya: Registrasi TPP mengirim data ke Google Form TPP. Stopper AI dapat mengirim dokumen/teks/audio yang dipilih pengguna ke penyedia AI sesuai API Key yang digunakan, dan pada mode Ambil Data Wilayah dapat mengirim kata kunci alamat ke sumber wilayah/BPS. Karena itu, hasil dan data yang dikirim tetap perlu dipertimbangkan sesuai kebijakan kerja masing-masing.
+Ya, hanya saat pengguna menjalankan fitur yang memang membutuhkan layanan luar. Pada Stopper AI, dokumen PDF/foto, teks, atau audio yang dipilih pengguna dapat dikirim ke penyedia AI sesuai API Key yang digunakan. Mode pencarian perkara/sumber online dan Ambil Data Wilayah juga dapat mengirim kata kunci pencarian atau alamat ke situs/sumber terkait seperti Wilayah.id dan BPS WebAPI. Karena itu, data yang diproses lewat fitur online tetap perlu dipertimbangkan sesuai kebijakan kerja masing-masing.
 
 **Apa itu Stopper AI?**
 Stopper AI adalah kumpulan fitur bantuan berbasis AI di LIBERO untuk mempercepat pekerjaan yang biasanya memakan waktu, seperti membaca dokumen pendukung PDF/foto, merapikan kronologi dari teks atau audio, membantu pencarian data perkara, dan Ambil Data Wilayah untuk menyusun rekomendasi lingkungan/wilayah. Hasil Stopper AI tetap ditampilkan untuk ditinjau terlebih dahulu sebelum diterapkan ke form.
