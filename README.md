@@ -273,9 +273,14 @@ Script akan otomatis:
 ## v2.2.7
 
 - **Penambahan Buku Panduan**: Buku Panduan kini dapat dibuka langsung dari dalam aplikasi, lengkap dengan daftar isi, zoom, navigasi halaman, mode buku, dan mode satu halaman ke bawah.
+- **STOPPER lebih siap dipakai**: Tombol STOPPER tetap tersedia di modul. Jika API Key belum diatur, aplikasi langsung menampilkan pengaturan STOPPER tanpa keluar dari modul kerja.
+- **Pencarian perkara lebih adaptif**: STOPPER ditingkatkan agar pencarian perkara dan pengambilan kronologi lebih stabil saat sumber data memakai perlindungan anti-bot atau sedang lambat.
+- **Review hasil STOPPER lebih rapi**: Tampilan hasil pembacaan dokumen dibuat lebih konsisten, mudah dibandingkan dengan data yang sudah ada, dan lebih aman sebelum diterapkan ke form.
+- **Pengisian otomatis lebih konsisten**: Hasil pembacaan data klien, perkara, pasal, wilayah, penjamin, kronologi, dan dokumen pendukung dibuat lebih selaras antara Litmas Integrasi dan Litmas Anak.
 - **Perbaikan tampilan launcher dan progress**: Splash, transisi masuk launcher, area progress, serta posisi tombol Buku Panduan dibuat lebih rapi dan mudah dilihat.
 - **Layout launcher lebih responsif**: Tampilan launcher disesuaikan untuk berbagai ukuran layar dan Windows scaling, termasuk 900x600, 1024x768, 1366x768, 1536x864, dan 1920x1080, agar kartu menu, footer, dan copyright tidak terpotong atau terlalu kosong.
 - **Layout modul lebih stabil di layar kecil**: Header modul, tanggal/jam, nama petugas, jabatan, sidenav, statusbar, dan area konten dibuat lebih aman di ukuran kecil tanpa scrollbar luar aplikasi.
+- **Tema dan tombol modul diseragamkan**: Warna teks, sidenav, tombol STOPPER, dan tampilan tema terang/gelap disesuaikan agar lebih konsisten saat berpindah tema.
 - **Layout tester ditambahkan**: Tersedia tool `scripts/layout_tester.bat` untuk mengecek tampilan Launcher, Litmas Integrasi, dan Litmas Anak pada ukuran layar simulasi sebelum rilis.
 - **Peningkatan performa aplikasi**: Pemuatan halaman, perpindahan tab, progress, update, dan animasi dibuat lebih ringan agar form panjang tetap nyaman digunakan.
 - **Penyesuaian akses TPP Online**: Fitur TPP Online hanya ditampilkan untuk pengguna/UPT yang memiliki akses.

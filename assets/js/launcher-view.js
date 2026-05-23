@@ -150,6 +150,7 @@ const DAYS = ['Minggu', 'Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat', 'Sabtu'];
               <div id="reg-status" class="reg-status">Semua field bertanda * wajib diisi</div>
               <div class="reg-actions">
                 <button type="button" class="reg-action reg-secondary" id="reg-cancel">Tutup</button>
+                <button type="button" class="reg-action reg-danger" id="reg-delete-now" style="display:none">Hapus LIBERO Sekarang</button>
                 <button type="button" class="reg-action reg-primary" id="reg-submit"><span class="reg-spinner"></span><span class="reg-submit-text">Daftar Sekarang</span></button>
               </div>
             </section>
@@ -195,6 +196,60 @@ const DAYS = ['Minggu', 'Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat', 'Sabtu'];
       setRegStatus(msg, type);
     }
 
+    function applyRegistrationTrialState(overlay, data) {
+      var banner = overlay.querySelector('#reg-trial-banner');
+      var cancel = overlay.querySelector('#reg-cancel');
+      var deleteNow = overlay.querySelector('#reg-delete-now');
+      if (data && data.trial_expired) {
+        if (banner) {
+          startRegistrationTrialCountdown(banner, data);
+          banner.style.display = 'block';
+        }
+        if (cancel) cancel.textContent = 'Keluar';
+        if (deleteNow) deleteNow.style.display = 'inline-flex';
+      } else {
+        if (banner) banner.style.display = 'none';
+        if (cancel) cancel.textContent = 'Tutup';
+        if (deleteNow) deleteNow.style.display = 'none';
+      }
+    }
+
+    function formatRegistrationTrialCountdown(totalSeconds) {
+      var seconds = Math.max(0, Math.floor(Number(totalSeconds) || 0));
+      var days = Math.floor(seconds / 86400); seconds %= 86400;
+      var hours = Math.floor(seconds / 3600); seconds %= 3600;
+      var minutes = Math.floor(seconds / 60); seconds %= 60;
+      return days + ' hari ' + hours + ' jam ' + minutes + ' menit ' + seconds + ' detik';
+    }
+
+    function getRegistrationTrialRemainingSeconds(data) {
+      if (data && data.auto_uninstall_at) {
+        var target = new Date(String(data.auto_uninstall_at));
+        if (!Number.isNaN(target.getTime())) {
+          return Math.max(0, Math.floor((target.getTime() - Date.now()) / 1000));
+        }
+      }
+      return Math.max(0, Math.floor(Number(data && data.trial_remaining_seconds) || 0));
+    }
+
+    function startRegistrationTrialCountdown(targetEl, data) {
+      if (!targetEl) return;
+      if (window._registrationTrialCountdownTimer) {
+        clearInterval(window._registrationTrialCountdownTimer);
+        window._registrationTrialCountdownTimer = null;
+      }
+      var render = function () {
+        var remaining = getRegistrationTrialRemainingSeconds(data);
+        if (remaining <= 0) {
+          targetEl.textContent = 'Masa trial telah melewati masa tenggang. LIBERO akan dihapus otomatis.';
+          return;
+        }
+        targetEl.textContent = 'Masa trial telah berakhir. Daftarkan perangkat untuk melanjutkan. LIBERO akan dihapus otomatis dalam ' + formatRegistrationTrialCountdown(remaining) + ' jika perangkat belum didaftarkan.';
+      };
+      render();
+      window._registrationTrialCountdownTimer = setInterval(render, 1000);
+    }
+
     function openRegistrationOverlay(opts) {
       opts = opts || {};
       return new Promise(function (resolve, reject) {
@@ -207,6 +262,7 @@ const DAYS = ['Minggu', 'Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat', 'Sabtu'];
         var submit = overlay.querySelector('#reg-submit');
         var closeBtn = overlay.querySelector('#reg-close');
         var cancel = overlay.querySelector('#reg-cancel');
+        var deleteNow = overlay.querySelector('#reg-delete-now');
         var closed = false;
 
         overlay.querySelectorAll('input, select, #reg-submit').forEach(function (el) {
@@ -299,6 +355,14 @@ const DAYS = ['Minggu', 'Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat', 'Sabtu'];
           });
         }
 
+        function deleteLiberoNow() {
+          if (!window.confirm('LIBERO akan ditutup dan dihapus dari perangkat ini. Lanjutkan?')) return;
+          setRegStatus('Menyiapkan penghapusan LIBERO...', 'sending');
+          if (window.pywebview && window.pywebview.api && window.pywebview.api.hapus_libero_sekarang) {
+            window.pywebview.api.hapus_libero_sekarang();
+          }
+        }
+
         overlay.style.display = 'flex';
         overlay.setAttribute('aria-hidden', 'false');
         document.body.classList.add('registration-open');
@@ -308,6 +372,7 @@ const DAYS = ['Minggu', 'Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat', 'Sabtu'];
 
         closeBtn.onclick = close;
         cancel.onclick = close;
+        if (deleteNow) deleteNow.onclick = deleteLiberoNow;
         submit.onclick = submitRegistration;
         document.addEventListener('keydown', onKey);
 
@@ -315,8 +380,7 @@ const DAYS = ['Minggu', 'Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat', 'Sabtu'];
         window.pywebview.api.get_reg_init_data(false).then(function (data) {
           data = data || {};
           overlay.querySelector('#reg-uuid').textContent = data.uuid || 'Tidak terdeteksi';
-          overlay.querySelector('#reg-trial-banner').style.display = data.trial_expired ? 'block' : 'none';
-          overlay.querySelector('#reg-cancel').textContent = data.trial_expired ? 'Lewati' : 'Tutup';
+          applyRegistrationTrialState(overlay, data);
           setRegStatus('Semua field bertanda * wajib diisi', '');
 
           if (data.existing_status === 'approved') {

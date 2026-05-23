@@ -4692,6 +4692,7 @@ html.launcher-ready .tile:not(.portal-activating) {
   color: #ffb8b8;
   font-size: 12px;
   font-weight: 750;
+  line-height: 1.45;
 }
 
 .reg-form-grid {
@@ -4811,6 +4812,12 @@ html.launcher-ready .tile:not(.portal-activating) {
 
 .reg-primary {
   min-width: 150px;
+}
+
+.reg-danger {
+  border-color: rgba(232, 113, 113, .42);
+  background: rgba(232, 113, 113, .10);
+  color: #ffb8b8;
 }
 
 .reg-action:disabled {
