@@ -1,3 +1,4 @@
+// LIBERO: Helper inisialisasi lazy tab dan aktivasi tab.
 (function () {
   'use strict';
 
@@ -7,7 +8,8 @@
   var cfg = {
     keepMounted: 1,
     unloadDelay: 900,
-    initialDelay: 1200
+    initialDelay: 1200,
+    outputUnloadDelay: 450
   };
 
   function disabled() {
@@ -109,6 +111,13 @@
     return active ? panelIndex(active) : toIdx(window.ACTIVE_TAB_IDX || 0);
   }
 
+  function outputTabs() {
+    var bodyModule = document.body && document.body.getAttribute('data-libero-module');
+    var name = bodyModule ? String(bodyModule).toLowerCase() : String(document.title || '').toLowerCase();
+    if (name === 'litmasanak' || name.indexOf('anak') >= 0) return { 10: true, 11: true, 12: true, 13: true };
+    return { 10: true, 11: true, 12: true };
+  }
+
   function remember(idx) {
     idx = toIdx(idx);
     if (idx < 0) return;
@@ -201,10 +210,12 @@
       panel.removeAttribute('data-lazy-unmounted');
       mounted[idx] = true;
 
-      if (!restored && !opts.skipLoad) {
+      var needsLoad = panel.getAttribute('data-lazy-load-pending') === '1';
+      if (!opts.skipLoad && (!restored || needsLoad)) {
         var data = dataCache[idx] || window.__LIBERO_LAST_LOAD_DATA__ || {};
         var loadFn = window['loadTab' + idx];
         if (typeof loadFn === 'function') safe(function () { loadFn(data); });
+        panel.removeAttribute('data-lazy-load-pending');
       }
       postMount(idx);
     }
@@ -216,6 +227,32 @@
     restoringAll = true;
     eachPanel(function (idx) { mount(idx); });
     restoringAll = false;
+  }
+
+  function markUnmountedLoadPending() {
+    eachPanel(function (idx) {
+      if (mounted[idx] !== false) return;
+      var panel = panels[idx] || document.getElementById('tp-' + idx);
+      if (panel) panel.setAttribute('data-lazy-load-pending', '1');
+    });
+  }
+
+  function withSkippedUnmountedLoaders(fn) {
+    var originals = {};
+    eachPanel(function (idx) {
+      if (mounted[idx] !== false) return;
+      var name = 'loadTab' + idx;
+      if (typeof window[name] !== 'function') return;
+      originals[name] = window[name];
+      window[name] = function () { };
+    });
+    try {
+      return fn();
+    } finally {
+      Object.keys(originals).forEach(function (name) {
+        window[name] = originals[name];
+      });
+    }
   }
 
   function holdAllMounted() {
@@ -253,6 +290,18 @@
 
   function beginReset() {
     resetInProgress = true;
+    safe(function () {
+      if (typeof window.__LIBERO_SET_PROGRESS_SUSPENDED === 'function') {
+        window.__LIBERO_SET_PROGRESS_SUSPENDED(true);
+      } else {
+        window.__LIBERO_PROGRESS_SUSPENDED__ = true;
+      }
+    });
+    safe(function () {
+      if (typeof window.__LIBERO_PROGRESS_RESET_SLOTS === 'function') {
+        window.__LIBERO_PROGRESS_RESET_SLOTS();
+      }
+    });
     if (trimTimer) {
       clearTimeout(trimTimer);
       trimTimer = null;
@@ -263,8 +312,15 @@
 
   function finishReset() {
     resetCache();
-    collectMounted();
     resetInProgress = false;
+    safe(function () {
+      if (typeof window.__LIBERO_SET_PROGRESS_SUSPENDED === 'function') {
+        window.__LIBERO_SET_PROGRESS_SUSPENDED(false);
+      } else {
+        window.__LIBERO_PROGRESS_SUSPENDED__ = false;
+        if (typeof window.updateProgress === 'function') window.updateProgress();
+      }
+    });
     scheduleTrim();
   }
 
@@ -297,6 +353,7 @@
 
   function scheduleTrim(delay) {
     if (trimTimer) clearTimeout(trimTimer);
+    if (delay == null && outputTabs()[activeIndex()]) delay = cfg.outputUnloadDelay;
     trimTimer = setTimeout(trim, delay == null ? cfg.unloadDelay : delay);
   }
 
@@ -320,24 +377,27 @@
     window.collectAllTabs = function () {
       var restore = preserveActiveScroll();
       holdAllMounted();
-      collectMounted();
-      var out = {};
-      var activeSet = activeIndexSet();
-      eachPanel(function (idx) {
-        if (activeSet && !activeSet[idx]) return;
-        if (dataCache[idx] && typeof dataCache[idx] === 'object') Object.assign(out, dataCache[idx]);
-      });
-      releaseAllMounted(1500);
-      restoreSoon(restore);
-      if (!Object.keys(out).length && typeof originalCollect === 'function') {
-        return safe(function () { return originalCollect(); }, {});
-      }
       try {
-        if (out.riwayat_pidana && out.tanggapan_korban && !out.riwayat_pidana.tanggapan_korban) {
-          out.riwayat_pidana.tanggapan_korban = out.tanggapan_korban;
+        collectMounted();
+        var out = {};
+        var activeSet = activeIndexSet();
+        eachPanel(function (idx) {
+          if (activeSet && !activeSet[idx]) return;
+          if (dataCache[idx] && typeof dataCache[idx] === 'object') Object.assign(out, dataCache[idx]);
+        });
+        if (!Object.keys(out).length && typeof originalCollect === 'function') {
+          return safe(function () { return originalCollect(); }, {});
         }
-      } catch (_) { }
-      return out;
+        try {
+          if (out.riwayat_pidana && out.tanggapan_korban && !out.riwayat_pidana.tanggapan_korban) {
+            out.riwayat_pidana.tanggapan_korban = out.tanggapan_korban;
+          }
+        } catch (_) { }
+        return out;
+      } finally {
+        releaseAllMounted(1500);
+        restoreSoon(restore);
+      }
     };
 
     var originalValidate = window.validateAllTabs;
@@ -372,13 +432,16 @@
         resetCache();
         window.__LIBERO_LAST_LOAD_DATA__ = data || {};
         holdAllMounted();
-        var result = originalLoaded.apply(this, arguments);
-        setTimeout(function () {
+        var args = arguments;
+        var ctx = this;
+        try {
+          var result = originalLoaded.apply(ctx, args);
           collectMounted();
           safe(function () { if (typeof window._resizeFinp === 'function') window._resizeFinp(); });
-          releaseAllMounted();
-        }, 500);
-        return result;
+          return result;
+        } finally {
+          releaseAllMounted(1500);
+        }
       };
       window.onDataLoaded.__lazyTabsWrapped = true;
     }
@@ -389,13 +452,16 @@
         resetCache();
         window.__LIBERO_LAST_LOAD_DATA__ = data || {};
         holdAllMounted();
-        var result = originalLoadAll.apply(this, arguments);
-        setTimeout(function () {
+        var args = arguments;
+        var ctx = this;
+        try {
+          var result = originalLoadAll.apply(ctx, args);
           collectMounted();
           safe(function () { if (typeof window._resizeFinp === 'function') window._resizeFinp(); });
-          releaseAllMounted();
-        }, 500);
-        return result;
+          return result;
+        } finally {
+          releaseAllMounted(1500);
+        }
       };
       window._loadAllFromData.__lazyTabsWrapped = true;
     }
@@ -410,6 +476,13 @@
         } finally {
           if (resetInProgress) {
             resetInProgress = false;
+            safe(function () {
+              if (typeof window.__LIBERO_SET_PROGRESS_SUSPENDED === 'function') {
+                window.__LIBERO_SET_PROGRESS_SUSPENDED(false);
+              } else {
+                window.__LIBERO_PROGRESS_SUSPENDED__ = false;
+              }
+            });
             scheduleTrim();
           }
         }

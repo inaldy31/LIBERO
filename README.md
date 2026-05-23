@@ -5,7 +5,7 @@ Dibuat oleh Rinaldi Yudistira Nachrawy
 
 [![Hak Cipta](https://img.shields.io/badge/HKI-EC00202514424-gold?style=flat-square)](https://dgip.go.id)
 [![Platform](https://img.shields.io/badge/Platform-Windows%2010%2F11-blue?style=flat-square&logo=windows)](https://github.com/inaldy31/LIBERO/releases/latest)
-[![Versi](https://img.shields.io/badge/Versi-2.2.6-brightgreen?style=flat-square)](https://github.com/inaldy31/LIBERO/releases/latest)
+[![Versi](https://img.shields.io/badge/Versi-2.2.7-brightgreen?style=flat-square)](https://github.com/inaldy31/LIBERO/releases/latest)
 [![Trial](https://img.shields.io/badge/Trial-s.d.%2023%20Mei%202026-orange?style=flat-square)](https://github.com/inaldy31/LIBERO/releases/latest)
 ![GitHub release (latest)](https://img.shields.io/github/v/release/inaldy31/LIBERO?style=flat-square&label=Rilis+Terbaru)
 [![Total Unduhan](https://img.shields.io/github/downloads/inaldy31/LIBERO/total?style=flat-square&label=Total%20Unduhan&logo=github&cacheSeconds=3600)](https://github.com/inaldy31/LIBERO/releases)
@@ -26,6 +26,7 @@ Dibuat oleh Rinaldi Yudistira Nachrawy
   - [Keamanan Data](#keamanan-data)
   - [Build dari Source](#build-dari-source)
 - [Changelog](#changelog)
+  - [v2.2.7](#v227)
   - [v2.2.6](#v226)
   - [v2.2.5](#v225)
   - [v2.2.4](#v224)
@@ -99,8 +100,8 @@ LIBERO hadir untuk mengatasi hal tersebut dengan otomatisasi kalkulasi, standari
 
 <table>
   <tr>
-    <td><img src="assets/screenshots/Screenshot (23).png" width="280"/></td>
-    <td><img src="assets/screenshots/Screenshot (24).png" width="280"/></td>
+    <td><img src="docs/screenshots/Screenshot (23).png" width="280"/></td>
+    <td><img src="docs/screenshots/Screenshot (24).png" width="280"/></td>
   </tr>
 </table>
 
@@ -108,49 +109,49 @@ LIBERO hadir untuk mengatasi hal tersebut dengan otomatisasi kalkulasi, standari
 
 <table>
   <tr>
-    <td><img src="assets/screenshots/Screenshot (25).png" width="280"/></td>
-    <td><img src="assets/screenshots/Screenshot (26).png" width="280"/></td>
-    <td><img src="assets/screenshots/Screenshot (27).png" width="280"/></td>
+    <td><img src="docs/screenshots/Screenshot (25).png" width="280"/></td>
+    <td><img src="docs/screenshots/Screenshot (26).png" width="280"/></td>
+    <td><img src="docs/screenshots/Screenshot (27).png" width="280"/></td>
   </tr>
   <tr>
-    <td><img src="assets/screenshots/Screenshot (28).png" width="280"/></td>
-    <td><img src="assets/screenshots/Screenshot (29).png" width="280"/></td>
-    <td><img src="assets/screenshots/Screenshot (30).png" width="280"/></td>
+    <td><img src="docs/screenshots/Screenshot (28).png" width="280"/></td>
+    <td><img src="docs/screenshots/Screenshot (29).png" width="280"/></td>
+    <td><img src="docs/screenshots/Screenshot (30).png" width="280"/></td>
   </tr>
   <tr>
-    <td><img src="assets/screenshots/Screenshot (31).png" width="280"/></td>
-    <td><img src="assets/screenshots/Screenshot (32).png" width="280"/></td>
-    <td><img src="assets/screenshots/Screenshot (33).png" width="280"/></td>
+    <td><img src="docs/screenshots/Screenshot (31).png" width="280"/></td>
+    <td><img src="docs/screenshots/Screenshot (32).png" width="280"/></td>
+    <td><img src="docs/screenshots/Screenshot (33).png" width="280"/></td>
   </tr>
   <tr>
-    <td><img src="assets/screenshots/Screenshot (34).png" width="280"/></td>
-    <td><img src="assets/screenshots/Screenshot (35).png" width="280"/></td>
-    <td><img src="assets/screenshots/Screenshot (36).png" width="280"/></td>
+    <td><img src="docs/screenshots/Screenshot (34).png" width="280"/></td>
+    <td><img src="docs/screenshots/Screenshot (35).png" width="280"/></td>
+    <td><img src="docs/screenshots/Screenshot (36).png" width="280"/></td>
   </tr>
   <tr>
-    <td><img src="assets/screenshots/Screenshot (37).png" width="280"/></td>
-    <td><img src="assets/screenshots/Screenshot (38).png" width="280"/></td>
-    <td><img src="assets/screenshots/Screenshot (39).png" width="280"/></td>
+    <td><img src="docs/screenshots/Screenshot (37).png" width="280"/></td>
+    <td><img src="docs/screenshots/Screenshot (38).png" width="280"/></td>
+    <td><img src="docs/screenshots/Screenshot (39).png" width="280"/></td>
   </tr>
   <tr>
-    <td><img src="assets/screenshots/Screenshot (40).png" width="280"/></td>
-    <td><img src="assets/screenshots/Screenshot (41).png" width="280"/></td>
-    <td><img src="assets/screenshots/Screenshot (42).png" width="280"/></td>
+    <td><img src="docs/screenshots/Screenshot (40).png" width="280"/></td>
+    <td><img src="docs/screenshots/Screenshot (41).png" width="280"/></td>
+    <td><img src="docs/screenshots/Screenshot (42).png" width="280"/></td>
   </tr>
   <tr>
-    <td><img src="assets/screenshots/Screenshot (43).png" width="280"/></td>
-    <td><img src="assets/screenshots/Screenshot (45).png" width="280"/></td>
-    <td><img src="assets/screenshots/Screenshot (46).png" width="280"/></td>
+    <td><img src="docs/screenshots/Screenshot (43).png" width="280"/></td>
+    <td><img src="docs/screenshots/Screenshot (45).png" width="280"/></td>
+    <td><img src="docs/screenshots/Screenshot (46).png" width="280"/></td>
   </tr>
   <tr>
-    <td><img src="assets/screenshots/Screenshot (47).png" width="280"/></td>
-    <td><img src="assets/screenshots/Screenshot (48).png" width="280"/></td>
-    <td><img src="assets/screenshots/Screenshot (49).png" width="280"/></td>
+    <td><img src="docs/screenshots/Screenshot (47).png" width="280"/></td>
+    <td><img src="docs/screenshots/Screenshot (48).png" width="280"/></td>
+    <td><img src="docs/screenshots/Screenshot (49).png" width="280"/></td>
   </tr>
   <tr>
-    <td><img src="assets/screenshots/Screenshot (50).png" width="280"/></td>
-    <td><img src="assets/screenshots/Screenshot (53).png" width="280"/></td>
-    <td><img src="assets/screenshots/Screenshot (51).png" width="280"/></td>
+    <td><img src="docs/screenshots/Screenshot (50).png" width="280"/></td>
+    <td><img src="docs/screenshots/Screenshot (53).png" width="280"/></td>
+    <td><img src="docs/screenshots/Screenshot (51).png" width="280"/></td>
   </tr>
 </table>
 
@@ -268,6 +269,17 @@ Script akan otomatis:
 ---
 
 # Changelog
+
+## v2.2.7
+
+- **Penambahan Buku Panduan**: Buku Panduan kini dapat dibuka langsung dari dalam aplikasi, lengkap dengan daftar isi, zoom, navigasi halaman, mode buku, dan mode satu halaman ke bawah.
+- **Perbaikan tampilan launcher dan progress**: Splash, transisi masuk launcher, area progress, serta posisi tombol Buku Panduan dibuat lebih rapi dan mudah dilihat.
+- **Layout launcher lebih responsif**: Tampilan launcher disesuaikan untuk berbagai ukuran layar dan Windows scaling, termasuk 900x600, 1024x768, 1366x768, 1536x864, dan 1920x1080, agar kartu menu, footer, dan copyright tidak terpotong atau terlalu kosong.
+- **Layout modul lebih stabil di layar kecil**: Header modul, tanggal/jam, nama petugas, jabatan, sidenav, statusbar, dan area konten dibuat lebih aman di ukuran kecil tanpa scrollbar luar aplikasi.
+- **Layout tester ditambahkan**: Tersedia tool `scripts/layout_tester.bat` untuk mengecek tampilan Launcher, Litmas Integrasi, dan Litmas Anak pada ukuran layar simulasi sebelum rilis.
+- **Peningkatan performa aplikasi**: Pemuatan halaman, perpindahan tab, progress, update, dan animasi dibuat lebih ringan agar form panjang tetap nyaman digunakan.
+- **Penyesuaian akses TPP Online**: Fitur TPP Online hanya ditampilkan untuk pengguna/UPT yang memiliki akses.
+- **Pembaruan dokumentasi dan aset rilis**: README, screenshot, panduan, dan aset pendukung disesuaikan dengan versi terbaru.
 
 ## v2.2.6
 

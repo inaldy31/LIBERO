@@ -3,10 +3,13 @@ pillow
 python-docx
 selenium
 webdriver-manager
+seleniumbase==4.48.4
 pywin32
 pycryptodome
 tkcalendar
 lxml
 requests
+curl_cffi
+scrapling[fetchers]==0.4.8
 google-genai
 pyinstaller
