@@ -6,7 +6,7 @@ Dibuat oleh Rinaldi Yudistira Nachrawy
 [![Hak Cipta](https://img.shields.io/badge/HKI-EC00202514424-gold?style=flat-square)](https://dgip.go.id)
 [![Platform](https://img.shields.io/badge/Platform-Windows%2010%2F11-blue?style=flat-square&logo=windows)](https://github.com/inaldy31/LIBERO/releases/latest)
 [![Versi](https://img.shields.io/badge/Versi-2.2.7-brightgreen?style=flat-square)](https://github.com/inaldy31/LIBERO/releases/latest)
-[![Trial](https://img.shields.io/badge/Trial-s.d.%2023%20Mei%202026-orange?style=flat-square)](https://github.com/inaldy31/LIBERO/releases/latest)
+[![Trial](https://img.shields.io/badge/Trial-14%20Hari-orange?style=flat-square)](https://github.com/inaldy31/LIBERO/releases/latest)
 ![GitHub release (latest)](https://img.shields.io/github/v/release/inaldy31/LIBERO?style=flat-square&label=Rilis+Terbaru)
 [![Total Unduhan](https://img.shields.io/github/downloads/inaldy31/LIBERO/total?style=flat-square&label=Total%20Unduhan&logo=github&cacheSeconds=3600)](https://github.com/inaldy31/LIBERO/releases)
 
@@ -24,7 +24,6 @@ Dibuat oleh Rinaldi Yudistira Nachrawy
   - [Registrasi Perangkat](#registrasi-perangkat)
   - [Sistem Trial](#sistem-trial)
   - [Keamanan Data](#keamanan-data)
-  - [Build dari Source](#build-dari-source)
 - [Changelog](#changelog)
   - [v2.2.7](#v227)
   - [v2.2.6](#v226)
@@ -45,6 +44,7 @@ Dibuat oleh Rinaldi Yudistira Nachrawy
   - [v1.0.0](#v100)
 - [FAQ](#faq)
 - [Troubleshooting](#troubleshooting)
+- [Bantuan & Kontak](#bantuan--kontak)
 - [Lisensi Penggunaan](#lisensi-penggunaan)
 - [Hak Cipta](#hak-cipta)
 
@@ -83,13 +83,13 @@ LIBERO hadir untuk mengatasi hal tersebut dengan otomatisasi kalkulasi, standari
 - **Fail Kerja Terlindungi**: Simpan dan lanjutkan progres kapan saja; file `.lit` terlindungi dan hanya bisa dibuka lewat aplikasi
 - **Templat Data Pribadi**: Buat satu file master berisi data UPT & petugas untuk mempercepat laporan baru
 - **Registrasi TPP**: Pendaftaran otomatis ke Google Form TPP via Selenium
-- **Stopper AI**: Asisten AI untuk membaca dokumen pendukung, merapikan kronologi, membantu pencarian perkara, dan menyusun rekomendasi wilayah yang dapat ditinjau sebelum diterapkan
+- **Stopper AI**: Asisten AI untuk membaca dokumen pendukung, merapikan kronologi, membantu pencarian perkara, dan menyusun rekomendasi wilayah yang dapat ditinjau sebelum diterapkan. Fitur yang memakai AI membutuhkan koneksi internet dan API Key pengguna
 - **Fitur Pengingat Kolom Kosong**: Otomatis mendeteksi field yang belum diisi sebelum dokumen dibuat
 - **Autosave**: Data tersimpan otomatis setiap 10 detik
 - **21 Pilihan Tema**: Tampilan dapat dikustomisasi sesuai selera
 - **Pintasan Keyboard**: SHIFT+F3 (ubah format huruf), Ctrl+Z/Y, Ctrl+±/scroll (zoom)
 - **Auto-Update**: Notifikasi dan unduhan installer versi terbaru dari GitHub Releases *(baru di v2.0.1)*
-- **Sistem Trial**: Berlaku sampai 23 Mei 2026, atau 14 hari sejak pertama dibuka
+- **Sistem Trial**: Berlaku 14 hari sejak pertama dibuka
 - **Registrasi Perangkat**: Sistem aktivasi berbasis UUID perangkat (HWID)
 
 ---
@@ -181,6 +181,7 @@ LIBERO hadir untuk mengatasi hal tersebut dengan otomatisasi kalkulasi, standari
 6. Daftarkan perangkat via tombol **Daftar Perangkat** di launcher agar dapat terus digunakan setelah trial berakhir
 
 > **Catatan pengguna lama:** Jika masih memakai `LIBERO.exe` (onefile), jalankan sekali untuk migrasi otomatis ke versi installer.
+> **Panduan penggunaan:** Buku Panduan tersedia langsung di dalam aplikasi melalui tombol **Buku Panduan**.
 
 ---
 
@@ -206,9 +207,7 @@ Registrasi diperlukan untuk menggunakan LIBERO setelah masa trial berakhir. UUID
 
 ## Sistem Trial
 
-- **Deadline global:** 23 Mei 2026 (berlaku untuk semua pengguna)
-- **Durasi dinamis:** 14 hari sejak pertama kali membuka aplikasi
-- Trial berakhir pada tanggal yang **lebih jauh** antara deadline global dan 14 hari dinamis
+- Masa trial berlangsung 14 hari sejak pertama kali membuka aplikasi
 - Setelah trial berakhir, perangkat wajib terdaftar untuk melanjutkan penggunaan
 - Manipulasi tanggal sistem akan terdeteksi dan akses akan ditolak
 
@@ -225,46 +224,6 @@ LIBERO dirancang dengan prinsip perlindungan data klien:
 - Pada fitur inti, data klien diproses secara lokal dan tidak dikirim ke server LIBERO
 - Komunikasi dengan server LIBERO hanya terjadi untuk keperluan verifikasi status aktivasi perangkat
 - Fitur online hanya mengirim data yang dipilih/diproses pengguna ke layanan terkait saat fitur tersebut dijalankan
-
----
-
-## Build dari Source
-
-**Prasyarat:**
-- Python 3.11+ dengan virtual environment (`.venv`)
-- Semua dependensi terinstall di `.venv`
-- Inno Setup 6 (ISCC.exe) untuk membuat installer
-
-**Langkah build:**
-
-```powershell
-# Jalankan dari root project
-.\scripts\build_LIBERO.ps1
-```
-
-Script akan otomatis:
-1. Membersihkan hasil build sebelumnya
-2. Mengecek dan menginstall PyInstaller, pywebview, dan Pillow jika belum ada
-3. Mengunduh WebView2 Bootstrapper jika belum ada di folder `archive\`
-4. Memvalidasi semua file yang dibutuhkan
-5. Menjalankan PyInstaller (mode onedir) dengan konfigurasi lengkap
-6. Membuat installer `Setup_LIBERO_v<versi>.exe` via Inno Setup
-7. Membuka folder `dist\` jika build berhasil
-
-**Dependensi utama:**
-
-| Package | Kegunaan |
-|---|---|
-| pywebview | Render antarmuka HTML |
-| Pillow | Pemrosesan gambar logo |
-| python-docx | Generate dokumen `.docx` |
-| selenium | Otomasi form TPP |
-| webdriver-manager | Manajemen WebDriver otomatis |
-| pycryptodome | Komponen kriptografi aplikasi |
-| tkcalendar | Widget kalender tkinter |
-| pywin32 | Integrasi Windows COM |
-| lxml | Parsing XML/HTML |
-| requests | HTTP request |
 
 ---
 
@@ -552,6 +511,14 @@ Autosave berjalan otomatis saat pengguna mengisi form Litmas Integrasi atau Litm
 
 **Data hilang setelah aplikasi ditutup**
 > Gunakan tombol **SIMPAN DATA** sebelum menutup, atau manfaatkan fitur autosave. Buka kembali fail kerja `.lit` melalui tombol **LANJUTKAN DATA**.
+
+---
+
+## Bantuan & Kontak
+
+Untuk bantuan registrasi, laporan bug, atau permintaan fitur, gunakan halaman [GitHub Issues](https://github.com/inaldy31/LIBERO/issues).
+
+Saat melaporkan masalah, sertakan versi LIBERO, versi Windows, langkah yang dilakukan, serta screenshot atau pesan error jika ada.
 
 ---
 
