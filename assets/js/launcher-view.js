@@ -514,7 +514,28 @@ const DAYS = ['Minggu', 'Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat', 'Sabtu'];
       }, 40);
     }
 
-    function showGateEnter(labelText, callback) {
+    const MODULE_LAUNCH_DEBOUNCE_MS = 1800;
+    let moduleLaunchLock = false;
+    let moduleLaunchTimer = null;
+
+    function releaseModuleLaunchLock() {
+      moduleLaunchLock = false;
+      if (moduleLaunchTimer) {
+        clearTimeout(moduleLaunchTimer);
+        moduleLaunchTimer = null;
+      }
+    }
+
+    function lockModuleLaunch() {
+      moduleLaunchLock = true;
+      if (moduleLaunchTimer) clearTimeout(moduleLaunchTimer);
+      moduleLaunchTimer = setTimeout(() => {
+        moduleLaunchLock = false;
+        moduleLaunchTimer = null;
+      }, MODULE_LAUNCH_DEBOUNCE_MS);
+    }
+
+    function showGateEnter(labelText, callback, onFailure) {
       const ov = document.getElementById('exit-overlay');
       const gateTop = document.getElementById('exit-gate-top');
       const gateBot = document.getElementById('exit-gate-bottom');
@@ -579,11 +600,13 @@ const DAYS = ['Minggu', 'Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat', 'Sabtu'];
             if (result && typeof result.catch === 'function') {
               result.catch(() => {
                 ov.style.display = 'none';
+                if (typeof onFailure === 'function') onFailure();
                 showToast('Gagal membuka modul. Coba klik lagi.');
               });
             }
           } catch (_e) {
             ov.style.display = 'none';
+            if (typeof onFailure === 'function') onFailure();
             showToast('Gagal membuka modul. Coba klik lagi.');
           }
         }, 950);
@@ -601,15 +624,33 @@ const DAYS = ['Minggu', 'Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat', 'Sabtu'];
         showToast('Memuat aplikasi, tunggu sebentar...'); return;
       }
       if (name === 'Integrasi') {
-        if (e && e.currentTarget) e.currentTarget.classList.add('portal-activating');
+        if (moduleLaunchLock) {
+          showToast('Modul sedang dibuka, tunggu sebentar...');
+          return;
+        }
+        lockModuleLaunch();
+        const target = e && e.currentTarget ? e.currentTarget : null;
+        if (target) target.classList.add('portal-activating');
         if (window._stopBgCanvas) window._stopBgCanvas();
         if (window._clockTimer) { clearInterval(window._clockTimer); window._clockTimer = null; }
-        showGateEnter('Membuka Integrasi', () => window.pywebview.api.open_integrasi());
+        showGateEnter('Membuka Integrasi', () => window.pywebview.api.open_integrasi(), () => {
+          releaseModuleLaunchLock();
+          if (target) target.classList.remove('portal-activating');
+        });
       } else if (name === 'Anak') {
-        if (e && e.currentTarget) e.currentTarget.classList.add('portal-activating');
+        if (moduleLaunchLock) {
+          showToast('Modul sedang dibuka, tunggu sebentar...');
+          return;
+        }
+        lockModuleLaunch();
+        const target = e && e.currentTarget ? e.currentTarget : null;
+        if (target) target.classList.add('portal-activating');
         if (window._stopBgCanvas) window._stopBgCanvas();
         if (window._clockTimer) { clearInterval(window._clockTimer); window._clockTimer = null; }
-        showGateEnter('Membuka Litmas Anak', () => window.pywebview.api.open_litmas_anak());
+        showGateEnter('Membuka Litmas Anak', () => window.pywebview.api.open_litmas_anak(), () => {
+          releaseModuleLaunchLock();
+          if (target) target.classList.remove('portal-activating');
+        });
       } else {
         if (name === 'Asimilasi') {
           toastWarning('Fitur Litmas Asimilasi masih dalam tahap pengembangan', 1500);
