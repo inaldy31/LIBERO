@@ -5,7 +5,7 @@ Dibuat oleh Rinaldi Yudistira Nachrawy
 
 [![Hak Cipta](https://img.shields.io/badge/HKI-EC00202514424-gold?style=flat-square)](https://dgip.go.id)
 [![Platform](https://img.shields.io/badge/Platform-Windows%2010%2F11-blue?style=flat-square&logo=windows)](https://github.com/inaldy31/LIBERO/releases/latest)
-[![Versi](https://img.shields.io/badge/Versi-2.2.8-brightgreen?style=flat-square)](https://github.com/inaldy31/LIBERO/releases/latest)
+[![Versi](https://img.shields.io/badge/Versi-2.2.9-brightgreen?style=flat-square)](https://github.com/inaldy31/LIBERO/releases/latest)
 [![Trial](https://img.shields.io/badge/Trial-14%20Hari-orange?style=flat-square)](https://github.com/inaldy31/LIBERO/releases/latest)
 ![GitHub release (latest)](https://img.shields.io/github/v/release/inaldy31/LIBERO?style=flat-square&label=Rilis+Terbaru)
 [![Total Unduhan](https://img.shields.io/github/downloads/inaldy31/LIBERO/total?style=flat-square&label=Total%20Unduhan&logo=github&cacheSeconds=3600)](https://github.com/inaldy31/LIBERO/releases)
@@ -25,7 +25,7 @@ Dibuat oleh Rinaldi Yudistira Nachrawy
   - [Sistem Trial](#sistem-trial)
   - [Keamanan Data](#keamanan-data)
 - [Changelog](#changelog)
-  - [v2.2.8](#v228)
+  - [v2.2.9](#v229)
   - [v2.2.7](#v227)
   - [v2.2.6](#v226)
   - [v2.2.5](#v225)
@@ -230,13 +230,9 @@ LIBERO dirancang dengan prinsip perlindungan data klien:
 
 # Changelog
 
-## v2.2.8
+## v2.2.9
 
-- **Perbaikan beberapa fitur**: Sejumlah bug pada Litmas Integrasi dan Litmas Anak diperbaiki agar pengisian form, penyimpanan, dan pembuatan dokumen berjalan lebih andal.
-- **Penyempurnaan fitur STOPPER**: Alur pencarian perkara, pembacaan dokumen, dan penerapan hasil ke form dibuat lebih konsisten dan mudah digunakan.
-- **Peningkatan performa**: Pemuatan halaman, perpindahan tab, dan proses simpan/ekspor dibuat lebih ringan sehingga aplikasi terasa lebih responsif.
-- **Penyempurnaan tampilan**: Penyesuaian kecil pada layout launcher dan modul agar tampil lebih rapi di berbagai ukuran layar dan tema.
-- **Stabilitas dan perbaikan minor**: Berbagai perbaikan kecil untuk meningkatkan kestabilan aplikasi secara keseluruhan.
+- **Perbaikan bug**: Perbaikan bug dan peningkatan stabilitas aplikasi.
 
 ## v2.2.7
 
