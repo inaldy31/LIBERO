@@ -26,6 +26,7 @@ Dibuat oleh Rinaldi Yudistira Nachrawy
   - [Keamanan Data](#keamanan-data)
 - [Changelog](#changelog)
   - [v2.2.9](#v229)
+  - [v2.2.8](#v228)
   - [v2.2.7](#v227)
   - [v2.2.6](#v226)
   - [v2.2.5](#v225)
@@ -233,6 +234,14 @@ LIBERO dirancang dengan prinsip perlindungan data klien:
 ## v2.2.9
 
 - **Perbaikan bug**: Perbaikan bug dan peningkatan stabilitas aplikasi.
+
+## v2.2.8
+
+- **Perbaikan beberapa fitur**: Sejumlah bug pada Litmas Integrasi dan Litmas Anak diperbaiki agar pengisian form, penyimpanan, dan pembuatan dokumen berjalan lebih andal.
+- **Penyempurnaan fitur STOPPER**: Alur pencarian perkara, pembacaan dokumen, dan penerapan hasil ke form dibuat lebih konsisten dan mudah digunakan.
+- **Peningkatan performa**: Pemuatan halaman, perpindahan tab, dan proses simpan/ekspor dibuat lebih ringan sehingga aplikasi terasa lebih responsif.
+- **Penyempurnaan tampilan**: Penyesuaian kecil pada layout launcher dan modul agar tampil lebih rapi di berbagai ukuran layar dan tema.
+- **Stabilitas dan perbaikan minor**: Berbagai perbaikan kecil untuk meningkatkan kestabilan aplikasi secara keseluruhan.
 
 ## v2.2.7
 
