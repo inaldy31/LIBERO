@@ -5,7 +5,7 @@ Dibuat oleh Rinaldi Yudistira Nachrawy
 
 [![Hak Cipta](https://img.shields.io/badge/HKI-EC00202514424-gold?style=flat-square)](https://dgip.go.id)
 [![Platform](https://img.shields.io/badge/Platform-Windows%2010%2F11-blue?style=flat-square&logo=windows)](https://github.com/inaldy31/LIBERO/releases/latest)
-[![Versi](https://img.shields.io/badge/Versi-2.2.9-brightgreen?style=flat-square)](https://github.com/inaldy31/LIBERO/releases/latest)
+[![Versi](https://img.shields.io/badge/Versi-2.2.10-brightgreen?style=flat-square)](https://github.com/inaldy31/LIBERO/releases/latest)
 [![Trial](https://img.shields.io/badge/Trial-14%20Hari-orange?style=flat-square)](https://github.com/inaldy31/LIBERO/releases/latest)
 ![GitHub release (latest)](https://img.shields.io/github/v/release/inaldy31/LIBERO?style=flat-square&label=Rilis+Terbaru)
 [![Total Unduhan](https://img.shields.io/github/downloads/inaldy31/LIBERO/total?style=flat-square&label=Total%20Unduhan&logo=github&cacheSeconds=3600)](https://github.com/inaldy31/LIBERO/releases)
@@ -25,6 +25,7 @@ Dibuat oleh Rinaldi Yudistira Nachrawy
   - [Sistem Trial](#sistem-trial)
   - [Keamanan Data](#keamanan-data)
 - [Changelog](#changelog)
+  - [v2.2.10](#v2210)
   - [v2.2.9](#v229)
   - [v2.2.8](#v228)
   - [v2.2.7](#v227)
@@ -230,6 +231,17 @@ LIBERO dirancang dengan prinsip perlindungan data klien:
 ---
 
 # Changelog
+
+## v2.2.10
+
+- **Perbaikan pada loading halaman**: Mengurangi kemungkinan aplikasi tertahan di layar loading gelap.
+- **Perbaikan pada perpindahan halaman**: Mengurangi risiko layar kosong atau aplikasi tertutup mendadak saat berpindah halaman.
+- **Perbaikan pada sistem update**: Proses download dan pemasangan update dibuat lebih tertib saat beberapa jendela/modul sedang terbuka.
+- **Perbaikan pada TPP Online**: Pengisian Google Form TPP dibuat lebih responsif dan bukti screenshot tetap tampil di aplikasi tanpa meninggalkan file sementara berisi data klien.
+- **Perbaikan pada STOPPER**: Hasil baca dokumen, pencarian data, dan penerapan ke form dibuat lebih konsisten.
+- **Perbaikan pada Litmas Anak**: Tampilan dan pengisian bagian pendidikan dibuat lebih stabil.
+- **Perbaikan pada cache aplikasi**: File sementara dari WebView yang tidak terpakai kini dapat dibersihkan agar folder cache tidak menumpuk.
+- **Perbaikan untuk kasus blank putih**: Menambahkan opsi `LIBERO_DISABLE_GPU=1` untuk perangkat tertentu yang sering mengalami layar putih.
 
 ## v2.2.9
 
