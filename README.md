@@ -238,7 +238,7 @@ LIBERO dirancang dengan prinsip perlindungan data klien:
 
 - **Menu konteks field ditambahkan**: Klik kanan pada field kini menyediakan menu bersama Potong, Salin, dan Tempel tanpa bergantung pada hook internal WebView2 atau mode debug.
 - **Data Manager memakai picker Windows native**: Aksi Buka di Explorer kini membuka dialog file Windows sesuai mode Data Manager, lalu meneruskan file terpilih ke alur buka, simpan, atau ekspor yang tepat.
-- **Identitas klien pada DOCX diperbaiki**: Pengantar klien perempuan kini konsisten memakai `binti`, sedangkan klien laki-laki tetap memakai `bin`. Penanda `Alm.` dan `Almh.` juga tidak lagi tergandakan.
+- **Identitas klien pada DOCX diperbaiki**: Pengantar klien perempuan kini konsisten memakai `binti`, sedangkan klien laki-laki tetap memakai `bin`. Penanda `Alm.` dan `Almh.` tidak lagi tergandakan dan hanya dipakai untuk orang tua beragama Islam; data lama tanpa agama tetap kompatibel.
 - **Registrasi dan trial lebih tahan gangguan jaringan**: Kegagalan verifikasi karena koneksi tidak lagi dianggap sebagai status perangkat tidak terdaftar, dan token lokal yang sah tetap dipertahankan.
 - **Migrasi installer lebih aman**: State registrasi/trial dipertahankan dan aplikasi onefile lama hanya dihapus setelah instalasi baru berhasil diverifikasi.
 - **Output dan tampilan dirapikan**: Nomor surat kosong memakai placeholder utuh `(BELUM DIISI)`, ring progress update tetap jelas, dan pilihan kesimpulan pada tema terang kembali memiliki kontras hijau/merah yang baik.
