@@ -5,7 +5,7 @@ Dibuat oleh Rinaldi Yudistira Nachrawy
 
 [![Hak Cipta](https://img.shields.io/badge/HKI-EC00202514424-gold?style=flat-square)](https://dgip.go.id)
 [![Platform](https://img.shields.io/badge/Platform-Windows%2010%2F11-blue?style=flat-square&logo=windows)](https://github.com/inaldy31/LIBERO/releases/latest)
-[![Versi](https://img.shields.io/badge/Versi-2.2.11-brightgreen?style=flat-square)](https://github.com/inaldy31/LIBERO/releases/latest)
+[![Versi](https://img.shields.io/badge/Versi-2.2.12-brightgreen?style=flat-square)](https://github.com/inaldy31/LIBERO/releases/latest)
 [![Trial](https://img.shields.io/badge/Trial-14%20Hari-orange?style=flat-square)](https://github.com/inaldy31/LIBERO/releases/latest)
 ![GitHub release (latest)](https://img.shields.io/github/v/release/inaldy31/LIBERO?style=flat-square&label=Rilis+Terbaru)
 [![Total Unduhan](https://img.shields.io/github/downloads/inaldy31/LIBERO/total?style=flat-square&label=Total%20Unduhan&logo=github&cacheSeconds=3600)](https://github.com/inaldy31/LIBERO/releases)
@@ -25,6 +25,7 @@ Dibuat oleh Rinaldi Yudistira Nachrawy
   - [Sistem Trial](#sistem-trial)
   - [Keamanan Data](#keamanan-data)
 - [Changelog](#changelog)
+  - [v2.2.12](#v2212)
   - [v2.2.11](#v2211)
   - [v2.2.10](#v2210)
   - [v2.2.9](#v229)
@@ -43,14 +44,14 @@ Dibuat oleh Rinaldi Yudistira Nachrawy
   - [v2.0.4](#v204)
   - [v2.0.3](#v203)
   - [v2.0.2](#v202)
-  - [v2.0.1](#v201)
-  - [v2.0.0](#v200)
-  - [v1.0.0](#v100)
-- [FAQ](#faq)
-- [Troubleshooting](#troubleshooting)
-- [Bantuan & Kontak](#bantuan--kontak)
-- [Lisensi Penggunaan](#lisensi-penggunaan)
-- [Hak Cipta](#hak-cipta)
+    - [v2.0.1](#v201)
+    - [v2.0.0](#v200)
+    - [v1.0.0](#v100)
+  - [FAQ](#faq)
+  - [Troubleshooting](#troubleshooting)
+  - [Bantuan \& Kontak](#bantuan--kontak)
+  - [Lisensi Penggunaan](#lisensi-penggunaan)
+  - [Hak Cipta](#hak-cipta)
 
 ---
 
@@ -232,6 +233,16 @@ LIBERO dirancang dengan prinsip perlindungan data klien:
 ---
 
 # Changelog
+
+## v2.2.12
+
+- **Menu konteks field ditambahkan**: Klik kanan pada field kini menyediakan menu bersama Potong, Salin, dan Tempel tanpa bergantung pada hook internal WebView2 atau mode debug.
+- **Data Manager memakai picker Windows native**: Aksi Buka di Explorer kini membuka dialog file Windows sesuai mode Data Manager, lalu meneruskan file terpilih ke alur buka, simpan, atau ekspor yang tepat.
+- **Identitas klien pada DOCX diperbaiki**: Pengantar klien perempuan kini konsisten memakai `binti`, sedangkan klien laki-laki tetap memakai `bin`. Penanda `Alm.` dan `Almh.` juga tidak lagi tergandakan.
+- **Registrasi dan trial lebih tahan gangguan jaringan**: Kegagalan verifikasi karena koneksi tidak lagi dianggap sebagai status perangkat tidak terdaftar, dan token lokal yang sah tetap dipertahankan.
+- **Migrasi installer lebih aman**: State registrasi/trial dipertahankan dan aplikasi onefile lama hanya dihapus setelah instalasi baru berhasil diverifikasi.
+- **Output dan tampilan dirapikan**: Nomor surat kosong memakai placeholder utuh `(BELUM DIISI)`, ring progress update tetap jelas, dan pilihan kesimpulan pada tema terang kembali memiliki kontras hijau/merah yang baik.
+- **Paket Litmas Awal dilengkapi**: View dan backend Litmas Awal kini tercantum dalam konfigurasi build PyInstaller.
 
 ## v2.2.11
 
