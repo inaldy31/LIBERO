@@ -242,7 +242,6 @@ LIBERO dirancang dengan prinsip perlindungan data klien:
 - **Registrasi dan trial lebih tahan gangguan jaringan**: Kegagalan verifikasi karena koneksi tidak lagi dianggap sebagai status perangkat tidak terdaftar, dan token lokal yang sah tetap dipertahankan.
 - **Migrasi installer lebih aman**: State registrasi/trial dipertahankan dan aplikasi onefile lama hanya dihapus setelah instalasi baru berhasil diverifikasi.
 - **Output dan tampilan dirapikan**: Nomor surat kosong memakai placeholder utuh `(BELUM DIISI)`, ring progress update tetap jelas, dan pilihan kesimpulan pada tema terang kembali memiliki kontras hijau/merah yang baik.
-- **Paket Litmas Awal dilengkapi**: View dan backend Litmas Awal kini tercantum dalam konfigurasi build PyInstaller.
 
 ## v2.2.11
 
