@@ -12,4 +12,5 @@ requests
 curl_cffi
 scrapling[fetchers]==0.4.8
 google-genai
+pymupdf
 pyinstaller

@@ -5,7 +5,7 @@ Dibuat oleh Rinaldi Yudistira Nachrawy
 
 [![Hak Cipta](https://img.shields.io/badge/HKI-EC00202514424-gold?style=flat-square)](https://dgip.go.id)
 [![Platform](https://img.shields.io/badge/Platform-Windows%2010%2F11-blue?style=flat-square&logo=windows)](https://github.com/inaldy31/LIBERO/releases/latest)
-[![Versi](https://img.shields.io/badge/Versi-2.2.12-brightgreen?style=flat-square)](https://github.com/inaldy31/LIBERO/releases/latest)
+[![Versi](https://img.shields.io/badge/Versi-2.2.13-brightgreen?style=flat-square)](https://github.com/inaldy31/LIBERO/releases/latest)
 [![Trial](https://img.shields.io/badge/Trial-14%20Hari-orange?style=flat-square)](https://github.com/inaldy31/LIBERO/releases/latest)
 ![GitHub release (latest)](https://img.shields.io/github/v/release/inaldy31/LIBERO?style=flat-square&label=Rilis+Terbaru)
 [![Total Unduhan](https://img.shields.io/github/downloads/inaldy31/LIBERO/total?style=flat-square&label=Total%20Unduhan&logo=github&cacheSeconds=3600)](https://github.com/inaldy31/LIBERO/releases)
@@ -25,6 +25,7 @@ Dibuat oleh Rinaldi Yudistira Nachrawy
   - [Sistem Trial](#sistem-trial)
   - [Keamanan Data](#keamanan-data)
 - [Changelog](#changelog)
+  - [v2.2.13](#v2213)
   - [v2.2.12](#v2212)
   - [v2.2.11](#v2211)
   - [v2.2.10](#v2210)
@@ -234,9 +235,20 @@ LIBERO dirancang dengan prinsip perlindungan data klien:
 
 # Changelog
 
+## v2.2.13
+
+- **Custom AI pada STOPPER AI**: Pengguna dapat mengarahkan STOPPER AI ke layanan AI sendiri melalui pengaturan Base URL, nama model, API Key opsional, batas token, dan timeout, lengkap dengan tombol uji koneksi. Dokumen PDF dapat dikirim sebagai gambar halaman (maksimal 10 halaman) bila layanan tersebut tidak bisa membaca PDF secara langsung, dan waktu proses diperpanjang agar dokumen atau audio besar tidak mudah gagal. Selama Custom AI aktif, layanan ini dipakai lebih dulu sampai pengaturannya dihapus.
+- **Narasi dokumen lebih sesuai data korban**: Litmas Integrasi dan Litmas Anak tidak lagi menyebut korban sebagai sumber data bila memang tidak ada pihak korban; judul akibat menyesuaikan korban, negara, atau keduanya; dan perkara dengan beberapa jenis korban tidak lagi dianggap hanya memiliki korban diri sendiri. Pada Litmas Anak, Bab X, Analisis, dan Kesimpulan kini membedakan korban setuju, tidak setuju, belum diisi, korban negara, serta korban diri sendiri sehingga isi dokumen tidak saling bertentangan atau mengarang penolakan diversi.
+- **Form lebih cepat dan progres lebih tepat**: Pengetikan, perubahan tinggi kotak teks, perpindahan tab, Analisis Manual, dan pemulihan posisi gulir dibuat lebih ringan. Penghitungan progres kini lebih fokus pada bagian yang sedang digunakan dan kartu korban hanya dianggap lengkap jika data wajibnya benar-benar terisi.
+- **Tampilan dan dialog lebih nyaman**: Kontras teks, placeholder, tombol, status, progress, Data Manager, STOPPER AI, audio, hasil RRI, dan banyak tema diperjelas. Pemilih tanggal tidak lagi tertutup saat menggulir pilihan tahun, sedangkan dialog penting harus ditutup lewat tombol yang jelas agar tidak hilang karena salah klik di luar dialog.
+- **Update lebih aman dan stabil**: Unduhan aktif memberi tanda setiap 15 detik dan launcher membaca status setiap 5 detik agar proses lambat tidak dianggap macet. Berkas update diperiksa ukuran dan formatnya, nama installer harus sesuai versi rilis, jalur installer harus berasal dari lokasi resmi, serta perubahan jam komputer tidak lagi membuat status update salah atau installer dijalankan pada waktu yang keliru.
+- **Registrasi, HWID, dan trial lebih hati-hati**: Gangguan koneksi dan status menunggu persetujuan tidak menghapus aplikasi. Penolakan yang tidak jelas harus terjadi pada tiga hari berbeda sebelum penghapusan otomatis dan perangkat yang pernah disetujui dilindungi dari jalur tersebut; status banned/rejected/revoked tetap mengikuti aturan sebelumnya. Pembacaan HWID memakai program Windows dari lokasi resmi, hasilnya dibuat lebih stabil saat startup, segel trial diperketat, dan masa trial dihitung konsisten 14 hari sejak penggunaan pertama.
+- **Penyimpanan dan data pendukung diperbaiki**: Proses membuka dan menyimpan fail `.lit` besar dibuat lebih cepat tanpa mengubah formatnya, sedangkan data pekerjaan dari BPS tidak lagi keliru terisi sebagai jenis kelamin.
+- **Build dan pengujian dirapikan**: Skrip PowerShell menjadi sumber utama konfigurasi build, file spec lokal dan helper Git pribadi tidak lagi dilacak, aset Custom AI dimasukkan ke daftar paket, serta pengujian otomatis ditambah untuk update, HWID, trial, fail `.lit`, progres form, pemilih tanggal, performa pengetikan, dan ketepatan narasi DOCX.
+
 ## v2.2.12
 
-- **Perbaikan update macet (stuck saat update)**: Mengatasi bug di mana panel pembaruan dapat terhenti di status "Mengunduh pembaruan..." secara permanen apabila proses terputus mendadak akibat crash, aplikasi tertutup paksa, atau gangguan koneksi. Launcher kini dilengkapi dengan sistem deteksi otomatis yang akan mereset status kembali ke idle jika tidak ada aktivitas unduhan selama lebih dari 120 detik, sehingga pembaruan dapat langsung diulang kembali tanpa mengharuskan pengguna untuk me-restart aplikasi
+- **Perbaikan update macet (stuck saat update)**: Mengatasi bug di mana panel pembaruan dapat terhenti di status "Mengunduh pembaruan..." secara permanen apabila proses terputus mendadak akibat crash, aplikasi tertutup paksa, atau gangguan koneksi. Launcher kini memeriksa heartbeat state unduhan setiap 5 detik dan mereset status kembali ke idle jika `updated_at` tidak berubah selama lebih dari 120 detik, sehingga pembaruan dapat langsung diulang tanpa me-restart aplikasi
 - **Menu konteks field ditambahkan**: Klik kanan pada field kini menyediakan menu bersama Potong, Salin, dan Tempel tanpa bergantung pada hook internal WebView2 atau mode debug.
 - **Data Manager memakai picker Windows native**: Aksi Buka di Explorer kini membuka dialog file Windows sesuai mode Data Manager, lalu meneruskan file terpilih ke alur buka, simpan, atau ekspor yang tepat.
 - **Identitas klien pada DOCX diperbaiki**: Pengantar klien perempuan kini konsisten memakai `binti`, sedangkan klien laki-laki tetap memakai `bin`. Penanda `Alm.` dan `Almh.` tidak lagi tergandakan dan hanya dipakai untuk orang tua beragama Islam; data lama tanpa agama tetap kompatibel.
