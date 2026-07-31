@@ -1,4 +1,5 @@
-pywebview
+pywebview==6.1
+pythonnet==3.0.5
 pillow
 python-docx
 selenium
@@ -13,4 +14,4 @@ curl_cffi
 scrapling[fetchers]==0.4.8
 google-genai
 pymupdf
-pyinstaller
+pyinstaller==6.18.0
