@@ -5,7 +5,7 @@ Dibuat oleh Rinaldi Yudistira Nachrawy
 
 [![Hak Cipta](https://img.shields.io/badge/HKI-EC00202514424-gold?style=flat-square)](https://dgip.go.id)
 [![Platform](https://img.shields.io/badge/Platform-Windows%2010%2F11-blue?style=flat-square&logo=windows)](https://github.com/inaldy31/LIBERO/releases/latest)
-[![Versi](https://img.shields.io/badge/Versi-2.2.13-brightgreen?style=flat-square)](https://github.com/inaldy31/LIBERO/releases/latest)
+[![Versi](https://img.shields.io/badge/Versi-2.2.14-brightgreen?style=flat-square)](https://github.com/inaldy31/LIBERO/releases/latest)
 [![Trial](https://img.shields.io/badge/Trial-14%20Hari-orange?style=flat-square)](https://github.com/inaldy31/LIBERO/releases/latest)
 ![GitHub release (latest)](https://img.shields.io/github/v/release/inaldy31/LIBERO?style=flat-square&label=Rilis+Terbaru)
 [![Total Unduhan](https://img.shields.io/github/downloads/inaldy31/LIBERO/total?style=flat-square&label=Total%20Unduhan&logo=github&cacheSeconds=3600)](https://github.com/inaldy31/LIBERO/releases)
@@ -25,6 +25,7 @@ Dibuat oleh Rinaldi Yudistira Nachrawy
   - [Sistem Trial](#sistem-trial)
   - [Keamanan Data](#keamanan-data)
 - [Changelog](#changelog)
+  - [v2.2.14](#v2214)
   - [v2.2.13](#v2213)
   - [v2.2.12](#v2212)
   - [v2.2.11](#v2211)
@@ -234,6 +235,15 @@ LIBERO dirancang dengan prinsip perlindungan data klien:
 ---
 
 # Changelog
+
+## v2.2.14
+
+- **Launcher, modul, dan update lebih stabil**: Proses membuka modul, menampilkan form, dan kembali ke launcher dibuat lebih andal. Saat update, installer membersihkan payload runtime lama dan cache HTML hasil patch sebelum menyalin versi baru, tanpa mengubah pilihan Restart sekarang/Nanti atau menyentuh data pengguna, registrasi, trial, HWID, dan file `.lit`.
+- **Simpan dan buat dokumen lebih aman**: Proses simpan dan pembuatan DOCX tidak lagi mudah bertabrakan saat tombol ditekan berulang atau proses membutuhkan waktu lebih lama.
+- **STOPPER Integrasi diperbaiki**: Pengisian otomatis RRI bagian C untuk klien perempuan dan sinkronisasi Tanggapan Korban dibuat lebih konsisten.
+- **Rekaman audio dan foto lebih terkontrol**: Rekaman memiliki batas durasi dan ukuran, sedangkan foto beresolusi terlalu besar ditolak agar aplikasi tidak terlalu berat.
+- **Form lebih nyaman dan ringan digunakan**: Pemilih tanggal diperbaiki dan pemuatan data dibuat bertahap. Pada Litmas Integrasi, Litmas Anak, dan Litmas Awal, glow logo dan pulse badge dibuat statis, chevron Aksi hanya bergerak saat berinteraksi, spinner Data Manager hanya berputar saat modal terbuka, dan shimmer Buku Panduan dihilangkan; shimmer STOPPER AI tetap dipertahankan.
+- **Validasi dokumen diperjelas**: Data pembinaan dan Register F yang belum lengkap kini diberitahukan sebelum dokumen dibuat.
 
 ## v2.2.13
 
