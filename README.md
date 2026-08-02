@@ -238,7 +238,7 @@ LIBERO dirancang dengan prinsip perlindungan data klien:
 
 ## v2.2.14
 
-- **Launcher, modul, dan update lebih stabil**: Proses membuka modul, menampilkan form, dan kembali ke launcher dibuat lebih andal. Saat update, installer membersihkan payload runtime lama dan cache HTML hasil patch sebelum menyalin versi baru, tanpa mengubah pilihan Restart sekarang/Nanti atau menyentuh data pengguna, registrasi, trial, HWID, dan file `.lit`.
+- **Launcher dan modul lebih stabil**: Proses membuka modul, menampilkan form, dan kembali ke launcher dibuat lebih andal untuk mengurangi layar kosong atau aplikasi tidak merespons.
 - **Simpan dan buat dokumen lebih aman**: Proses simpan dan pembuatan DOCX tidak lagi mudah bertabrakan saat tombol ditekan berulang atau proses membutuhkan waktu lebih lama.
 - **STOPPER Integrasi diperbaiki**: Pengisian otomatis RRI bagian C untuk klien perempuan dan sinkronisasi Tanggapan Korban dibuat lebih konsisten.
 - **Rekaman audio dan foto lebih terkontrol**: Rekaman memiliki batas durasi dan ukuran, sedangkan foto beresolusi terlalu besar ditolak agar aplikasi tidak terlalu berat.
