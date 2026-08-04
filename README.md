@@ -5,7 +5,7 @@ Dibuat oleh Rinaldi Yudistira Nachrawy
 
 [![Hak Cipta](https://img.shields.io/badge/HKI-EC00202514424-gold?style=flat-square)](https://dgip.go.id)
 [![Platform](https://img.shields.io/badge/Platform-Windows%2010%2F11-blue?style=flat-square&logo=windows)](https://github.com/inaldy31/LIBERO/releases/latest)
-[![Versi](https://img.shields.io/badge/Versi-2.2.14-brightgreen?style=flat-square)](https://github.com/inaldy31/LIBERO/releases/latest)
+[![Versi](https://img.shields.io/badge/Versi-2.2.15-brightgreen?style=flat-square)](https://github.com/inaldy31/LIBERO/releases/latest)
 [![Trial](https://img.shields.io/badge/Trial-14%20Hari-orange?style=flat-square)](https://github.com/inaldy31/LIBERO/releases/latest)
 ![GitHub release (latest)](https://img.shields.io/github/v/release/inaldy31/LIBERO?style=flat-square&label=Rilis+Terbaru)
 [![Total Unduhan](https://img.shields.io/github/downloads/inaldy31/LIBERO/total?style=flat-square&label=Total%20Unduhan&logo=github&cacheSeconds=3600)](https://github.com/inaldy31/LIBERO/releases)
@@ -25,6 +25,7 @@ Dibuat oleh Rinaldi Yudistira Nachrawy
   - [Sistem Trial](#sistem-trial)
   - [Keamanan Data](#keamanan-data)
 - [Changelog](#changelog)
+  - [v2.2.15](#v2215)
   - [v2.2.14](#v2214)
   - [v2.2.13](#v2213)
   - [v2.2.12](#v2212)
@@ -235,6 +236,11 @@ LIBERO dirancang dengan prinsip perlindungan data klien:
 ---
 
 # Changelog
+
+## v2.2.15
+
+- **Pembuatan dokumen melalui Selesaikan diperbaiki**: Data Manager kini memakai nama file sementara yang tetap dikenali sebagai DOCX, sehingga pembuatan dokumen tidak lagi gagal dengan pesan `name 'messagebox' is not defined`.
+- **Proses update diperjelas**: Status persiapan unduhan ditampilkan setelah koneksi ke installer berhasil dimulai agar launcher tidak menampilkan progres yang menyesatkan saat koneksi awal masih berlangsung.
 
 ## v2.2.14
 
