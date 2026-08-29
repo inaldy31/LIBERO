@@ -240,7 +240,7 @@ LIBERO dirancang dengan prinsip perlindungan data klien:
 
 ## v2.2.16
 
-- **Penyesuaian nomor surat sesuai dengan ketentuan terbaru**: Nomor surat pengantar/litmas pada bagian Data Umum kini otomatis menggunakan kode `PK.07.01` (sebelumnya `PK.06.01`). Penyesuaian ini berlaku untuk Litmas Integrasi, Litmas Anak, dan Litmas Awal — cukup isi nomor akhir seperti biasa.
+- **Penyesuaian nomor surat sesuai dengan ketentuan terbaru**: Nomor surat pengantar/litmas pada bagian Data Umum kini otomatis menggunakan kode `PK.07.01` (sebelumnya `PK.06.01`). Penyesuaian ini berlaku untuk Litmas Integrasi, Litmas Anak, dan Litmas Awal. Pengguna cukup mengisi nomor akhir seperti biasa.
 - **Nomor Surat Tugas pada Laporan Asesmen kini ditulis lengkap**: Kolom "Nomor Surat Tugas" di Detail Pelaksanaan Asesmen tidak lagi meminta nomor akhir saja. Nomor yang diisi langsung dipakai pada laporan asesmen dan dasar surat tanpa tambahan format otomatis.
 - **Fitur AI menggunakan model terbaru**: Stopper Kronologi, Audio-to-Chronology, dan pembacaan dokumen PDF kini menggunakan model bahasa AI terbaru untuk hasil yang lebih akurat. Model-model sebelumnya tetap tersedia sebagai cadangan; biaya dan pemakaian API Key tidak berubah.
 
@@ -281,7 +281,7 @@ LIBERO dirancang dengan prinsip perlindungan data klien:
 
 ## v2.2.11
 
-- **Perbaikan aplikasi macet saat membuka data**: Memperbaiki kondisi aplikasi berhenti merespons (freeze) dan tidak bisa diapa-apakan saat membuka sebagian file litmas — terutama file lama atau file dari pengguna lain. File tersebut kini terbuka normal di Litmas Integrasi, Litmas Anak, maupun Litmas Awal.
+- **Perbaikan aplikasi macet saat membuka data**: Memperbaiki kondisi aplikasi berhenti merespons (freeze) dan tidak bisa diapa-apakan saat membuka sebagian file litmas, terutama file lama atau file dari pengguna lain. File tersebut kini terbuka normal di Litmas Integrasi, Litmas Anak, maupun Litmas Awal.
 
 ## v2.2.10
 
