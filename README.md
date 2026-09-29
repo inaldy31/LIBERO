@@ -5,7 +5,7 @@ Dibuat oleh Rinaldi Yudistira Nachrawy
 
 [![Hak Cipta](https://img.shields.io/badge/HKI-EC00202514424-gold?style=flat-square)](https://dgip.go.id)
 [![Platform](https://img.shields.io/badge/Platform-Windows%2010%2F11-blue?style=flat-square&logo=windows)](https://github.com/inaldy31/LIBERO/releases/latest)
-[![Versi](https://img.shields.io/badge/Versi-2.2.17-brightgreen?style=flat-square)](https://github.com/inaldy31/LIBERO/releases/latest)
+[![Versi](https://img.shields.io/badge/Versi-2.2.18-brightgreen?style=flat-square)](https://github.com/inaldy31/LIBERO/releases/latest)
 [![Trial](https://img.shields.io/badge/Trial-14%20Hari-orange?style=flat-square)](https://github.com/inaldy31/LIBERO/releases/latest)
 ![GitHub release (latest)](https://img.shields.io/github/v/release/inaldy31/LIBERO?style=flat-square&label=Rilis+Terbaru)
 [![Total Unduhan](https://img.shields.io/github/downloads/inaldy31/LIBERO/total?style=flat-square&label=Total%20Unduhan&logo=github&cacheSeconds=3600)](https://github.com/inaldy31/LIBERO/releases)
@@ -25,6 +25,7 @@ Dibuat oleh Rinaldi Yudistira Nachrawy
   - [Sistem Trial](#sistem-trial)
   - [Keamanan Data](#keamanan-data)
 - [Changelog](#changelog)
+  - [v2.2.18](#v2218)
   - [v2.2.17](#v2217)
   - [v2.2.16](#v2216)
   - [v2.2.15](#v2215)
@@ -238,6 +239,13 @@ LIBERO dirancang dengan prinsip perlindungan data klien:
 ---
 
 # Changelog
+
+## v2.2.18
+
+- **LIBERO tidak lagi makin berat saat lama dipakai**: Sebelumnya setiap penyimpanan otomatis di Litmas Anak dan Litmas Awal, serta setiap pemakaian SIPP, AI kronologi, dan Registrasi TPP, meninggalkan proses latar belakang yang tidak pernah berhenti. Setelah beberapa jam mengisi form, beban prosesor bisa mencapai separuh inti CPU walaupun aplikasi sedang tidak dipakai. Proses tersebut kini tidak lagi dibuat.
+- **Pemeriksaan pembaruan lebih andal**: Proses latar belakang yang sama juga menghubungi GitHub berulang kali, sehingga batas akses GitHub bisa habis dan pembaruan tidak terdeteksi, terutama di kantor yang memakai satu koneksi internet bersama. Kini pemeriksaan pembaruan hanya dilakukan oleh launcher.
+- **Jejak pemasangan pembaruan**: Installer pembaruan kini menyimpan log pemasangan (`Setup Log *.txt` di folder TEMP), dan LIBERO mencatat di `libero.log` bila pembaruan sudah dijalankan tetapi versi aplikasi belum berubah, sehingga penyebab kegagalan pemasangan dapat ditelusuri.
+- **Restart Sekarang lebih rapi**: Saat **Restart Sekarang** dipilih, browser SIPP atau Registrasi TPP yang masih berjalan ikut ditutup sebelum pembaruan dipasang.
 
 ## v2.2.17
 
