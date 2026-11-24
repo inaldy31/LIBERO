@@ -5,7 +5,7 @@ Dibuat oleh Rinaldi Yudistira Nachrawy
 
 [![Hak Cipta](https://img.shields.io/badge/HKI-EC00202514424-gold?style=flat-square)](https://dgip.go.id)
 [![Platform](https://img.shields.io/badge/Platform-Windows%2010%2F11-blue?style=flat-square&logo=windows)](https://github.com/inaldy31/LIBERO/releases/latest)
-[![Versi](https://img.shields.io/badge/Versi-2.2.18-brightgreen?style=flat-square)](https://github.com/inaldy31/LIBERO/releases/latest)
+[![Versi](https://img.shields.io/badge/Versi-2.3.0-brightgreen?style=flat-square)](https://github.com/inaldy31/LIBERO/releases/latest)
 [![Trial](https://img.shields.io/badge/Trial-14%20Hari-orange?style=flat-square)](https://github.com/inaldy31/LIBERO/releases/latest)
 ![GitHub release (latest)](https://img.shields.io/github/v/release/inaldy31/LIBERO?style=flat-square&label=Rilis+Terbaru)
 [![Total Unduhan](https://img.shields.io/github/downloads/inaldy31/LIBERO/total?style=flat-square&label=Total%20Unduhan&logo=github&cacheSeconds=3600)](https://github.com/inaldy31/LIBERO/releases)
@@ -25,7 +25,7 @@ Dibuat oleh Rinaldi Yudistira Nachrawy
   - [Sistem Trial](#sistem-trial)
   - [Keamanan Data](#keamanan-data)
 - [Changelog](#changelog)
-  - [v2.2.18](#v2218)
+  - [v2.3.0](#v230)
   - [v2.2.17](#v2217)
   - [v2.2.16](#v2216)
   - [v2.2.15](#v2215)
@@ -93,11 +93,12 @@ LIBERO hadir untuk mengatasi hal tersebut dengan otomatisasi kalkulasi, standari
 - **Ekspor `.docx`**: Laporan final langsung siap pakai di Microsoft Word
 - **Fail Kerja Terlindungi**: Simpan dan lanjutkan progres kapan saja; file `.lit` terlindungi dan hanya bisa dibuka lewat aplikasi
 - **Templat Data Pribadi**: Buat satu file master berisi data UPT & petugas untuk mempercepat laporan baru
-- **Registrasi TPP**: Pendaftaran otomatis ke Google Form TPP via Selenium
-- **Stopper AI**: Asisten AI untuk membaca dokumen pendukung, merapikan kronologi, membantu pencarian perkara, dan menyusun rekomendasi wilayah yang dapat ditinjau sebelum diterapkan. Fitur yang memakai AI membutuhkan koneksi internet dan API Key pengguna
+- **Registrasi TPP (khusus Bapas Jambi)**: Pendaftaran otomatis ke Google Form TPP Bapas Jambi via Selenium
+- **Ambil Nomor Surat Otomatis (khusus Bapas Jambi)**: Pengambilan nomor surat baru dan pemilihan dari riwayat sistem penomoran surat Bapas Kelas I Jambi langsung di formulir Surat Dinas Litmas dan Surat Perintah Asesmen
+- **Stopper AI**: Asisten AI untuk membaca dokumen pendukung, merapikan kronologi, membantu pencarian perkara, dan menyusun rekomendasi wilayah yang dapat ditinjau sebelum diterapkan. Mendukung Google Gemini, Anthropic Claude, OpenAI, dan Custom AI (endpoint OpenAI-compatible). Fitur yang memakai AI membutuhkan koneksi internet dan API Key pengguna, kecuali Custom AI yang diarahkan ke server AI lokal
 - **Fitur Pengingat Kolom Kosong**: Otomatis mendeteksi field yang belum diisi sebelum dokumen dibuat
 - **Autosave**: Data tersimpan otomatis setiap 10 detik
-- **21 Pilihan Tema**: Tampilan dapat dikustomisasi sesuai selera
+- **28 Pilihan Tema**: Tampilan dapat dikustomisasi sesuai selera
 - **Pintasan Keyboard**: SHIFT+F3 (ubah format huruf), Ctrl+Z/Y, Ctrl+±/scroll (zoom)
 - **Auto-Update**: Notifikasi dan unduhan installer versi terbaru dari GitHub Releases *(baru di v2.0.1)*
 - **Sistem Trial**: Berlaku 14 hari sejak pertama dibuka
@@ -174,7 +175,7 @@ LIBERO hadir untuk mengatasi hal tersebut dengan otomatisasi kalkulasi, standari
 |---|---|
 | OS | Windows 10 / 11 (64-bit) |
 | WebView2 Runtime | Otomatis diinstal jika belum ada |
-| Internet | Diperlukan untuk registrasi/verifikasi perangkat, auto-update, Registrasi TPP, Stopper AI, Ambil Data Wilayah, dan akses halaman online |
+| Internet | Diperlukan untuk registrasi/verifikasi perangkat, auto-update, Registrasi TPP, Ambil Nomor Surat Otomatis, Stopper AI, Ambil Data Wilayah, dan akses halaman online |
 | RAM | Minimal 4 GB |
 | Storage | Minimal 200 MB |
 
@@ -208,8 +209,8 @@ Registrasi diperlukan untuk menggunakan LIBERO setelah masa trial berakhir. UUID
 5. Setelah disetujui, restart LIBERO
 
 **Status pendaftaran:**
-- `Menunggu persetujuan`: Data terkirim, tunggu konfirmasi pengembang
-- `Aktif`: Perangkat sudah dapat digunakan penuh
+- `Menunggu Persetujuan`: Data terkirim, tunggu konfirmasi pengembang
+- `Sudah Aktif`: Perangkat sudah dapat digunakan penuh
 - `Dinonaktifkan`: Akses dicabut oleh pengembang
 
 > Perangkat yang UUID-nya tidak terdaftar tidak dapat menjalankan aplikasi dan program akan tertutup secara otomatis.
@@ -240,12 +241,30 @@ LIBERO dirancang dengan prinsip perlindungan data klien:
 
 # Changelog
 
-## v2.2.18
+## v2.3.0
 
-- **LIBERO tidak lagi makin berat saat lama dipakai**: Sebelumnya setiap penyimpanan otomatis di Litmas Anak dan Litmas Awal, serta setiap pemakaian SIPP, AI kronologi, dan Registrasi TPP, meninggalkan proses latar belakang yang tidak pernah berhenti. Setelah beberapa jam mengisi form, beban prosesor bisa mencapai separuh inti CPU walaupun aplikasi sedang tidak dipakai. Proses tersebut kini tidak lagi dibuat.
-- **Pemeriksaan pembaruan lebih andal**: Proses latar belakang yang sama juga menghubungi GitHub berulang kali, sehingga batas akses GitHub bisa habis dan pembaruan tidak terdeteksi, terutama di kantor yang memakai satu koneksi internet bersama. Kini pemeriksaan pembaruan hanya dilakukan oleh launcher.
-- **Jejak pemasangan pembaruan**: Installer pembaruan kini menyimpan log pemasangan (`Setup Log *.txt` di folder TEMP), dan LIBERO mencatat di `libero.log` bila pembaruan sudah dijalankan tetapi versi aplikasi belum berubah, sehingga penyebab kegagalan pemasangan dapat ditelusuri.
-- **Restart Sekarang lebih rapi**: Saat **Restart Sekarang** dipilih, browser SIPP atau Registrasi TPP yang masih berjalan ikut ditutup sebelum pembaruan dipasang.
+- **Model AI STOPPER diperbarui**: STOPPER AI kini memakai model terbaru tiap penyedia: Claude Opus 5.5, Sonnet 5.5, dan Haiku 5.5; OpenAI GPT-6.1 Sol dan GPT-6 Luna; serta Gemini generasi terbaru. Transkripsi audio OpenAI kini memakai gpt-transcribe.
+- **Pilih sendiri AI yang dipakai**: Di Pengaturan AI, petugas kini dapat memilih apakah STOPPER memakai API Key (Gemini, Claude, atau OpenAI) atau Custom AI. Model transkripsi audio Custom AI juga dapat diisi.
+- **STOPPER di latar belakang**: STOPPER dokumen, kronologi, dan data wilayah kini dapat dijalankan di latar belakang lewat tombol **Jalankan di Latar Belakang**, sehingga formulir tetap bisa diisi sambil menunggu. Pemberitahuan **Tinjau Hasil** muncul saat hasilnya siap, dan layar proses menampilkan AI serta model yang sedang dipakai.
+- **Konfirmasi sebelum menimpa file**: Menyimpan data `.lit` atau membuat ulang dokumen Word dengan nama yang sudah ada kini menampilkan konfirmasi **Timpa File?** atau **Timpa Dokumen?**, dan dokumen Word lama disimpan sebagai cadangan `.docx.bak`. Bila cadangan tidak dapat dibuat, file lama dibiarkan utuh, dan dokumen yang masih terbuka di Word diberi pesan agar ditutup dulu.
+- **Konfirmasi saat menutup jendela**: Menutup LIBERO lewat tombol X atau Alt+F4 kini menampilkan konfirmasi yang sama dengan tombol **Keluar**, dan isian terakhir disimpan otomatis sebelum aplikasi ditutup. Bila simpan otomatis itu gagal, LIBERO menampilkan peringatan **Simpan Otomatis Gagal** lebih dulu, dan bila LIBERO gagal keluar tersedia pilihan **Paksa Keluar**.
+- **Nomor halaman di dokumen Litmas**: Dokumen Litmas kini bernomor halaman "- 2 -", "- 3 -", dan seterusnya di tengah atas, mengikuti Permen Imipas 13/2026.
+- **Penomoran surat dinas sesuai Permen Imipas 13/2026**: Nomor surat pengantar kini mengikuti format Permen Imipas 13/2026, misalnya `WP.5.PAS.1/T/PK.07.01/1234/2026`, dengan tahun nomor mengikuti tanggal surat. Sifat Surat dapat dipilih (Biasa, Terbatas, Rahasia, atau Sangat Rahasia) dengan bawaan Terbatas, dan kodenya ikut tercantum di nomor surat. Kolom Nomor Surat Litmas kini mendukung isian nomor urut maupun nomor surat lengkap disertai pratinjau langsung di formulir tanpa duplikasi awalan pada dokumen Word.
+- **Ambil nomor surat otomatis (khusus Bapas Jambi)**: Perangkat terdaftar Balai Pemasyarakatan Kelas I Jambi kini dapat mengambil nomor surat baru atau memilih dari riwayat penomoran surat Bapas Jambi langsung di formulir **Surat Dinas Litmas** (Integrasi, Litmas Anak, Litmas Awal) dan **Surat Perintah** pada Detail Pelaksanaan Asesmen (Integrasi, Litmas Awal), dengan pengisian otomatis nama pegawai, tujuan surat, perihal beserta nama klien, nomor surat, dan tanggal surat.
+- **Surat Perintah dan isi cepat Detail Pelaksanaan Asesmen**: Istilah *Surat Tugas* pada formulir asesmen, unggah dokumen STOPPER, validasi kelengkapan, dan dokumen Word Lampiran Asesmen (`Surat Perintah Kepala ...`) kini diseragamkan menjadi **Surat Perintah** tanpa merusak kompatibilitas fail `.lit` lama. Tersedia pula tombol isi cepat (**Ambil dari Asal Permintaan**, **Ambil dari Tgl. Wawancara Klien**, dan **Ambil dari Tgl. Penerimaan**) pada Litmas Integrasi dan Litmas Awal.
+- **Riwayat pernikahan wali di Litmas Anak**: Memilih status pernikahan wali **Menikah** kini langsung menampilkan isian pernikahan beserta tombol **+ Tambah Pernikahan Wali**.
+- **Perbaikan pada performa aplikasi**: LIBERO kini tetap ringan walaupun dipakai berjam-jam untuk mengisi formulir, dan menu utama terbuka lebih cepat.
+- **Perbaikan pada penyimpanan data**: Simpan dan muat data `.lit` dibuat lebih andal, termasuk untuk nama klien yang memuat tanda baca, dengan pesan yang lebih jelas bila file tidak dapat dibuka. Simpan otomatis dan cadangan file dibuat lebih aman, dan keluar aplikasi menunggu penyimpanan atau pembuatan dokumen selesai. Pengaturan aplikasi juga disimpan lebih aman.
+- **Perbaikan pada Data Manager**: Flashdisk dan drive lain tampil di bagian Komputer, nama file yang tidak dapat dipakai di Windows ditolak dengan pesan yang jelas, dan tombol **Buka Dokumen** membuka dokumen di Microsoft Word bila terpasang.
+- **Perbaikan pada pembaruan otomatis**: Pemeriksaan, pengunduhan, dan pemasangan pembaruan dibuat lebih andal dan hemat kuota internet. File pembaruan diperiksa keutuhannya sebelum dipasang, dan log pemasangan disimpan untuk memudahkan penelusuran kendala.
+- **Perbaikan pada verifikasi perangkat dan keamanan**: Verifikasi perangkat kini lebih andal di Windows 11 terbaru dan menyediakan tombol **Coba Lagi** bila gagal sementara. Pemeriksaan lisensi dan perlindungan data klien diperkuat, dan rekaman audio di file data hanya dibuka dari komputer sendiri.
+- **Perbaikan pada STOPPER AI**: Pembacaan dokumen, PDF, dan foto, Ambil Data Wilayah, Perbaiki Narasi, serta Rekaman ke Narasi dibuat lebih akurat dan andal. STOPPER hanya mengisi kolom yang diminta, setiap proses berjalan tertib, dan layar review menampilkan isian saat ini dan hasilnya secara lengkap. Layar review kini punya kotak **Pilih Semua** untuk mencentang atau mengosongkan semua isian sekaligus.
+- **Perbaikan pada Custom AI dan API Key**: Custom AI kini menerima jawaban secara bertahap, mencoba lagi otomatis saat server sibuk, dan dapat dibatalkan. Dukungan API Key Claude dan OpenAI disesuaikan dengan model terbaru. Untuk API Key Gemini kuota gratis, LIBERO kini mencoba lagi atau berganti model lebih dulu saat server penuh atau batas pemakaian tercapai, dan pesan kegagalannya menjelaskan penyebabnya.
+- **Perbaikan pada riwayat pernikahan**: Riwayat pernikahan yang sudah diisi tetap terjaga saat memilih tanggal di kalender dan saat meninjau hasil STOPPER. Status nikah dan agama dari AI dicocokkan ke pilihan yang tersedia di formulir.
+- **Perbaikan pada tata letak dokumen Litmas**: Sampul dan surat pengantar selalu muat satu halaman, foto dan tanda tangan tampil proporsional, serta tabel dan blok tanda tangan lebih rapi.
+- **Perbaikan pada narasi Litmas Integrasi dan Litmas Anak**: Kalimat kesimpulan dan analisis, uraian korban dan perkara di Litmas Anak, serta penulisan nama, gelar, dan sebutan almarhum kini disusun lebih tepat dan rapi sesuai isian. Sebutan bin, binti, atau anak dari mengikuti agama klien, dan singkatan serta gelar seperti DKI, RSUD, LAPAS, dr., dan KH. tercetak sesuai penulisannya.
+- **Perbaikan pada Litmas Anak**: Hal yang Meringankan dan Memberatkan dapat dipilih per baris lalu diubah atau dihapus lewat **Edit Terpilih** dan **Hapus Terpilih**, atau diubah langsung dengan klik dua kali, dan **Tampilkan Otomatis** membaca semua isian. Pemeriksaan kelengkapan Rekomendasi, isian Pelaksanaan Diversi, dan ancaman pidana yang diisi dalam bulan menyesuaikan jenis Litmas dan isian.
+- **Perbaikan pada tampilan formulir**: Formulir lebih rapi di layar kecil (1280×720), teks lebih mudah dibaca di beberapa tema, dan tombol panah kiri dan kanan menggeser formulir saat jendela sempit. Layar penuh, tombol F11 dan Esc, serta dialog bekerja lebih konsisten, logo AI di pengaturan STOPPER tampil lengkap, dan foto di atas 100 megapiksel ditolak dengan pesan yang jelas.
 
 ## v2.2.17
 
@@ -528,10 +547,22 @@ Tidak. Jika unduhan gagal atau terputus, LIBERO akan mengunduh ulang installer d
 Stopper AI adalah kumpulan fitur bantuan berbasis AI di LIBERO untuk mempercepat pekerjaan yang biasanya memakan waktu, seperti membaca dokumen pendukung PDF/foto, merapikan kronologi dari teks atau audio, membantu pencarian data perkara, dan Ambil Data Wilayah untuk menyusun rekomendasi lingkungan/wilayah. Hasil Stopper AI tetap ditampilkan untuk ditinjau terlebih dahulu sebelum diterapkan ke form.
 
 **Bagaimana cara memasang atau mengaktifkan Stopper AI?**<br>
-Stopper AI tidak perlu installer terpisah karena sudah menjadi bagian dari LIBERO. Pastikan LIBERO terpasang dari installer terbaru, buka **Pengaturan**, lalu isi API Key AI yang didukung. Setelah itu fitur Stopper AI dapat dipakai dari tombol STOPPER/AI di form Litmas Integrasi atau Litmas Anak.
+Stopper AI tidak perlu installer terpisah karena sudah menjadi bagian dari LIBERO. Pastikan LIBERO terpasang dari installer terbaru, klik tombol **AI STOPPER** di launcher (jendela *Pengaturan STOPPER*), lalu isi API Key Google Gemini, Anthropic Claude, atau OpenAI, atau atur Custom AI. Setelah itu fitur Stopper AI dapat dipakai dari tombol STOPPER/AI di form Litmas Integrasi atau Litmas Anak.
 
 **Apakah Stopper AI bisa digunakan tanpa API Key AI?**<br>
-Tidak untuk proses yang benar-benar membutuhkan AI, seperti ekstraksi dokumen, perbaikan kronologi, transkripsi audio, atau rekomendasi naratif. Beberapa fitur non-AI tetap berjalan, tetapi tombol Stopper AI akan meminta API Key jika prosesnya membutuhkan layanan AI.
+Tidak untuk proses yang benar-benar membutuhkan AI, seperti ekstraksi dokumen, perbaikan kronologi, transkripsi audio, atau rekomendasi naratif, kecuali memakai Custom AI yang diarahkan ke server AI lokal (misalnya Ollama atau LM Studio) yang tidak memerlukan API Key. Beberapa fitur non-AI tetap berjalan, tetapi tombol Stopper AI akan meminta API Key jika prosesnya membutuhkan layanan AI.
+
+**Model AI apa yang dipakai Stopper AI?**<br>
+LIBERO memilih penyedia sesuai API Key yang disimpan (Custom AI didahulukan bila diatur), lalu mencoba model per tier secara berurutan. Daftar per Oktober 2026:
+
+| Penyedia | Membaca dokumen & data wilayah | Narasi kronologi (SIPP, perbaikan narasi, audio, dokumen BAP) | Transkripsi audio |
+|---|---|---|---|
+| Google Gemini | Gemini Flash stabil terbaru yang terdeteksi otomatis (saat ini Gemini 3.8 Flash), lalu cadangan Flash, Pro (khusus akun berbayar), dan Flash-Lite | Sama | Langsung oleh model Gemini |
+| Anthropic Claude | Opus 5.5 → Sonnet 5.5 → Haiku 5.5, cadangan Sonnet 4.6 | Sonnet 5.5 → Haiku 5.5, cadangan Sonnet 4.6 | Tidak tersedia (Claude API tidak menerima audio) |
+| OpenAI | GPT-6.1 Sol → GPT-6 Luna, cadangan GPT-5.6 Sol | GPT-6.1 Sol → GPT-6 Luna, cadangan GPT-5.6 Sol | gpt-transcribe |
+| Custom AI | Model yang diisi pengguna | Model yang diisi pengguna | Endpoint `/audio/transcriptions` di penyedia yang sama, dengan model transkripsi yang diisi pengguna (bawaan whisper-1) |
+
+Jika satu model sedang sibuk, terkena batas kuota, atau tidak tersedia untuk API Key tersebut, LIBERO otomatis mencoba model berikutnya **dari penyedia yang sama**. LIBERO hanya menyimpan satu API Key, sehingga tidak berpindah ke penyedia lain.
 
 **Di mana API Key AI disimpan?**<br>
 API Key AI disimpan secara lokal di perangkat pengguna pada berkas pengaturan aplikasi LIBERO. Penyimpanan ini bertujuan agar pengguna tidak perlu memasukkan API Key berulang kali. API Key tidak dikirim ke server LIBERO, tetapi akan digunakan untuk menghubungi penyedia layanan AI saat fitur Stopper AI dijalankan.
@@ -541,6 +572,9 @@ Tidak. Hasil Stopper AI ditampilkan dalam jendela pratinjau terlebih dahulu. Pen
 
 **Apakah dokumen, foto, teks, atau audio yang dipilih untuk Stopper AI dikirim keluar?**<br>
 Ya, hanya saat pengguna menjalankan fitur Stopper AI yang membutuhkan layanan AI. Dokumen PDF/foto, teks, atau audio yang dipilih pengguna dapat dikirim ke penyedia AI sesuai API Key yang digunakan. Data tersebut tidak dikirim ke server LIBERO.
+
+**Apakah penyedia AI memakai data yang dikirim?**<br>
+Tergantung ketentuan penyedia dan jenis akun. Pada Gemini API tingkat gratis, Google menyatakan data yang dikirim dapat dipakai untuk meningkatkan produknya, sedangkan pada tingkat berbayar (Billing aktif) tidak. Untuk dokumen klien yang sensitif, gunakan akun berbayar dan pelajari ketentuan data penyedia AI yang dipakai.
 
 **Apakah dokumen yang diproses Stopper AI otomatis dihapus?**<br>
 Di sisi LIBERO, dokumen asli tetap berada di perangkat pengguna dan tidak disimpan ke server LIBERO. LIBERO hanya menggunakan dokumen tersebut saat proses Stopper AI berjalan. Setelah data dikirim ke layanan AI, pengelolaannya berada di luar server LIBERO.
@@ -584,10 +618,13 @@ Autosave berjalan otomatis saat pengguna mengisi form Litmas Integrasi atau Litm
 > Pastikan koneksi internet aktif. LIBERO akan mencoba mengunduh pembaruan lagi secara otomatis dengan jeda bertahap.
 
 **Stopper AI tidak muncul atau tidak bisa digunakan**
-> Buka **Pengaturan** dan pastikan API Key AI sudah diisi. Beberapa proses Stopper AI membutuhkan koneksi internet dan API Key yang masih aktif.
+> Klik **AI STOPPER** di launcher dan pastikan API Key AI atau Custom AI sudah diisi. Beberapa proses Stopper AI membutuhkan koneksi internet dan API Key yang masih aktif.
 
 **Stopper AI gagal memproses dokumen, foto, teks, atau audio**
 > Periksa koneksi internet, API Key, kuota/rate limit penyedia AI, serta ukuran dan format file yang dipilih. Coba ulang beberapa saat kemudian jika layanan AI sedang sibuk.
+
+**Rekaman audio tidak bisa diproses dengan API Key Claude**
+> Claude API tidak menerima input audio. Untuk mengubah rekaman menjadi kronologi, gunakan API Key Google Gemini atau OpenAI, atau Custom AI yang menyediakan endpoint `/audio/transcriptions`.
 
 **Dokumen tidak berhasil dibuat**
 > Pastikan semua field wajib sudah diisi. Field yang belum diisi ditandai merah **(BELUM DIISI)** pada dokumen hasil.
